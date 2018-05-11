@@ -1,0 +1,50 @@
+1526041393a:1:{s:13:"ContactUs.htm";a:9:{s:8:"fileName";s:13:"ContactUs.htm";s:7:"content";s:1022:"title = "Contact Us"
+url = "/contact-us/"
+layout = "Default"
+is_hidden = 0
+==
+<div class="contact-us-page">
+<div class="container">
+
+    <div class="row">
+      <div class="col-md-8 col-sm-12">
+       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15936.421963312983!2d101.6578872!3d3.0664687!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5efe35d435727865!2sCV+SMART+AUTO!5e0!3m2!1sen!2smy!4v1525349979543" height="550" frameborder="0" style="border:0;width: 100%;" allowfullscreen></iframe>
+      </div>
+      <div class="col-md-4 col-sm-12 contact-us-info">
+       	<h2>find us here</h2>
+       	<p><b>CV Smart Auto Trading</b><span> (00258889-A)</span><br/>
+		D-2-0-25 , JALAN 1/152 , <br/>
+		Taman OUG Parklane ,<br/>
+		58200 Kuala Lumpur.</p>
+		<h3>Subsidiary Company</h3>
+		<p>CV Smart Solution</p>
+		<h2>call us</h2>
+		<p>012-2866884 </p>
+		<h2>we are also on</h2>
+		<img src="/cvsmart/themes/cvsmart/assets/img/contact_wechat.jpg"/>
+      </div>
+    </div>
+  </div>
+</div>";s:5:"mtime";i:1525708511;s:6:"markup";s:939:"<div class="contact-us-page">
+<div class="container">
+
+    <div class="row">
+      <div class="col-md-8 col-sm-12">
+       <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15936.421963312983!2d101.6578872!3d3.0664687!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x5efe35d435727865!2sCV+SMART+AUTO!5e0!3m2!1sen!2smy!4v1525349979543" height="550" frameborder="0" style="border:0;width: 100%;" allowfullscreen></iframe>
+      </div>
+      <div class="col-md-4 col-sm-12 contact-us-info">
+       	<h2>find us here</h2>
+       	<p><b>CV Smart Auto Trading</b><span> (00258889-A)</span><br/>
+		D-2-0-25 , JALAN 1/152 , <br/>
+		Taman OUG Parklane ,<br/>
+		58200 Kuala Lumpur.</p>
+		<h3>Subsidiary Company</h3>
+		<p>CV Smart Solution</p>
+		<h2>call us</h2>
+		<p>012-2866884 </p>
+		<h2>we are also on</h2>
+		<img src="/cvsmart/themes/cvsmart/assets/img/contact_wechat.jpg"/>
+      </div>
+    </div>
+  </div>
+</div>";s:4:"code";N;s:5:"title";s:10:"Contact Us";s:3:"url";s:12:"/contact-us/";s:6:"layout";s:7:"Default";s:9:"is_hidden";s:1:"0";}}
