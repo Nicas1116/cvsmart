@@ -11,13 +11,6 @@ navigation:
         icon: icon-car
         permissions:
             - cars-permission
-        sideMenu:
-            car-category:
-                label: 'Car Category'
-                url: nicas/carsforsell/carcategory
-                icon: icon-car
-                permissions:
-                    - cars-permission
     main-menu-item2:
         label: 'Static Banner'
         url: nicas/carsforsell/staticbanner

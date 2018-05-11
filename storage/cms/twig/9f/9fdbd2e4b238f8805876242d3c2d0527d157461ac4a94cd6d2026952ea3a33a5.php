@@ -155,7 +155,7 @@ class __TwigTemplate_424d649f4500c0ccc062c36c2b4e9f8ab8b3e10a885c0a684b92288bb2b
         // line 109
         echo $this->env->getExtension('Cms\Twig\Extension')->themeFilter("assets/css/cvsmart.css?v=2");
         echo "\" rel=\"stylesheet\">
-
+    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js\"></script>
 
 
 
@@ -230,7 +230,7 @@ class __TwigTemplate_424d649f4500c0ccc062c36c2b4e9f8ab8b3e10a885c0a684b92288bb2b
 
 
 
-    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js\"></script>
+
 
 
 
@@ -474,180 +474,354 @@ class __TwigTemplate_424d649f4500c0ccc062c36c2b4e9f8ab8b3e10a885c0a684b92288bb2b
 
     public function getSourceContext()
     {
-        return new Twig_Source("<!DOCTYPE html>
-<html lang=\"en\">
-
-<head>
-    <meta charset=\"utf-8\">
-    <meta name=\"robots\" content=\"all,follow\">
-    <meta name=\"googlebot\" content=\"index,follow,snippet,archive\">
-    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
-
-    <title>cvSmart - {{ this.page.title }}</title>
-
-    <meta name=\"keywords\" content=\"Organising,Promoting,Live,Music,Concerts,Showcases\">
-    <meta name=\"description\" content=\"We provide services relating to organising and promoting live music concerts and showcases.\">
-
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
-
-    <!-- Bootstrap and Font Awesome css -->
-    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\">
-    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css\">
-
-    <!-- Css animations  -->
-    <link href=\"{{ 'assets/css/animate.css'|theme }}\" rel=\"stylesheet\">
-
-    <!-- Theme stylesheet, if possible do not edit this stylesheet -->
-    <link href=\"{{ 'assets/css/style.default.css'|theme }}\" rel=\"stylesheet\" id=\"theme-stylesheet\">
-
-    <!-- Custom stylesheet - for your changes -->
-    <link href=\"{{ 'assets/css/custom.css'|theme }}\" rel=\"stylesheet\">
-    <!-- <link href=\"{{ 'assets/css/bootstrap.min.css'|theme }}\" rel=\"stylesheet\"> -->
-    <link href=\"{{ 'assets/css/bootstrap-social.css'|theme }}\" rel=\"stylesheet\">
-    <link href=\"{{ 'assets/css/lity.min.css'|theme }}\" rel=\"stylesheet\">
-    <!-- Responsivity for older IE -->
-    <!--[if lt IE 9]>
-        <script src=\"https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js\"></script>
-        <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>
-    <![endif]-->
-
-    <!-- Favicon and apple touch icons-->
-    <!-- <link rel=\"shortcut icon\" href=\"/themes/cvsmart/assets/img/favicon.ico\" type=\"image/x-icon\" />-->
-    <link rel=\"apple-touch-icon\" href=\"/themes/cvsmart/assets/img/apple-touch-icon.png\" />
-    <link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"/themes/cvsmart/assets/img/apple-touch-icon-57x57.png\" />
-    <link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"/themes/cvsmart/assets/img/apple-touch-icon-72x72.png\" />
-    <link rel=\"apple-touch-icon\" sizes=\"76x76\" href=\"/themes/cvsmart/assets/img/apple-touch-icon-76x76.png\" />
-    <link rel=\"apple-touch-icon\" sizes=\"114x114\" href=\"/themes/cvsmart/assets/img/apple-touch-icon-114x114.png\" />
-    <link rel=\"apple-touch-icon\" sizes=\"120x120\" href=\"/themes/cvsmart/assets/img/apple-touch-icon-120x120.png\" />
-    <link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"/themes/cvsmart/assets/img/apple-touch-icon-144x144.png\" />
-    <link rel=\"apple-touch-icon\" sizes=\"152x152\" href=\"/themes/cvsmart/assets/img/apple-touch-icon-152x152.png\" />
-    <!-- owl carousel css -->
-
-    <link href=\"{{ 'assets/css/owl.carousel.css'|theme }}\" rel=\"stylesheet\">
-    <link href=\"{{ 'assets/css/owl.theme.css'|theme }}\" rel=\"stylesheet\">
-    <link href=\"https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css\" rel=\"stylesheet\">
-    <link href=\"https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.9/css/lightgallery.min.css\" rel=\"stylesheet\" type=\"text/css\">
-
-    <link href=\"{{ 'assets/css/cvsmart.css?v=2'|theme }}\" rel=\"stylesheet\">
-
-
-
-
-    <!-- <link href=\"{{ 'assets/css/scrolling-nav.css'|theme }}\" rel=\"stylesheet\"> -->
-</head>
-
-<body>
-
-    <div id=\"all\">
-
-      <header id=\"layout-header\">
-          {% partial 'site/header' %}
-      </header>
-      <!-- Content -->
-      <div id=\"layout-content\">
-          {% page %}
-      </div>
-
-      <footer id=\"layout-footer\">
-          {% partial 'site/footer' %}
-      </footer>
-
-    </div>
-
-    <!-- /#all -->
-
-    <!-- #### JAVASCRIPT FILES ### -->
-
-    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js\"></script>
-
-    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js\"></script>
-    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js\"></script>
-
-    <script src=\"{{ 'assets/js/jquery.cookie.js'|theme }}\"></script>
-    <script src=\"{{ 'assets/js/waypoints.min.js'|theme }}\"></script>
-    <script src=\"{{ 'assets/js/jquery.counterup.min.js'|theme }}\"></script>
-    <script src=\"{{ 'assets/js/jquery.parallax-1.1.3.js'|theme }}\"></script>
-    <script src=\"{{ 'assets/js/jquery.validate.min.js'|theme }}\"></script>
-
-    <script src=\"https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js\"></script>
-    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js\"></script>
-
-    <script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.9/js/lightgallery.min.js\"></script>
-
-<script src=\"https://sachinchoolur.github.io/lightGallery/lightgallery/js/lg-fullscreen.js\"></script>
-<script src=\"https://sachinchoolur.github.io/lightGallery/lightgallery/js/lg-thumbnail.js\"></script>
-<script src=\"https://sachinchoolur.github.io/lightGallery/lightgallery/js/lg-video.js\"></script>
-<script src=\"https://sachinchoolur.github.io/lightGallery/lightgallery/js/lg-autoplay.js\"></script>
-
-    <!-- <script src=\"https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js\"></script> -->
-    {% framework extras %}
-    {% scripts %}
-
-    <!-- owl carousel -->
-    <script src=\"{{ 'assets/js/owl.carousel.min.js'|theme }}\"></script>
-    {% if this.page.id == 'home' %}
-    <script>
-    \$(function() {
-        console.log(\"here\");
-        \$(\"#light-thumb\").lightGallery({
-          thumbnail:true,
-          selector: '.portfolio-thumb'
-        });
-
-        \$(document).on(\"scroll\", onScroll);
-
-        \$(document).on('click', '.page-scroll a', function(event) {
-            \$(document).off(\"scroll\");
-            \$(\".page-scroll\").removeClass(\"active\");
-            \$(this).parent( \".page-scroll\" ).addClass(\"active\");
-
-            var target = this.hash,
-                menu = target;
-            \$target = \$(target);
-
-            var \$anchor = \$(this);
-            var anchorstr = \$anchor.attr('href');
-            var res = anchorstr.replace(\"/\", \" \");
-
-            \$('html, body').stop().animate({
-                'scrollTop': \$(res).offset().top - 100
-            }, 1500, 'easeInOutExpo', function () {
-                window.location.hash = target;
-                \$(document).on(\"scroll\", onScroll);
-            });
-
-            event.preventDefault();
-        });
-    });
-
-    function onScroll(event){
-        \$(document).on(\"scroll\");
-        var scrollPos = \$(document).scrollTop() + 100;
-
-        \$('.page-scroll a').each(function () {
-            var currLink = \$(this);
-            var anchorstr = currLink.attr(\"href\");
-            var res = anchorstr.replace(\"/\", \" \");
-            var refElement = \$(res);
-
-            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
-                \$('.page-scroll').removeClass(\"active\");
-                currLink.parent( \".page-scroll\" ).addClass(\"active\");
-            }
-            else{
-                currLink.removeClass(\"active\");
-            }
-        });
-    }
-    </script>
-    {% endif %}
-
-    <script src=\"{{ 'assets/js/jquery.twbsPagination.min.js'|theme }}\"></script>
-    <script src=\"{{ 'assets/js/lity.min.js'|theme }}\"></script>
-    <script src=\"{{ 'assets/js/front.js?v=102'|theme }}\"></script>
-
-</body>
-
+        return new Twig_Source("<!DOCTYPE html>
+
+<html lang=\"en\">
+
+
+
+<head>
+
+    <meta charset=\"utf-8\">
+
+    <meta name=\"robots\" content=\"all,follow\">
+
+    <meta name=\"googlebot\" content=\"index,follow,snippet,archive\">
+
+    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">
+
+
+
+    <title>cvSmart - {{ this.page.title }}</title>
+
+
+
+    <meta name=\"keywords\" content=\"Organising,Promoting,Live,Music,Concerts,Showcases\">
+
+    <meta name=\"description\" content=\"We provide services relating to organising and promoting live music concerts and showcases.\">
+
+
+
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300,300italic,500,700,800' rel='stylesheet' type='text/css'>
+
+
+
+    <!-- Bootstrap and Font Awesome css -->
+
+    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css\">
+
+    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css\">
+
+
+
+    <!-- Css animations  -->
+
+    <link href=\"{{ 'assets/css/animate.css'|theme }}\" rel=\"stylesheet\">
+
+
+
+    <!-- Theme stylesheet, if possible do not edit this stylesheet -->
+
+    <link href=\"{{ 'assets/css/style.default.css'|theme }}\" rel=\"stylesheet\" id=\"theme-stylesheet\">
+
+
+
+    <!-- Custom stylesheet - for your changes -->
+
+    <link href=\"{{ 'assets/css/custom.css'|theme }}\" rel=\"stylesheet\">
+
+    <!-- <link href=\"{{ 'assets/css/bootstrap.min.css'|theme }}\" rel=\"stylesheet\"> -->
+
+    <link href=\"{{ 'assets/css/bootstrap-social.css'|theme }}\" rel=\"stylesheet\">
+
+    <link href=\"{{ 'assets/css/lity.min.css'|theme }}\" rel=\"stylesheet\">
+
+    <!-- Responsivity for older IE -->
+
+    <!--[if lt IE 9]>
+
+        <script src=\"https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js\"></script>
+
+        <script src=\"https://oss.maxcdn.com/respond/1.4.2/respond.min.js\"></script>
+
+    <![endif]-->
+
+
+
+    <!-- Favicon and apple touch icons-->
+
+    <!-- <link rel=\"shortcut icon\" href=\"/themes/cvsmart/assets/img/favicon.ico\" type=\"image/x-icon\" />-->
+
+    <link rel=\"apple-touch-icon\" href=\"/themes/cvsmart/assets/img/apple-touch-icon.png\" />
+
+    <link rel=\"apple-touch-icon\" sizes=\"57x57\" href=\"/themes/cvsmart/assets/img/apple-touch-icon-57x57.png\" />
+
+    <link rel=\"apple-touch-icon\" sizes=\"72x72\" href=\"/themes/cvsmart/assets/img/apple-touch-icon-72x72.png\" />
+
+    <link rel=\"apple-touch-icon\" sizes=\"76x76\" href=\"/themes/cvsmart/assets/img/apple-touch-icon-76x76.png\" />
+
+    <link rel=\"apple-touch-icon\" sizes=\"114x114\" href=\"/themes/cvsmart/assets/img/apple-touch-icon-114x114.png\" />
+
+    <link rel=\"apple-touch-icon\" sizes=\"120x120\" href=\"/themes/cvsmart/assets/img/apple-touch-icon-120x120.png\" />
+
+    <link rel=\"apple-touch-icon\" sizes=\"144x144\" href=\"/themes/cvsmart/assets/img/apple-touch-icon-144x144.png\" />
+
+    <link rel=\"apple-touch-icon\" sizes=\"152x152\" href=\"/themes/cvsmart/assets/img/apple-touch-icon-152x152.png\" />
+
+    <!-- owl carousel css -->
+
+
+
+    <link href=\"{{ 'assets/css/owl.carousel.css'|theme }}\" rel=\"stylesheet\">
+
+    <link href=\"{{ 'assets/css/owl.theme.css'|theme }}\" rel=\"stylesheet\">
+
+    <link href=\"https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/css/swiper.min.css\" rel=\"stylesheet\">
+
+    <link href=\"https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.9/css/lightgallery.min.css\" rel=\"stylesheet\" type=\"text/css\">
+
+
+
+    <link href=\"{{ 'assets/css/cvsmart.css?v=2'|theme }}\" rel=\"stylesheet\">
+    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js\"></script>
+
+
+
+
+
+
+
+
+    <!-- <link href=\"{{ 'assets/css/scrolling-nav.css'|theme }}\" rel=\"stylesheet\"> -->
+
+</head>
+
+
+
+<body>
+
+
+
+    <div id=\"all\">
+
+
+
+      <header id=\"layout-header\">
+
+          {% partial 'site/header' %}
+
+      </header>
+
+      <!-- Content -->
+
+      <div id=\"layout-content\">
+
+          {% page %}
+
+      </div>
+
+
+
+      <footer id=\"layout-footer\">
+
+          {% partial 'site/footer' %}
+
+      </footer>
+
+
+
+    </div>
+
+
+
+    <!-- /#all -->
+
+
+
+    <!-- #### JAVASCRIPT FILES ### -->
+
+
+
+
+
+
+
+    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js\"></script>
+
+    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js\"></script>
+
+
+
+    <script src=\"{{ 'assets/js/jquery.cookie.js'|theme }}\"></script>
+
+    <script src=\"{{ 'assets/js/waypoints.min.js'|theme }}\"></script>
+
+    <script src=\"{{ 'assets/js/jquery.counterup.min.js'|theme }}\"></script>
+
+    <script src=\"{{ 'assets/js/jquery.parallax-1.1.3.js'|theme }}\"></script>
+
+    <script src=\"{{ 'assets/js/jquery.validate.min.js'|theme }}\"></script>
+
+
+
+    <script src=\"https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js\"></script>
+
+    <script src=\"https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.0.7/js/swiper.min.js\"></script>
+
+
+
+    <script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/lightgallery/1.3.9/js/lightgallery.min.js\"></script>
+
+
+
+<script src=\"https://sachinchoolur.github.io/lightGallery/lightgallery/js/lg-fullscreen.js\"></script>
+
+<script src=\"https://sachinchoolur.github.io/lightGallery/lightgallery/js/lg-thumbnail.js\"></script>
+
+<script src=\"https://sachinchoolur.github.io/lightGallery/lightgallery/js/lg-video.js\"></script>
+
+<script src=\"https://sachinchoolur.github.io/lightGallery/lightgallery/js/lg-autoplay.js\"></script>
+
+
+
+    <!-- <script src=\"https://cdnjs.cloudflare.com/ajax/libs/Swiper/3.4.2/js/swiper.min.js\"></script> -->
+
+    {% framework extras %}
+
+    {% scripts %}
+
+
+
+    <!-- owl carousel -->
+
+    <script src=\"{{ 'assets/js/owl.carousel.min.js'|theme }}\"></script>
+
+    {% if this.page.id == 'home' %}
+
+    <script>
+
+    \$(function() {
+
+        console.log(\"here\");
+
+        \$(\"#light-thumb\").lightGallery({
+
+          thumbnail:true,
+
+          selector: '.portfolio-thumb'
+
+        });
+
+
+
+        \$(document).on(\"scroll\", onScroll);
+
+
+
+        \$(document).on('click', '.page-scroll a', function(event) {
+
+            \$(document).off(\"scroll\");
+
+            \$(\".page-scroll\").removeClass(\"active\");
+
+            \$(this).parent( \".page-scroll\" ).addClass(\"active\");
+
+
+
+            var target = this.hash,
+
+                menu = target;
+
+            \$target = \$(target);
+
+
+
+            var \$anchor = \$(this);
+
+            var anchorstr = \$anchor.attr('href');
+
+            var res = anchorstr.replace(\"/\", \" \");
+
+
+
+            \$('html, body').stop().animate({
+
+                'scrollTop': \$(res).offset().top - 100
+
+            }, 1500, 'easeInOutExpo', function () {
+
+                window.location.hash = target;
+
+                \$(document).on(\"scroll\", onScroll);
+
+            });
+
+
+
+            event.preventDefault();
+
+        });
+
+    });
+
+
+
+    function onScroll(event){
+
+        \$(document).on(\"scroll\");
+
+        var scrollPos = \$(document).scrollTop() + 100;
+
+
+
+        \$('.page-scroll a').each(function () {
+
+            var currLink = \$(this);
+
+            var anchorstr = currLink.attr(\"href\");
+
+            var res = anchorstr.replace(\"/\", \" \");
+
+            var refElement = \$(res);
+
+
+
+            if (refElement.position().top <= scrollPos && refElement.position().top + refElement.height() > scrollPos) {
+
+                \$('.page-scroll').removeClass(\"active\");
+
+                currLink.parent( \".page-scroll\" ).addClass(\"active\");
+
+            }
+
+            else{
+
+                currLink.removeClass(\"active\");
+
+            }
+
+        });
+
+    }
+
+    </script>
+
+    {% endif %}
+
+
+
+    <script src=\"{{ 'assets/js/jquery.twbsPagination.min.js'|theme }}\"></script>
+
+    <script src=\"{{ 'assets/js/lity.min.js'|theme }}\"></script>
+
+    <script src=\"{{ 'assets/js/front.js?v=102'|theme }}\"></script>
+
+
+
+</body>
+
+
+
 </html>", "D:\\xampp\\htdocs\\cars\\cvsmart/themes/cvsmart/layouts/Default.htm", "");
     }
 }

@@ -1,4 +1,4 @@
-1526037070a:1:{s:11:"CarList.htm";a:10:{s:8:"fileName";s:11:"CarList.htm";s:7:"content";s:982:"title = "Car List"
+1526060075a:1:{s:11:"CarList.htm";a:10:{s:8:"fileName";s:11:"CarList.htm";s:7:"content";s:3099:"title = "Car List"
 url = "/car-list"
 layout = "Default"
 is_hidden = 0
@@ -30,7 +30,60 @@ is_hidden = 0
   var currentpage = {{ currentpage}};
   var totalpages =  {{ sizeofcarlist }};
 	
-</script>";s:5:"mtime";i:1525715426;s:6:"markup";s:883:"{% partial 'CarSelectPage' %}
+</script>
+<script type="text/javascript">
+  var carcategory = JSON.parse('{{ car_categorylist|raw }}');
+  var car_accesor = JSON.parse('{{ car_accesortlist|raw }}');
+  $(document).ready(function(){
+    var dbrand = new Array();
+    $.each(carcategory,function(i,a){
+      if($.inArray(a.category, dbrand) < 0 ){
+        dbrand.push(a.category)
+        $(".car_category_select").append("<option value='"+a.category+"'>"+a.category+"</option>");
+      }
+    })
+    $(".car_category_select").select2();
+
+    $(".car_category_select").change(function(){
+      var car_brand_select_val = $(this).val();
+      var dmodel = new Array();
+      $(".car_brand_select").html("<option value=''>All Brands</option>")
+      $.each(carcategory,function(i,a){
+        if(a.category == car_brand_select_val){
+          if($.inArray(a.brand, dmodel) < 0 ){
+            dmodel.push(a.brand)
+            $(".car_brand_select").append("<option value='"+a.brand+"'>"+a.brand+"</option>");
+          }
+        }
+      })
+      $(".car_brand_select").removeAttr("disabled");
+      $(".car_brand_select").select2("destroy").select2();
+    })
+    var abrand = new Array();
+    $.each(car_accesor,function(i,a){
+      if($.inArray(a.brand, abrand) < 0 ){
+        abrand.push(a.brand)
+        $(".car_accessories_brand").append("<option value='"+a.brand+"'>"+a.brand+"</option>");
+      }
+    })
+    $(".car_accessories_brand").select2();
+    $(".car_accessories_brand").change(function(){
+      var car_brand_select_val = $(this).val();
+      var dmodel = new Array();
+      $(".car_accessories_category").html("<option>All Categories</option>")
+      $.each(carcategory,function(i,a){
+        if(a.brand == car_brand_select_val){
+          if($.inArray(a.model, dmodel) < 0 ){
+            dmodel.push(a.model)
+            $(".car_accessories_category").append("<option value='"+a.category+"'>"+a.category+"</option>");
+          }
+        }
+      })
+      $(".car_accessories_category").removeAttr("disabled");
+      $(".car_accessories_category").select2("destroy").select2();
+    })
+  })
+</script>";s:5:"mtime";i:1526059452;s:6:"markup";s:3000:"{% partial 'CarSelectPage' %}
 <div class="container carlistpage">
 
     <div class="row">
@@ -55,4 +108,57 @@ is_hidden = 0
   var currentpage = {{ currentpage}};
   var totalpages =  {{ sizeofcarlist }};
 	
+</script>
+<script type="text/javascript">
+  var carcategory = JSON.parse('{{ car_categorylist|raw }}');
+  var car_accesor = JSON.parse('{{ car_accesortlist|raw }}');
+  $(document).ready(function(){
+    var dbrand = new Array();
+    $.each(carcategory,function(i,a){
+      if($.inArray(a.category, dbrand) < 0 ){
+        dbrand.push(a.category)
+        $(".car_category_select").append("<option value='"+a.category+"'>"+a.category+"</option>");
+      }
+    })
+    $(".car_category_select").select2();
+
+    $(".car_category_select").change(function(){
+      var car_brand_select_val = $(this).val();
+      var dmodel = new Array();
+      $(".car_brand_select").html("<option value=''>All Brands</option>")
+      $.each(carcategory,function(i,a){
+        if(a.category == car_brand_select_val){
+          if($.inArray(a.brand, dmodel) < 0 ){
+            dmodel.push(a.brand)
+            $(".car_brand_select").append("<option value='"+a.brand+"'>"+a.brand+"</option>");
+          }
+        }
+      })
+      $(".car_brand_select").removeAttr("disabled");
+      $(".car_brand_select").select2("destroy").select2();
+    })
+    var abrand = new Array();
+    $.each(car_accesor,function(i,a){
+      if($.inArray(a.brand, abrand) < 0 ){
+        abrand.push(a.brand)
+        $(".car_accessories_brand").append("<option value='"+a.brand+"'>"+a.brand+"</option>");
+      }
+    })
+    $(".car_accessories_brand").select2();
+    $(".car_accessories_brand").change(function(){
+      var car_brand_select_val = $(this).val();
+      var dmodel = new Array();
+      $(".car_accessories_category").html("<option>All Categories</option>")
+      $.each(carcategory,function(i,a){
+        if(a.brand == car_brand_select_val){
+          if($.inArray(a.model, dmodel) < 0 ){
+            dmodel.push(a.model)
+            $(".car_accessories_category").append("<option value='"+a.category+"'>"+a.category+"</option>");
+          }
+        }
+      })
+      $(".car_accessories_category").removeAttr("disabled");
+      $(".car_accessories_category").select2("destroy").select2();
+    })
+  })
 </script>";s:4:"code";N;s:5:"title";s:8:"Car List";s:3:"url";s:9:"/car-list";s:6:"layout";s:7:"Default";s:9:"is_hidden";s:1:"0";s:15:"CarsforsellList";a:0:{}}}

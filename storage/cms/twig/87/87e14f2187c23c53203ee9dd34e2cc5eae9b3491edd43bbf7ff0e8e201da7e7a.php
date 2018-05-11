@@ -18,21 +18,22 @@ class __TwigTemplate_cc40b168bd0785c5d79ae97b3a6b3507d5fe57de03ea751595d2774ade2
         // line 1
         echo "<div class=\"carselectpage\">
 <div class=\"container \">
+  <form method=\"POST\">
    <div class=\"row\">
       <div class=\"col-md-11 col-sm-12\">
           <div class=\"row\">
             <div class=\"col-md-4 col-sm-12\">
-                <select class=\"form-control custom-select\">
-                  <option>Categories</option>
+                <select name=\"car_category_select\" class=\"form-control custom-select car_category_select\">
+                  <option value=\"\">All Categories</option>
                   ";
-        // line 9
+        // line 10
         if (($context["car_categorieslist"] ?? null)) {
-            // line 10
+            // line 11
             echo "                      ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable(($context["car_categorieslist"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["slider"]) {
-                // line 11
+                // line 12
                 echo "                      <option value=\"";
                 echo twig_escape_filter($this->env, $context["slider"], "html", null, true);
                 echo "\">";
@@ -43,24 +44,24 @@ class __TwigTemplate_cc40b168bd0785c5d79ae97b3a6b3507d5fe57de03ea751595d2774ade2
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['slider'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 13
+            // line 14
             echo "                    ";
         }
-        // line 14
+        // line 15
         echo "                </select>
             </div>
             <div class=\"col-md-4 col-sm-12\">
-              <select class=\"form-control custom-select\">
-                  <option>Brand</option>
+              <select name=\"car_brand_select\" class=\"form-control custom-select car_brand_select\" disabled>
+                  <option value=\"\">All Brand</option>
                   ";
-        // line 19
+        // line 20
         if (($context["car_brandlist"] ?? null)) {
-            // line 20
+            // line 21
             echo "                      ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable(($context["car_brandlist"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["slider"]) {
-                // line 21
+                // line 22
                 echo "                      <option value=\"";
                 echo twig_escape_filter($this->env, $context["slider"], "html", null, true);
                 echo "\">";
@@ -71,24 +72,24 @@ class __TwigTemplate_cc40b168bd0785c5d79ae97b3a6b3507d5fe57de03ea751595d2774ade2
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['slider'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 23
+            // line 24
             echo "                    ";
         }
-        // line 24
+        // line 25
         echo "                </select>
             </div>
             <div class=\"col-md-4 col-sm-12\">
-              <select class=\"form-control custom-select\">
-                  <option>All state</option>
+              <select name=\"car_state_select\" class=\"form-control custom-select\">
+                  <option value=\"\">All state</option>
                   ";
-        // line 29
+        // line 30
         if (($context["car_statelist"] ?? null)) {
-            // line 30
+            // line 31
             echo "                      ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable(($context["car_statelist"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["slider"]) {
-                // line 31
+                // line 32
                 echo "                      <option value=\"";
                 echo twig_escape_filter($this->env, $context["slider"], "html", null, true);
                 echo "\">";
@@ -99,10 +100,10 @@ class __TwigTemplate_cc40b168bd0785c5d79ae97b3a6b3507d5fe57de03ea751595d2774ade2
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['slider'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 33
+            // line 34
             echo "                    ";
         }
-        // line 34
+        // line 35
         echo "                </select>
             </div>
           </div>
@@ -111,6 +112,7 @@ class __TwigTemplate_cc40b168bd0785c5d79ae97b3a6b3507d5fe57de03ea751595d2774ade2
           <button class=\"submitbutton form-control\"><i class=\"fa fa-search\"></i></button>
       </div>
     </div>
+  </form>
 </div>
 </div>";
     }
@@ -127,19 +129,20 @@ class __TwigTemplate_cc40b168bd0785c5d79ae97b3a6b3507d5fe57de03ea751595d2774ade2
 
     public function getDebugInfo()
     {
-        return array (  106 => 34,  103 => 33,  92 => 31,  87 => 30,  85 => 29,  78 => 24,  75 => 23,  64 => 21,  59 => 20,  57 => 19,  50 => 14,  47 => 13,  36 => 11,  31 => 10,  29 => 9,  19 => 1,);
+        return array (  107 => 35,  104 => 34,  93 => 32,  88 => 31,  86 => 30,  79 => 25,  76 => 24,  65 => 22,  60 => 21,  58 => 20,  51 => 15,  48 => 14,  37 => 12,  32 => 11,  30 => 10,  19 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Twig_Source("<div class=\"carselectpage\">
 <div class=\"container \">
+  <form method=\"POST\">
    <div class=\"row\">
       <div class=\"col-md-11 col-sm-12\">
           <div class=\"row\">
             <div class=\"col-md-4 col-sm-12\">
-                <select class=\"form-control custom-select\">
-                  <option>Categories</option>
+                <select name=\"car_category_select\" class=\"form-control custom-select car_category_select\">
+                  <option value=\"\">All Categories</option>
                   {% if car_categorieslist %}
                       {% for slider in car_categorieslist %}
                       <option value=\"{{slider }}\">{{ slider }}</option>
@@ -148,8 +151,8 @@ class __TwigTemplate_cc40b168bd0785c5d79ae97b3a6b3507d5fe57de03ea751595d2774ade2
                 </select>
             </div>
             <div class=\"col-md-4 col-sm-12\">
-              <select class=\"form-control custom-select\">
-                  <option>Brand</option>
+              <select name=\"car_brand_select\" class=\"form-control custom-select car_brand_select\" disabled>
+                  <option value=\"\">All Brand</option>
                   {% if car_brandlist %}
                       {% for slider in car_brandlist %}
                       <option value=\"{{slider }}\">{{ slider }}</option>
@@ -158,8 +161,8 @@ class __TwigTemplate_cc40b168bd0785c5d79ae97b3a6b3507d5fe57de03ea751595d2774ade2
                 </select>
             </div>
             <div class=\"col-md-4 col-sm-12\">
-              <select class=\"form-control custom-select\">
-                  <option>All state</option>
+              <select name=\"car_state_select\" class=\"form-control custom-select\">
+                  <option value=\"\">All state</option>
                   {% if car_statelist %}
                       {% for slider in car_statelist %}
                       <option value=\"{{slider }}\">{{ slider }}</option>
@@ -173,6 +176,7 @@ class __TwigTemplate_cc40b168bd0785c5d79ae97b3a6b3507d5fe57de03ea751595d2774ade2
           <button class=\"submitbutton form-control\"><i class=\"fa fa-search\"></i></button>
       </div>
     </div>
+  </form>
 </div>
 </div>", "D:\\xampp\\htdocs\\cars\\cvsmart/themes/cvsmart/partials/CarSelectPage.htm", "");
     }

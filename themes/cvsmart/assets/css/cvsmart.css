@@ -395,7 +395,9 @@ section, div.section{margin-bottom: 0px;}
 .submitbutton i.fa{font-size: 30px;line-height: 1;color:#a0a0a0;height:  auto;line-height: 65px;}
 .search_container select{font-family: 'AileronBold';width: 100%;display: block;background-color: rgba(0,0,0,0.7);background-image:  url(../img/form_select_bg.png);background-repeat:  no-repeat;background-position: center right 20px;padding: 23px 20px;height: auto;font-size: 16px;line-height: 1;color:#fff;box-shadow: none!important;border-color: rgba(128, 128, 128, 0.7)!important;text-transform: uppercase;-webkit-appearance:  none;-moz-apperance: none;}
 
-.carselectpage select{font-family: 'AileronBold';width: 100%;display: block;background-color: #252525;background-image:  url(../img/form_select_bg.png);background-repeat:  no-repeat;background-position: center right 20px;padding: 23px 20px;height: auto;font-size: 16px;line-height: 1;color:#fff;box-shadow: none!important;border-color: rgba(128, 128, 128, 0.7)!important;text-transform: uppercase;-webkit-appearance:  none;-moz-apperance: none;}
+.select2-container--default .select2-selection,.carselectpage select{font-family: 'AileronBold';width: 100%;display: block;background-color: #252525;/* background-image:  url(../img/form_select_bg.png); */background-repeat:  no-repeat;background-position: center right 20px;padding: 23px 20px;height: auto;font-size: 16px;line-height: 1;color:#fff;box-shadow: none!important;border-color: rgba(128, 128, 128, 0.7)!important;text-transform: uppercase;-webkit-appearance:  none;-moz-apperance: none;}
+.search_container .select2-container--default .select2-selection{background:#000}
+.search_container .select2-container--default{margin-bottom:20px;}
 .carlistpage h1{font-family: 'FuturaCondMedium';text-transform: uppercase;font-size: 28px;line-height: 1;margin-bottom: 30px;color:#fff;margin-top:  0px;}
 #pagination .page-item.first .page-link,
 #pagination .page-item.prev .page-link,
@@ -536,4 +538,4 @@ section, div.section{margin-bottom: 0px;}
   .navbar-default .navbar-toggle, .navbar-default .navbar-toggle{background: transparent;color:#fff;}
 #layout-header .navbar-brand.home{top:0px;}
 .navbar ul.nav > li > a.normalbutton.active, .navbar ul.nav > li > a.normalbutton:hover{border-bottom: none;}
-}
+} 

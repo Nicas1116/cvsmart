@@ -12,17 +12,6 @@ tabs:
             required: 1
             type: text
             tab: 'Basic Info'
-        car_brand:
-            label: 'Car Brand'
-            span: auto
-            required: 1
-            type: text
-            tab: 'Basic Info'
-        car_model:
-            label: 'Car Model'
-            span: auto
-            type: text
-            tab: 'Basic Info'
         car_states:
             label: States
             span: auto
@@ -47,10 +36,41 @@ tabs:
             type: datepicker
             tab: 'Basic Info'
         car_category:
-            label: 'Car Category'
-            span: auto
-            type: dropdown
+            label: 'Car Model'
+            prompt: 'Add new item'
+            span: left
+            type: repeater
             tab: 'Basic Info'
+            form:
+                fields:
+                    category:
+                        label: Category
+                        span: full
+                        type: text
+                    brand:
+                        label: Brand
+                        span: full
+                        type: text
+                    model:
+                        label: Model
+                        span: full
+                        type: text
+        car_accessories:
+            label: 'Car Accessories'
+            prompt: 'Add new item'
+            span: right
+            type: repeater
+            tab: 'Basic Info'
+            form:
+                fields:
+                    brand:
+                        label: Brand
+                        span: full
+                        type: text
+                    category:
+                        label: Category
+                        span: full
+                        type: text
         carimages:
             label: 'Car Banner'
             prompt: 'Add new Images'

@@ -52,7 +52,7 @@ is_hidden = 0
        			<h2>Find used car for sale</h2>
        			<div class="row">
 		            <div class="col-md-6 col-sm-12">
-		                <select name="brand" class="form-control custom-select">
+		                <select name="brand" class="form-control custom-select car_brand_select">
 		                  <option>All Brands</option>
 		                  {% if car_brandlist %}
 			                {% for slider in car_brandlist %}
@@ -62,7 +62,7 @@ is_hidden = 0
 		                </select>
 		            </div>
 		            <div class="col-md-6 col-sm-12">
-		              <select name="models" class="form-control custom-select">
+		              <select name="models" class="form-control custom-select car_model_select" disabled>
 		                  <option>All Models</option>
 		                  {% if car_modellist %}
 			                {% for slider in car_modellist %}
@@ -100,8 +100,8 @@ is_hidden = 0
        			<h2>Find modify car accessories</h2>
        			<div class="row">
 		            <div class="col-md-6 col-sm-12">
-		                <select class="form-control custom-select">
-		                  <option>Brand</option>
+		                <select class="form-control custom-select car_accessories_brand">
+		                  <option>All Brand</option>
 		                  {% if car_brandlist %}
 			                {% for slider in car_brandlist %}
 			                <option value="{{slider }}">{{ slider }}</option>
@@ -110,8 +110,8 @@ is_hidden = 0
 		                </select>
 		            </div>
 		            <div class="col-md-6 col-sm-12">
-		              <select class="form-control custom-select">
-		                  <option>Categories</option>
+		              <select class="form-control custom-select car_accessories_category" disabled>
+		                  <option>All Categories</option>
 		                  {% if car_categorieslist %}
 			                {% for slider in car_categorieslist %}
 			                <option value="{{slider }}">{{ slider }}</option>
@@ -193,3 +193,55 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 </div>
 </div>
 </section>
+<script type="text/javascript">
+	var carcategory = JSON.parse('{{ car_categorylist|raw }}');
+	var car_accesor = JSON.parse('{{ car_accesortlist|raw }}');
+	$(document).ready(function(){
+		var dbrand = new Array();
+		$.each(carcategory,function(i,a){
+			if($.inArray(a.brand, dbrand) < 0 ){
+				dbrand.push(a.brand)
+				$(".car_brand_select").append("<option value='"+a.brand+"'>"+a.brand+"</option>");
+			}
+		})
+		$(".car_brand_select").select2();
+		$(".car_brand_select").change(function(){
+			var car_brand_select_val = $(this).val();
+			var dmodel = new Array();
+			$(".car_model_select").html("<option value=''>All Models</option>")
+			$.each(carcategory,function(i,a){
+				if(a.brand == car_brand_select_val){
+					if($.inArray(a.model, dmodel) < 0 ){
+						dmodel.push(a.model)
+						$(".car_model_select").append("<option value='"+a.model+"'>"+a.model+"</option>");
+					}
+				}
+			})
+			$(".car_model_select").removeAttr("disabled");
+			$(".car_model_select").select2("destroy").select2();
+		})
+		var abrand = new Array();
+		$.each(car_accesor,function(i,a){
+			if($.inArray(a.brand, abrand) < 0 ){
+				abrand.push(a.brand)
+				$(".car_accessories_brand").append("<option value='"+a.brand+"'>"+a.brand+"</option>");
+			}
+		})
+		$(".car_accessories_brand").select2();
+		$(".car_accessories_brand").change(function(){
+			var car_brand_select_val = $(this).val();
+			var dmodel = new Array();
+			$(".car_accessories_category").html("<option value=''>All Categories</option>")
+			$.each(carcategory,function(i,a){
+				if(a.brand == car_brand_select_val){
+					if($.inArray(a.model, dmodel) < 0 ){
+						dmodel.push(a.model)
+						$(".car_accessories_category").append("<option value='"+a.category+"'>"+a.category+"</option>");
+					}
+				}
+			})
+			$(".car_accessories_category").removeAttr("disabled");
+			$(".car_accessories_category").select2("destroy").select2();
+		})
+	})
+</script>

@@ -14,24 +14,43 @@ $(document).ready(function(){
       });
   }
 
-   if($('.swiper-container').length>0){
-var mySwiper = new Swiper('.swiper-container', {
+   if($('.home_sidebanner.swiper-container').length>0){
+var mySwiper = new Swiper('.home_sidebanner.swiper-container', {
   autoplay: true,
-   speed: 400,
+   speed: 500,
   loop: true,
   pagination: {
-    el: '.swiper-pagination',
+    el: '.home_sidebanner .swiper-pagination',
     type: 'bullets',
     clickable: true
   },
-  nextButton: '.s-button-next',
-  prevButton: '.s-button-prev',
+  nextButton: '.home_sidebanner .s-button-next',
+  prevButton: '.home_sidebanner .s-button-prev',
 });
 
 
 }
 
-  exampleSlider = $('#slider').flexslider({
+   if($('#home .swiper-container').length>0){
+var mySwiper = new Swiper('#home .swiper-container', {
+  autoplay: true,
+   speed: 400,
+  loop: true,
+  pagination: {
+    el: '#home .swiper-pagination',
+    type: 'bullets',
+    clickable: true
+  },
+  nextButton: '#home .s-button-next',
+  prevButton: '#home .s-button-prev',
+});
+
+
+}
+
+ 
+
+ exampleSlider = $('#slider').flexslider({
     animation: "slide",
     controlNav: false,
     animationLoop: false,
@@ -50,7 +69,7 @@ $(".youtubelink").mouseenter(function(){
     
     console.log(($(".lity-youtube").length<=0));
     if($(".lity-youtube").length<=0){
-      $(this).trigger("click");
+      //$(this).trigger("click");
       console.log("TEST");
     }
     
@@ -58,7 +77,7 @@ $(".youtubelink").mouseenter(function(){
 /*
          * Bind custom select
          */
-        $('select.custom-select').each(function(){
+        /*$('select.custom-select').each(function(){
             var $element = $(this),
                 extraOptions = {
                     dropdownCssClass: '',
@@ -89,9 +108,6 @@ $(".youtubelink").mouseenter(function(){
                 extraOptions.dropdownCssClass += ' select-hide-selected'
             }
 
-            /*
-             * October AJAX
-             */
             var source = $element.data('handler');
             if (source) {
                 extraOptions.ajax = {
@@ -115,9 +131,6 @@ $(".youtubelink").mouseenter(function(){
                 extraOptions.tags = true
                 extraOptions.tokenSeparators = separators.split('|')
 
-                /*
-                 * When the dropdown is hidden, force the first option to be selected always.
-                 */
                 if ($element.hasClass('select-no-dropdown')) {
                     extraOptions.selectOnClose = true
                     extraOptions.closeOnSelect = false
@@ -135,5 +148,5 @@ $(".youtubelink").mouseenter(function(){
             }
 
             $element.select2($.extend({}, selectOptions, extraOptions))
-        })
+        })*/
   })

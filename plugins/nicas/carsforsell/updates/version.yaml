@@ -48,3 +48,12 @@
 1.0.17:
     - 'Created table nicas_carsforsell_carcategory'
     - builder_table_create_nicas_carsforsell_carcategory.php
+1.0.18:
+    - 'Updated table nicas_carsforsell_car'
+    - builder_table_update_nicas_carsforsell_car_4.php
+1.0.19:
+    - 'Updated table nicas_carsforsell_car'
+    - builder_table_update_nicas_carsforsell_car_5.php
+1.0.20:
+    - 'Drop table nicas_carsforsell_carcategory'
+    - builder_table_delete_nicas_carsforsell_carcategory.php

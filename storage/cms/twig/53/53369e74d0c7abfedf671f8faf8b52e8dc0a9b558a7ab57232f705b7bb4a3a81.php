@@ -78,7 +78,7 @@ class __TwigTemplate_94eb9d144d0610f59eb42f2a39f911ffe5b00d76243550f2a902d3900a3
        \t\t\t<h2>Find used car for sale</h2>
        \t\t\t<div class=\"row\">
 \t\t            <div class=\"col-md-6 col-sm-12\">
-\t\t                <select name=\"brand\" class=\"form-control custom-select\">
+\t\t                <select name=\"brand\" class=\"form-control custom-select car_brand_select\">
 \t\t                  <option>All Brands</option>
 \t\t                  ";
         // line 46
@@ -106,7 +106,7 @@ class __TwigTemplate_94eb9d144d0610f59eb42f2a39f911ffe5b00d76243550f2a902d3900a3
         echo "\t\t                </select>
 \t\t            </div>
 \t\t            <div class=\"col-md-6 col-sm-12\">
-\t\t              <select name=\"models\" class=\"form-control custom-select\">
+\t\t              <select name=\"models\" class=\"form-control custom-select car_model_select\" disabled>
 \t\t                  <option>All Models</option>
 \t\t                  ";
         // line 56
@@ -198,8 +198,8 @@ class __TwigTemplate_94eb9d144d0610f59eb42f2a39f911ffe5b00d76243550f2a902d3900a3
        \t\t\t<h2>Find modify car accessories</h2>
        \t\t\t<div class=\"row\">
 \t\t            <div class=\"col-md-6 col-sm-12\">
-\t\t                <select class=\"form-control custom-select\">
-\t\t                  <option>Brand</option>
+\t\t                <select class=\"form-control custom-select car_accessories_brand\">
+\t\t                  <option>All Brand</option>
 \t\t                  ";
         // line 94
         if (($context["car_brandlist"] ?? null)) {
@@ -226,8 +226,8 @@ class __TwigTemplate_94eb9d144d0610f59eb42f2a39f911ffe5b00d76243550f2a902d3900a3
         echo "\t\t                </select>
 \t\t            </div>
 \t\t            <div class=\"col-md-6 col-sm-12\">
-\t\t              <select class=\"form-control custom-select\">
-\t\t                  <option>Categories</option>
+\t\t              <select class=\"form-control custom-select car_accessories_category\" disabled>
+\t\t                  <option>All Categories</option>
 \t\t                  ";
         // line 104
         if (($context["car_categorieslist"] ?? null)) {
@@ -364,7 +364,66 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 </div>
 </div>
 </div>
-</section>";
+</section>
+<script type=\"text/javascript\">
+\tvar carcategory = JSON.parse('";
+        // line 186
+        echo ($context["car_categorylist"] ?? null);
+        echo "');
+\tvar car_accesor = JSON.parse('";
+        // line 187
+        echo ($context["car_accesortlist"] ?? null);
+        echo "');
+\tconsole.log(carcategory)
+\t\$(document).ready(function(){
+\t\tvar dbrand = new Array();
+\t\t\$.each(carcategory,function(i,a){
+\t\t\tif(\$.inArray(a.brand, dbrand) < 0 ){
+\t\t\t\tdbrand.push(a.brand)
+\t\t\t\t\$(\".car_brand_select\").append(\"<option value='\"+a.brand+\"'>\"+a.brand+\"</option>\");
+\t\t\t}
+\t\t})
+\t\t\$(\".car_brand_select\").select2();
+\t\t\$(\".car_brand_select\").change(function(){
+\t\t\tvar car_brand_select_val = \$(this).val();
+\t\t\tvar dmodel = new Array();
+\t\t\t\$(\".car_model_select\").html(\"<option>All Models</option>\")
+\t\t\t\$.each(carcategory,function(i,a){
+\t\t\t\tif(a.brand == car_brand_select_val){
+\t\t\t\t\tif(\$.inArray(a.model, dmodel) < 0 ){
+\t\t\t\t\t\tdmodel.push(a.model)
+\t\t\t\t\t\t\$(\".car_model_select\").append(\"<option value='\"+a.model+\"'>\"+a.model+\"</option>\");
+\t\t\t\t\t}
+\t\t\t\t}
+\t\t\t})
+\t\t\t\$(\".car_model_select\").removeAttr(\"disabled\");
+\t\t\t\$(\".car_model_select\").select2(\"destroy\").select2();
+\t\t})
+\t\tvar abrand = new Array();
+\t\t\$.each(car_accesor,function(i,a){
+\t\t\tif(\$.inArray(a.brand, abrand) < 0 ){
+\t\t\t\tabrand.push(a.brand)
+\t\t\t\t\$(\".car_accessories_brand\").append(\"<option value='\"+a.brand+\"'>\"+a.brand+\"</option>\");
+\t\t\t}
+\t\t})
+\t\t\$(\".car_accessories_brand\").select2();
+\t\t\$(\".car_accessories_brand\").change(function(){
+\t\t\tvar car_brand_select_val = \$(this).val();
+\t\t\tvar dmodel = new Array();
+\t\t\t\$(\".car_accessories_category\").html(\"<option>All Categories</option>\")
+\t\t\t\$.each(carcategory,function(i,a){
+\t\t\t\tif(a.brand == car_brand_select_val){
+\t\t\t\t\tif(\$.inArray(a.model, dmodel) < 0 ){
+\t\t\t\t\t\tdmodel.push(a.model)
+\t\t\t\t\t\t\$(\".car_accessories_category\").append(\"<option value='\"+a.category+\"'>\"+a.category+\"</option>\");
+\t\t\t\t\t}
+\t\t\t\t}
+\t\t\t})
+\t\t\t\$(\".car_accessories_category\").removeAttr(\"disabled\");
+\t\t\t\$(\".car_accessories_category\").select2(\"destroy\").select2();
+\t\t})
+\t})
+</script>";
     }
 
     public function getTemplateName()
@@ -379,7 +438,7 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 
     public function getDebugInfo()
     {
-        return array (  336 => 153,  333 => 152,  322 => 149,  319 => 148,  314 => 147,  312 => 146,  295 => 131,  292 => 130,  281 => 127,  278 => 126,  273 => 125,  271 => 124,  254 => 109,  251 => 108,  240 => 106,  235 => 105,  233 => 104,  226 => 99,  223 => 98,  212 => 96,  207 => 95,  205 => 94,  190 => 81,  187 => 80,  176 => 78,  171 => 77,  169 => 76,  162 => 71,  159 => 70,  148 => 68,  143 => 67,  141 => 66,  134 => 61,  131 => 60,  120 => 58,  115 => 57,  113 => 56,  106 => 51,  103 => 50,  92 => 48,  87 => 47,  85 => 46,  54 => 17,  51 => 16,  40 => 13,  37 => 12,  32 => 11,  30 => 10,  19 => 1,);
+        return array (  375 => 187,  371 => 186,  336 => 153,  333 => 152,  322 => 149,  319 => 148,  314 => 147,  312 => 146,  295 => 131,  292 => 130,  281 => 127,  278 => 126,  273 => 125,  271 => 124,  254 => 109,  251 => 108,  240 => 106,  235 => 105,  233 => 104,  226 => 99,  223 => 98,  212 => 96,  207 => 95,  205 => 94,  190 => 81,  187 => 80,  176 => 78,  171 => 77,  169 => 76,  162 => 71,  159 => 70,  148 => 68,  143 => 67,  141 => 66,  134 => 61,  131 => 60,  120 => 58,  115 => 57,  113 => 56,  106 => 51,  103 => 50,  92 => 48,  87 => 47,  85 => 46,  54 => 17,  51 => 16,  40 => 13,  37 => 12,  32 => 11,  30 => 10,  19 => 1,);
     }
 
     public function getSourceContext()
@@ -427,7 +486,7 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
        \t\t\t<h2>Find used car for sale</h2>
        \t\t\t<div class=\"row\">
 \t\t            <div class=\"col-md-6 col-sm-12\">
-\t\t                <select name=\"brand\" class=\"form-control custom-select\">
+\t\t                <select name=\"brand\" class=\"form-control custom-select car_brand_select\">
 \t\t                  <option>All Brands</option>
 \t\t                  {% if car_brandlist %}
 \t\t\t                {% for slider in car_brandlist %}
@@ -437,7 +496,7 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 \t\t                </select>
 \t\t            </div>
 \t\t            <div class=\"col-md-6 col-sm-12\">
-\t\t              <select name=\"models\" class=\"form-control custom-select\">
+\t\t              <select name=\"models\" class=\"form-control custom-select car_model_select\" disabled>
 \t\t                  <option>All Models</option>
 \t\t                  {% if car_modellist %}
 \t\t\t                {% for slider in car_modellist %}
@@ -475,8 +534,8 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
        \t\t\t<h2>Find modify car accessories</h2>
        \t\t\t<div class=\"row\">
 \t\t            <div class=\"col-md-6 col-sm-12\">
-\t\t                <select class=\"form-control custom-select\">
-\t\t                  <option>Brand</option>
+\t\t                <select class=\"form-control custom-select car_accessories_brand\">
+\t\t                  <option>All Brand</option>
 \t\t                  {% if car_brandlist %}
 \t\t\t                {% for slider in car_brandlist %}
 \t\t\t                <option value=\"{{slider }}\">{{ slider }}</option>
@@ -485,8 +544,8 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 \t\t                </select>
 \t\t            </div>
 \t\t            <div class=\"col-md-6 col-sm-12\">
-\t\t              <select class=\"form-control custom-select\">
-\t\t                  <option>Categories</option>
+\t\t              <select class=\"form-control custom-select car_accessories_category\" disabled>
+\t\t                  <option>All Categories</option>
 \t\t                  {% if car_categorieslist %}
 \t\t\t                {% for slider in car_categorieslist %}
 \t\t\t                <option value=\"{{slider }}\">{{ slider }}</option>
@@ -567,6 +626,59 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 </div>
 </div>
 </div>
-</section>", "D:\\xampp\\htdocs\\cars\\cvsmart/themes/cvsmart/pages/Home.htm", "");
+</section>
+<script type=\"text/javascript\">
+\tvar carcategory = JSON.parse('{{ car_categorylist|raw }}');
+\tvar car_accesor = JSON.parse('{{ car_accesortlist|raw }}');
+\tconsole.log(carcategory)
+\t\$(document).ready(function(){
+\t\tvar dbrand = new Array();
+\t\t\$.each(carcategory,function(i,a){
+\t\t\tif(\$.inArray(a.brand, dbrand) < 0 ){
+\t\t\t\tdbrand.push(a.brand)
+\t\t\t\t\$(\".car_brand_select\").append(\"<option value='\"+a.brand+\"'>\"+a.brand+\"</option>\");
+\t\t\t}
+\t\t})
+\t\t\$(\".car_brand_select\").select2();
+\t\t\$(\".car_brand_select\").change(function(){
+\t\t\tvar car_brand_select_val = \$(this).val();
+\t\t\tvar dmodel = new Array();
+\t\t\t\$(\".car_model_select\").html(\"<option>All Models</option>\")
+\t\t\t\$.each(carcategory,function(i,a){
+\t\t\t\tif(a.brand == car_brand_select_val){
+\t\t\t\t\tif(\$.inArray(a.model, dmodel) < 0 ){
+\t\t\t\t\t\tdmodel.push(a.model)
+\t\t\t\t\t\t\$(\".car_model_select\").append(\"<option value='\"+a.model+\"'>\"+a.model+\"</option>\");
+\t\t\t\t\t}
+\t\t\t\t}
+\t\t\t})
+\t\t\t\$(\".car_model_select\").removeAttr(\"disabled\");
+\t\t\t\$(\".car_model_select\").select2(\"destroy\").select2();
+\t\t})
+\t\tvar abrand = new Array();
+\t\t\$.each(car_accesor,function(i,a){
+\t\t\tif(\$.inArray(a.brand, abrand) < 0 ){
+\t\t\t\tabrand.push(a.brand)
+\t\t\t\t\$(\".car_accessories_brand\").append(\"<option value='\"+a.brand+\"'>\"+a.brand+\"</option>\");
+\t\t\t}
+\t\t})
+\t\t\$(\".car_accessories_brand\").select2();
+\t\t\$(\".car_accessories_brand\").change(function(){
+\t\t\tvar car_brand_select_val = \$(this).val();
+\t\t\tvar dmodel = new Array();
+\t\t\t\$(\".car_accessories_category\").html(\"<option>All Categories</option>\")
+\t\t\t\$.each(carcategory,function(i,a){
+\t\t\t\tif(a.brand == car_brand_select_val){
+\t\t\t\t\tif(\$.inArray(a.model, dmodel) < 0 ){
+\t\t\t\t\t\tdmodel.push(a.model)
+\t\t\t\t\t\t\$(\".car_accessories_category\").append(\"<option value='\"+a.category+\"'>\"+a.category+\"</option>\");
+\t\t\t\t\t}
+\t\t\t\t}
+\t\t\t})
+\t\t\t\$(\".car_accessories_category\").removeAttr(\"disabled\");
+\t\t\t\$(\".car_accessories_category\").select2(\"destroy\").select2();
+\t\t})
+\t})
+</script>", "D:\\xampp\\htdocs\\cars\\cvsmart/themes/cvsmart/pages/Home.htm", "");
     }
 }

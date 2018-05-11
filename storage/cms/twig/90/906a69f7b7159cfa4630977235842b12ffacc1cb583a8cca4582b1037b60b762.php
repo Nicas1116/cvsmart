@@ -69,6 +69,65 @@ class __TwigTemplate_0a02b1dff4aa9c7b67218ae78126da5d1d60395a23f3bcc02b928891ecf
         echo twig_escape_filter($this->env, ($context["sizeofcarlist"] ?? null), "html", null, true);
         echo ";
 \t
+</script>
+<script type=\"text/javascript\">
+  var carcategory = JSON.parse('";
+        // line 28
+        echo ($context["car_categorylist"] ?? null);
+        echo "');
+  var car_accesor = JSON.parse('";
+        // line 29
+        echo ($context["car_accesortlist"] ?? null);
+        echo "');
+  \$(document).ready(function(){
+    var dbrand = new Array();
+    \$.each(carcategory,function(i,a){
+      if(\$.inArray(a.category, dbrand) < 0 ){
+        dbrand.push(a.category)
+        \$(\".car_category_select\").append(\"<option value='\"+a.category+\"'>\"+a.category+\"</option>\");
+      }
+    })
+    \$(\".car_category_select\").select2();
+
+    \$(\".car_category_select\").change(function(){
+      var car_brand_select_val = \$(this).val();
+      var dmodel = new Array();
+      \$(\".car_brand_select\").html(\"<option value=''>All Brands</option>\")
+      \$.each(carcategory,function(i,a){
+        if(a.category == car_brand_select_val){
+          if(\$.inArray(a.brand, dmodel) < 0 ){
+            dmodel.push(a.brand)
+            \$(\".car_brand_select\").append(\"<option value='\"+a.brand+\"'>\"+a.brand+\"</option>\");
+          }
+        }
+      })
+      \$(\".car_brand_select\").removeAttr(\"disabled\");
+      \$(\".car_brand_select\").select2(\"destroy\").select2();
+    })
+    var abrand = new Array();
+    \$.each(car_accesor,function(i,a){
+      if(\$.inArray(a.brand, abrand) < 0 ){
+        abrand.push(a.brand)
+        \$(\".car_accessories_brand\").append(\"<option value='\"+a.brand+\"'>\"+a.brand+\"</option>\");
+      }
+    })
+    \$(\".car_accessories_brand\").select2();
+    \$(\".car_accessories_brand\").change(function(){
+      var car_brand_select_val = \$(this).val();
+      var dmodel = new Array();
+      \$(\".car_accessories_category\").html(\"<option>All Categories</option>\")
+      \$.each(carcategory,function(i,a){
+        if(a.brand == car_brand_select_val){
+          if(\$.inArray(a.model, dmodel) < 0 ){
+            dmodel.push(a.model)
+            \$(\".car_accessories_category\").append(\"<option value='\"+a.category+\"'>\"+a.category+\"</option>\");
+          }
+        }
+      })
+      \$(\".car_accessories_category\").removeAttr(\"disabled\");
+      \$(\".car_accessories_category\").select2(\"destroy\").select2();
+    })
+  })
 </script>";
     }
 
@@ -84,7 +143,7 @@ class __TwigTemplate_0a02b1dff4aa9c7b67218ae78126da5d1d60395a23f3bcc02b928891ecf
 
     public function getDebugInfo()
     {
-        return array (  69 => 24,  65 => 23,  57 => 17,  43 => 15,  40 => 14,  36 => 13,  23 => 2,  19 => 1,);
+        return array (  80 => 29,  76 => 28,  69 => 24,  65 => 23,  57 => 17,  43 => 15,  40 => 14,  36 => 13,  23 => 2,  19 => 1,);
     }
 
     public function getSourceContext()
@@ -114,6 +173,59 @@ class __TwigTemplate_0a02b1dff4aa9c7b67218ae78126da5d1d60395a23f3bcc02b928891ecf
   var currentpage = {{ currentpage}};
   var totalpages =  {{ sizeofcarlist }};
 \t
+</script>
+<script type=\"text/javascript\">
+  var carcategory = JSON.parse('{{ car_categorylist|raw }}');
+  var car_accesor = JSON.parse('{{ car_accesortlist|raw }}');
+  \$(document).ready(function(){
+    var dbrand = new Array();
+    \$.each(carcategory,function(i,a){
+      if(\$.inArray(a.category, dbrand) < 0 ){
+        dbrand.push(a.category)
+        \$(\".car_category_select\").append(\"<option value='\"+a.category+\"'>\"+a.category+\"</option>\");
+      }
+    })
+    \$(\".car_category_select\").select2();
+
+    \$(\".car_category_select\").change(function(){
+      var car_brand_select_val = \$(this).val();
+      var dmodel = new Array();
+      \$(\".car_brand_select\").html(\"<option value=''>All Brands</option>\")
+      \$.each(carcategory,function(i,a){
+        if(a.category == car_brand_select_val){
+          if(\$.inArray(a.brand, dmodel) < 0 ){
+            dmodel.push(a.brand)
+            \$(\".car_brand_select\").append(\"<option value='\"+a.brand+\"'>\"+a.brand+\"</option>\");
+          }
+        }
+      })
+      \$(\".car_brand_select\").removeAttr(\"disabled\");
+      \$(\".car_brand_select\").select2(\"destroy\").select2();
+    })
+    var abrand = new Array();
+    \$.each(car_accesor,function(i,a){
+      if(\$.inArray(a.brand, abrand) < 0 ){
+        abrand.push(a.brand)
+        \$(\".car_accessories_brand\").append(\"<option value='\"+a.brand+\"'>\"+a.brand+\"</option>\");
+      }
+    })
+    \$(\".car_accessories_brand\").select2();
+    \$(\".car_accessories_brand\").change(function(){
+      var car_brand_select_val = \$(this).val();
+      var dmodel = new Array();
+      \$(\".car_accessories_category\").html(\"<option>All Categories</option>\")
+      \$.each(carcategory,function(i,a){
+        if(a.brand == car_brand_select_val){
+          if(\$.inArray(a.model, dmodel) < 0 ){
+            dmodel.push(a.model)
+            \$(\".car_accessories_category\").append(\"<option value='\"+a.category+\"'>\"+a.category+\"</option>\");
+          }
+        }
+      })
+      \$(\".car_accessories_category\").removeAttr(\"disabled\");
+      \$(\".car_accessories_category\").select2(\"destroy\").select2();
+    })
+  })
 </script>", "D:\\xampp\\htdocs\\cars\\cvsmart/themes/cvsmart/pages/CarList.htm", "");
     }
 }

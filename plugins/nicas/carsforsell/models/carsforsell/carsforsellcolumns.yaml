@@ -16,9 +16,3 @@ columns:
     shortdesc:
         label: 'Short Desc'
         type: text
-    car_brand:
-        label: 'Car Brand'
-        type: text
-    car_category:
-        label: 'Car Category'
-        type: text

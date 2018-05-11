@@ -38,5 +38,5 @@ class Carsforsell extends Model
      */
     public $table = 'nicas_carsforsell_car';
 
-    protected $jsonable = ['carimages'];
+    protected $jsonable = ['carimages','car_category','car_accessories'];
 }

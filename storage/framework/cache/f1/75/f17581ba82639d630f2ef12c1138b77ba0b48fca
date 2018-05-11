@@ -1,11 +1,12 @@
-1525772288a:1:{s:17:"CarSelectPage.htm";a:5:{s:8:"fileName";s:17:"CarSelectPage.htm";s:7:"content";s:1676:"<div class="carselectpage">
+1526059977a:1:{s:17:"CarSelectPage.htm";a:5:{s:8:"fileName";s:17:"CarSelectPage.htm";s:7:"content";s:1867:"<div class="carselectpage">
 <div class="container ">
+  <form method="POST">
    <div class="row">
       <div class="col-md-11 col-sm-12">
           <div class="row">
             <div class="col-md-4 col-sm-12">
-                <select class="form-control custom-select">
-                  <option>Categories</option>
+                <select name="car_category_select" class="form-control custom-select car_category_select">
+                  <option value="">All Categories</option>
                   {% if car_categorieslist %}
                       {% for slider in car_categorieslist %}
                       <option value="{{slider }}">{{ slider }}</option>
@@ -14,8 +15,8 @@
                 </select>
             </div>
             <div class="col-md-4 col-sm-12">
-              <select class="form-control custom-select">
-                  <option>Brand</option>
+              <select name="car_brand_select" class="form-control custom-select car_brand_select" disabled>
+                  <option value="">All Brand</option>
                   {% if car_brandlist %}
                       {% for slider in car_brandlist %}
                       <option value="{{slider }}">{{ slider }}</option>
@@ -24,8 +25,8 @@
                 </select>
             </div>
             <div class="col-md-4 col-sm-12">
-              <select class="form-control custom-select">
-                  <option>All state</option>
+              <select name="car_state_select" class="form-control custom-select">
+                  <option value="">All state</option>
                   {% if car_statelist %}
                       {% for slider in car_statelist %}
                       <option value="{{slider }}">{{ slider }}</option>
@@ -39,15 +40,17 @@
           <button class="submitbutton form-control"><i class="fa fa-search"></i></button>
       </div>
     </div>
+  </form>
 </div>
-</div>";s:5:"mtime";i:1525715393;s:6:"markup";s:1676:"<div class="carselectpage">
+</div>";s:5:"mtime";i:1526059376;s:6:"markup";s:1867:"<div class="carselectpage">
 <div class="container ">
+  <form method="POST">
    <div class="row">
       <div class="col-md-11 col-sm-12">
           <div class="row">
             <div class="col-md-4 col-sm-12">
-                <select class="form-control custom-select">
-                  <option>Categories</option>
+                <select name="car_category_select" class="form-control custom-select car_category_select">
+                  <option value="">All Categories</option>
                   {% if car_categorieslist %}
                       {% for slider in car_categorieslist %}
                       <option value="{{slider }}">{{ slider }}</option>
@@ -56,8 +59,8 @@
                 </select>
             </div>
             <div class="col-md-4 col-sm-12">
-              <select class="form-control custom-select">
-                  <option>Brand</option>
+              <select name="car_brand_select" class="form-control custom-select car_brand_select" disabled>
+                  <option value="">All Brand</option>
                   {% if car_brandlist %}
                       {% for slider in car_brandlist %}
                       <option value="{{slider }}">{{ slider }}</option>
@@ -66,8 +69,8 @@
                 </select>
             </div>
             <div class="col-md-4 col-sm-12">
-              <select class="form-control custom-select">
-                  <option>All state</option>
+              <select name="car_state_select" class="form-control custom-select">
+                  <option value="">All state</option>
                   {% if car_statelist %}
                       {% for slider in car_statelist %}
                       <option value="{{slider }}">{{ slider }}</option>
@@ -81,5 +84,6 @@
           <button class="submitbutton form-control"><i class="fa fa-search"></i></button>
       </div>
     </div>
+  </form>
 </div>
 </div>";s:4:"code";N;}}
