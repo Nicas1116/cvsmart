@@ -1,0 +1,218 @@
+1525708465a:1:{s:15:"site/header.htm";a:5:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:4106:"<header>
+
+
+    <!-- *** TOP END *** -->
+
+    <!-- *** NAVBAR ***
+_________________________________________________________ -->
+
+    {% if this.page.id == 'home' %}
+    <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+    {% else %}
+    <div >
+    {% endif %}
+          <!-- *** TOP ***
+      _________________________________________________________ -->
+        <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+
+            <div class="container">
+                <div class="navbar-header">
+
+                    <a class="navbar-brand home" href="/">
+                        <img src="/themes/cvsmart/assets/img/sp_logo.png">
+                       
+                    </a>
+                    <div class="navbar-buttons">
+                        <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                            <span class="sr-only">Toggle navigation</span>
+                            <i class="fa fa-align-justify"></i>
+                        </button>
+                    </div>
+                </div>
+                <!--/.navbar-header -->
+                <div class="navbar-collapse collapse" id="navigation">
+
+                    <ul class="nav navbar-nav navbar-right">
+                    
+                        <li class="page-scroll use-yamm yamm-fw">
+                            <a class="normalbutton  {% if this.page.id == 'CarList' %} active {% endif %} " href="/car-list">CAR LIST</a>
+
+                        </li>
+                        <li class="page-scroll use-yamm yamm-fw">
+                            <a class="normalbutton mbutton  {% if this.page.id == 'ContactUs' %} active {% endif %} " href="/contact-us">CONTACT US</a>
+                        </li>
+
+                        <li>
+                            <a class="socialbutton" href="http://www.facebook.com/"><img src="/themes/cvsmart/assets/img/header_facebook.png"/></i></a>
+
+                        </li>
+
+                        <li>
+                            <a class="socialbutton" href="http://www.facebook.com/"><img src="/themes/cvsmart/assets/img/header_instagram.png"/></i></a>
+
+                        </li>
+                        <!-- <li class="page-scroll
+                        {% if this.page.id == 'package' %} active
+                        {% endif %}
+                        dropdown use-yamm yamm-fw">
+                            <a href="/package">Package</a>
+
+                        </li> -->
+
+                        <!-- ========== FULL WIDTH MEGAMENU END ================== -->
+
+                        <!-- <li class="dropdown">
+                            <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown">Contact <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="contact.html">Contact option 1</a>
+                                </li>
+                                <li><a href="contact2.html">Contact option 2</a>
+                                </li>
+                                <li><a href="contact3.html">Contact option 3</a>
+                                </li>
+
+                            </ul>
+                        </li> -->
+                    </ul>
+
+                </div>
+                <!--/.nav-collapse -->
+
+
+
+                <div class="collapse clearfix" id="search">
+
+                    <form class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-btn">
+
+                                <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+
+                            </span>
+                        </div>
+                    </form>
+
+                </div>
+                <!--/.nav-collapse -->
+
+            </div>
+
+
+        </div>
+        <!-- /#navbar -->
+
+    </div>
+
+    <!-- *** NAVBAR END *** -->
+
+</header>
+";s:5:"mtime";i:1525620468;s:6:"markup";s:4105:"<header>
+
+
+    <!-- *** TOP END *** -->
+
+    <!-- *** NAVBAR ***
+_________________________________________________________ -->
+
+    {% if this.page.id == 'home' %}
+    <div class="navbar-affixed-top" data-spy="affix" data-offset-top="200">
+    {% else %}
+    <div >
+    {% endif %}
+          <!-- *** TOP ***
+      _________________________________________________________ -->
+        <div class="navbar navbar-default yamm" role="navigation" id="navbar">
+
+            <div class="container">
+                <div class="navbar-header">
+
+                    <a class="navbar-brand home" href="/">
+                        <img src="/themes/cvsmart/assets/img/sp_logo.png">
+                       
+                    </a>
+                    <div class="navbar-buttons">
+                        <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
+                            <span class="sr-only">Toggle navigation</span>
+                            <i class="fa fa-align-justify"></i>
+                        </button>
+                    </div>
+                </div>
+                <!--/.navbar-header -->
+                <div class="navbar-collapse collapse" id="navigation">
+
+                    <ul class="nav navbar-nav navbar-right">
+                    
+                        <li class="page-scroll use-yamm yamm-fw">
+                            <a class="normalbutton  {% if this.page.id == 'CarList' %} active {% endif %} " href="/car-list">CAR LIST</a>
+
+                        </li>
+                        <li class="page-scroll use-yamm yamm-fw">
+                            <a class="normalbutton mbutton  {% if this.page.id == 'ContactUs' %} active {% endif %} " href="/contact-us">CONTACT US</a>
+                        </li>
+
+                        <li>
+                            <a class="socialbutton" href="http://www.facebook.com/"><img src="/themes/cvsmart/assets/img/header_facebook.png"/></i></a>
+
+                        </li>
+
+                        <li>
+                            <a class="socialbutton" href="http://www.facebook.com/"><img src="/themes/cvsmart/assets/img/header_instagram.png"/></i></a>
+
+                        </li>
+                        <!-- <li class="page-scroll
+                        {% if this.page.id == 'package' %} active
+                        {% endif %}
+                        dropdown use-yamm yamm-fw">
+                            <a href="/package">Package</a>
+
+                        </li> -->
+
+                        <!-- ========== FULL WIDTH MEGAMENU END ================== -->
+
+                        <!-- <li class="dropdown">
+                            <a href="javascript: void(0)" class="dropdown-toggle" data-toggle="dropdown">Contact <b class="caret"></b></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="contact.html">Contact option 1</a>
+                                </li>
+                                <li><a href="contact2.html">Contact option 2</a>
+                                </li>
+                                <li><a href="contact3.html">Contact option 3</a>
+                                </li>
+
+                            </ul>
+                        </li> -->
+                    </ul>
+
+                </div>
+                <!--/.nav-collapse -->
+
+
+
+                <div class="collapse clearfix" id="search">
+
+                    <form class="navbar-form" role="search">
+                        <div class="input-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                            <span class="input-group-btn">
+
+                                <button type="submit" class="btn btn-template-main"><i class="fa fa-search"></i></button>
+
+                            </span>
+                        </div>
+                    </form>
+
+                </div>
+                <!--/.nav-collapse -->
+
+            </div>
+
+
+        </div>
+        <!-- /#navbar -->
+
+    </div>
+
+    <!-- *** NAVBAR END *** -->
+
+</header>";s:4:"code";N;}}

@@ -1,0 +1,5 @@
+<?php 
+$video_id = explode("?v=", $value);
+$video_id = $video_id[1];
+?>
+<iframe style="width:300px;display: block;height: 200px;border:none;" src="https://www.youtube.com/embed/<?php echo $video_id; ?>"></iframe>

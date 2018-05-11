@@ -1,0 +1,14 @@
+fields:
+    imagelink:
+        label: 'Image Link'
+        span: left
+        type: text
+    imagebanner:
+        label: 'Image Banner'
+        mode: file
+        span: left
+        type: mediafinder
+    sorting:
+        label: Sorting
+        span: left
+        type: number

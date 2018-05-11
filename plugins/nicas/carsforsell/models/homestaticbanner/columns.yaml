@@ -1,0 +1,14 @@
+columns:
+    id:
+        label: Id
+        type: text
+        searchable: true
+    link:
+        label: Link
+        type: text
+        searchable: true
+    staticimage:
+        label: Image
+        type: partial
+        path: ~/plugins/nicas/carsforsell/models/homestaticbanner/image.htm
+        sortable: false

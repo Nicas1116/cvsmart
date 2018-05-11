@@ -1,0 +1,62 @@
+1525708465a:1:{s:15:"site/footer.htm";a:5:{s:8:"fileName";s:15:"site/footer.htm";s:7:"content";s:794:"
+<footer id="footer">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <p>Phone<br/>
+<a href="tel:+6012-2866884">+6012-2866884</a><br/>
+Email<br/>
+<a href="mailto:info@cvsmart.my">info@cvsmart.my</a><br/>
+Address<br/>
+D-2-0-25 , JALAN 1/152 , Taman OUG Parklane ,<br/>
+58200 Kuala Lumpur.</p>
+      </div>
+      
+      <div class="col-md-6 col-sm-12 text-right">
+        <p>follow us on:<br/>
+        <a><img src="/themes/cvsmart/assets/img/footer_facebook.png"/></a>
+        <a><img src="/themes/cvsmart/assets/img/footer_instagram.png"/></a><br/>
+© 2018 CV Smart Auto Trading<br/>
+ALL RIGHTS RESERVED</p>
+      </div>
+
+    </div>
+    <!-- /.col-md-3 -->
+  </div>
+  <!-- /.container -->
+</footer>
+<!-- /#footer -->
+
+<!-- *** FOOTER END *** -->
+
+";s:5:"mtime";i:1525358410;s:6:"markup";s:791:"<footer id="footer">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-6 col-sm-12">
+        <p>Phone<br/>
+<a href="tel:+6012-2866884">+6012-2866884</a><br/>
+Email<br/>
+<a href="mailto:info@cvsmart.my">info@cvsmart.my</a><br/>
+Address<br/>
+D-2-0-25 , JALAN 1/152 , Taman OUG Parklane ,<br/>
+58200 Kuala Lumpur.</p>
+      </div>
+      
+      <div class="col-md-6 col-sm-12 text-right">
+        <p>follow us on:<br/>
+        <a><img src="/themes/cvsmart/assets/img/footer_facebook.png"/></a>
+        <a><img src="/themes/cvsmart/assets/img/footer_instagram.png"/></a><br/>
+© 2018 CV Smart Auto Trading<br/>
+ALL RIGHTS RESERVED</p>
+      </div>
+
+    </div>
+    <!-- /.col-md-3 -->
+  </div>
+  <!-- /.container -->
+</footer>
+<!-- /#footer -->
+
+<!-- *** FOOTER END *** -->";s:4:"code";N;}}

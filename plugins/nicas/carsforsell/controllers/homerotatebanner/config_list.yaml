@@ -1,0 +1,12 @@
+list: $/nicas/carsforsell/models/homerotatebanner/columns.yaml
+modelClass: Nicas\Carsforsell\Models\HomeRotateBanner
+title: HomeRotateBanner
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'nicas/carsforsell/homerotatebanner/update/:id'

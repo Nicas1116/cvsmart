@@ -1,0 +1,50 @@
+1.0.1:
+    - 'Initialize plugin.'
+1.0.2:
+    - 'Created table nicas_carsforsell_'
+    - builder_table_create_nicas_carsforsell_.php
+1.0.3:
+    - 'Updated table nicas_carsforsell_'
+    - builder_table_update_nicas_carsforsell_.php
+1.0.4:
+    - 'Updated table nicas_carsforsell_'
+    - builder_table_update_nicas_carsforsell__2.php
+1.0.5:
+    - 'Updated table nicas_carsforsell_'
+    - builder_table_update_nicas_carsforsell__3.php
+1.0.6:
+    - 'Updated table nicas_carsforsell_'
+    - builder_table_update_nicas_carsforsell__4.php
+1.0.7:
+    - 'Updated table nicas_carsforsell_'
+    - builder_table_update_nicas_carsforsell__5.php
+1.0.8:
+    - 'Updated table nicas_carsforsell_'
+    - builder_table_update_nicas_carsforsell__6.php
+1.0.9:
+    - 'Updated table nicas_carsforsell_'
+    - builder_table_update_nicas_carsforsell__7.php
+1.0.10:
+    - 'Created table nicas_carsforsell_homesstaticbanner'
+    - builder_table_create_nicas_carsforsell_homesstaticbanner.php
+1.0.11:
+    - 'Created table nicas_carsforsell_youtubelink'
+    - builder_table_create_nicas_carsforsell_youtubelink.php
+1.0.12:
+    - 'Updated table nicas_carsforsell_'
+    - builder_table_update_nicas_carsforsell_car.php
+1.0.13:
+    - 'Updated table nicas_carsforsell_car'
+    - builder_table_update_nicas_carsforsell_car_2.php
+1.0.14:
+    - 'Updated table nicas_carsforsell_car'
+    - builder_table_update_nicas_carsforsell_car_3.php
+1.0.15:
+    - 'Created table nicas_carsforsell_homerotatebanner'
+    - builder_table_create_nicas_carsforsell_homerotatebanner.php
+1.0.16:
+    - 'Updated table nicas_carsforsell_homerotatebanner'
+    - builder_table_update_nicas_carsforsell_homerotatebanner.php
+1.0.17:
+    - 'Created table nicas_carsforsell_carcategory'
+    - builder_table_create_nicas_carsforsell_carcategory.php

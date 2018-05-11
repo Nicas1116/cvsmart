@@ -1,0 +1,1354 @@
+
+@starplanet-red: #EC1C24;
+@starplanet-red-border: #67090d;
+@starplanet-hover-red: black;
+@starplanet-hover-red-border: #545454;
+@starplanet-hover: #f97378;
+
+@splanet-media-mobile-max: ~'(max-width: 768px)';
+@splanet-media-tablets-max: ~'(max-width: 992px)';
+
+a {
+  color: @starplanet-red;
+}
+a:hover {
+  color: @starplanet-hover;
+}
+
+.splanet-color {
+  color: @starplanet-red;
+}
+
+.splanet-btn {
+  background-color: @starplanet-red;
+  color:white;
+}
+
+.btn-template-main {
+    color: @starplanet-red;
+    background-color: #ffffff;
+    border-color: @starplanet-red-border;
+}
+
+.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background-color: @starplanet-red;
+}
+
+.bar {
+  padding:30px 0;
+}
+
+h2 {
+  @media @splanet-media-mobile-max {
+    font-size: 20px;
+  }
+}
+
+#top {
+    background: #000000;
+    p {
+      font-size: 14px;
+    }
+}
+
+.navbar-brand>img {
+    padding-top:5px;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    color: #ffffff;
+    background-color: @starplanet-red;
+}
+
+.navbar ul.nav > li.active > a, .navbar ul.nav > li.open > a {
+    text-decoration: none !important;
+    border-top: solid 5px @starplanet-red-border;
+}
+
+.navbar ul.nav > li > a:hover {
+    border-top: solid 5px @starplanet-hover-red;
+}
+
+.navbar-default .navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: white;
+    background-color: @starplanet-hover-red-border;
+}
+
+.navbar ul.nav > li > a {
+    text-decoration: none;
+}
+
+.swiper-slide {
+
+  padding:0px;
+  img {
+    width: 100%;
+  }
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background: white;
+}
+
+
+.s-button-next, .s-button-prev {
+    position: absolute;
+    top: 50%;
+    width: 27px;
+    height: 44px;
+    margin-top: -22px;
+    z-index: 10;
+    cursor: pointer;
+    -moz-background-size: 27px 44px;
+    -webkit-background-size: 27px 44px;
+    background-size: 27px 44px;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    font-size: 38px;
+    @media @splanet-media-mobile-max {
+      font-size: 20px;
+    }
+}
+
+.s-button-prev {
+  left:20px;
+  @media @splanet-media-mobile-max {
+      left:5px;
+  }
+}
+.s-button-next {
+  right:20px;
+  @media @splanet-media-mobile-max {
+      right:5px;
+  }
+}
+
+#signup {
+  position: relative;
+  margin-bottom: 0px;
+ form {
+   padding-bottom: 30px;
+ }
+  h2 {
+    color: @starplanet-red;
+    font-size: 20px;
+  }
+
+  .btn-default.active, .btn-default.focus, .btn-default:active, .btn-default:focus, .btn-default:hover, .open>.dropdown-toggle.btn-default {
+    color: white;
+    background-color: @starplanet-red;
+  }
+  .submit {
+
+    background-color: @starplanet-red;
+    color: white;
+  }
+}
+
+.home-sign-up-btn {
+  position: absolute;
+  top: -51px;
+  right: 0px;
+  z-index: 100;
+  background-color: @starplanet-red;
+  color: white;
+  padding:15px;
+  font-size: 15px;
+  border: 0;
+  border-top-left-radius: 5px;
+}
+
+#home {
+  margin-bottom: 0px;
+}
+
+#features {
+  border-top: solid 1px #999999;
+  h1 {
+    color: @starplanet-red;
+    text-decoration: underline;
+    text-align: center;
+    padding-bottom: 30px;
+  }
+
+  .box-simple .icon {
+    color: @starplanet-red;
+    border-color: @starplanet-red;
+    -webkit-transition: all 0.2s ease-out;
+    -moz-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+  }
+}
+
+.signup-gray {
+    background-color: #e6e6e6 !important;
+    color: black !important;
+}
+
+.available {
+  color: #09BA00;
+  &:after {
+    content: "Available";
+  }
+}
+.out-of-stock {
+  color: red;
+  &:after {
+    content: "Out of Stock";
+  }
+}
+
+#rewards {
+  color: white;
+  background-color: @starplanet-red;
+  h2 {
+    color:white;
+  }
+  .heading h2 {
+    border-bottom: solid 5px white;
+  }
+  .rewards-desc {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  .owl-pagination {
+    display: none;
+  }
+
+
+  .testimonials .item {
+    background-color: transparent;
+  }
+
+  .testimonials a {
+    text-decoration: none;
+    color:white;
+  }
+
+  h2 a {
+    text-decoration: none;
+    color:white;
+  }
+
+  .rewards-bottom {
+    position: relative;
+    bottom: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #7d0101;
+    // margin-top: 30px;
+    text-align: center;
+  }
+
+  .testimonials .item .testimonial {
+    position: relative;
+    padding: 20px;
+  }
+
+
+  .owl-buttons {
+    background:transparent;
+    color:white;
+    top:30%;
+    width: 100%;
+    font-size: 30px;
+
+    .owl-prev {
+      position: absolute;
+      left:-40px;
+    }
+    .owl-next {
+      position: absolute;
+      right: -45px;
+    }
+    @media (max-width: 768px) {
+      .owl-prev {
+        left:-15px;
+      }
+      .owl-next {
+        right: -20px;
+      }
+    }
+  }
+  .owl-carousel .owl-controls .owl-buttons div, .owl-theme .owl-controls .owl-buttons div {
+      background:transparent;
+      font-size: 40px;
+      color:white;
+  }
+
+
+}
+
+#events {
+  color: black;
+
+  h2 {
+    color: white;
+  }
+  .event {
+    position: relative;
+    padding: 20px;
+  }
+  .heading h2 {
+    border-bottom: solid 5px white;
+  }
+  .desc {
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+  .owl-pagination {
+    display: block;
+    left: -2%;
+    position: relative;
+    @media @splanet-media-mobile-max {
+      left:-20px;
+    }
+  }
+
+  .owl-buttons {
+    background:transparent;
+    position: absolute;
+    color:white;
+    top:35%;
+    width: 100%;
+    font-size: 30px;
+
+    .owl-prev {
+      position: absolute;
+      left:-40px;
+      @media @splanet-media-mobile-max {
+        left:-10px;
+      }
+    }
+    .owl-next {
+      position: absolute;
+      right: -45px;
+      @media @splanet-media-mobile-max {
+        right:-20px;
+      }
+    }
+  }
+
+  .owl-carousel .owl-controls .owl-buttons div, .owl-theme .owl-controls .owl-buttons div {
+      background:transparent;
+      font-size: 40px;
+      color:white;
+  }
+  .owl-carousel .owl-wrapper-outer {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    left: -10px;
+  }
+}
+
+.concert-events {
+  list-style: none;
+  .row {
+    padding-right:20px;
+  }
+  img {
+    border:1px solid #ddd;
+  }
+}
+
+.bar.background-image-fixed-2 {
+    background: url(../img/eventbg.jpg) center top no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+#membership {
+  // background: url(/themes/splanet/assets/img/newslider/banner02-02.jpg) center top no-repeat;
+  background:black;
+  background-attachment: fixed;
+  background-size: cover;
+  .background {
+  }
+  h2 {
+    color: white;
+  }
+  .event {
+    position: relative;
+    padding: 20px;
+  }
+  .heading h2 {
+    border-bottom: solid 5px white;
+  }
+
+  p {
+    color:white;
+    text-align: center;
+    @media @splanet-media-mobile-max {
+      text-align: left;
+    }
+
+
+  }
+  .row {
+    text-align: center;
+    @media @splanet-media-mobile-max {
+      text-align: left;
+    }
+  }
+  button {
+    border:1px solid white;
+    background: black;
+    color: white;
+    margin-top:10px;
+
+
+  }
+}
+#portfolio {
+  h2 {
+    color: white;
+  }
+  .heading h2 {
+    border-bottom: solid 5px white;
+  }
+  img {
+    width: 100%;
+  }
+
+  .col-xs-4 {
+      padding:0px;
+      position: relative;
+  }
+  .year {
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.41);
+    bottom: 0px;
+    text-align: center;
+    left: 0;
+    right: 0;
+    color: white;
+    height: 50px;
+    font-size: 25px;
+    -webkit-box-shadow: -1px -16px 50px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: -1px -16px 50px 0px rgba(0,0,0,0.5);
+    box-shadow: -1px -16px 50px 0px rgba(0,0,0,0.5);
+  }
+
+}
+
+#portfolios {
+  h2 {
+    color: white;
+  }
+  .heading h2 {
+    border-bottom: solid 5px white;
+  }
+
+  img {
+    width: 95%;
+    height: 550px;
+
+    @media @splanet-media-tablets-max {
+      height: 360px;
+    }
+    @media @splanet-media-mobile-max {
+      height: auto;
+    }
+  }
+
+  .portfolio-thumb {
+    position: relative;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    @media @splanet-media-mobile-max {
+      margin: 10px;
+    }
+    // &:nth-child(3n+3) {
+    //   clear:both;
+    // }
+  }
+
+
+  .year {
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.41);
+    bottom: 0px;
+    text-align: center;
+    left: 0;
+    color: white;
+    height: 50px;
+    font-size: 25px;
+    -webkit-box-shadow: -1px -16px 50px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: -1px -16px 50px 0px rgba(0,0,0,0.5);
+    box-shadow: -1px -16px 50px 0px rgba(0,0,0,0.5);
+    margin:0 auto;
+    width: 95%;
+  }
+
+}
+
+#posters {
+  h2 {
+    color: white;
+  }
+  .heading h2 {
+    border-bottom: solid 5px white;
+  }
+
+  img {
+    width:auto;
+    height: 550px;
+    padding:10px;
+    @media @splanet-media-tablets-max {
+      height: 360px;
+    }
+    @media @splanet-media-mobile-max {
+      height: auto;
+      width: 98%;
+    }
+  }
+
+  .portfolio-thumb {
+    position: relative;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    overflow: hidden;
+    @media @splanet-media-mobile-max {
+      margin: 10px;
+    }
+    // &:nth-child(3n+3) {
+    //   clear:both;
+    // }
+  }
+
+
+  .portfolio-thumb-1 {
+    position: relative;
+    padding: 0;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    @media @splanet-media-mobile-max {
+      margin: 10px;
+    }
+    // &:nth-child(3n+3) {
+    //   clear:both;
+    // }
+  }
+
+  .year {
+    position: absolute;
+    background-color:rgba(0, 0, 0, 0.41);
+    bottom: 0px;
+    text-align: center;
+    left: 0;
+    color: white;
+    height: 50px;
+    font-size: 25px;
+    -webkit-box-shadow: -1px -16px 50px 0px rgba(0,0,0,0.5);
+    -moz-box-shadow: -1px -16px 50px 0px rgba(0,0,0,0.5);
+    box-shadow: -1px -16px 50px 0px rgba(0,0,0,0.5);
+    margin:0 auto;
+    width: auto;
+  }
+  h3 {
+    color:black;
+  }
+}
+
+.view-portforlio  {
+  text-decoration: none;
+  &:hover {
+  text-decoration: none;
+  }
+  h3 {
+    color:white;
+  }
+}
+
+#how-it-works {
+  h2 {
+    text-align: left;
+  }
+
+  .heading h2 {
+    border-bottom: solid 0px white;
+  }
+  .desc {
+    list-style-type: decimal;
+    padding-left:15px;
+  }
+}
+
+#video {
+
+  background:black;
+  background-attachment: fixed;
+  background-size: cover;
+  .background {
+
+  }
+  h2 {
+    color: white;
+  }
+  .event {
+    position: relative;
+    padding: 20px;
+  }
+  .heading h2 {
+    border-bottom: solid 5px white;
+  }
+
+  .owl-pagination {
+    display: block;
+    left: 0;
+    position: relative;
+  }
+
+  .owl-buttons {
+    background:transparent;
+    color:white;
+    position: absolute;
+    top:35%;
+    width: 100%;
+    font-size: 30px;
+    left:22px;
+    .owl-prev {
+      position: absolute;
+      left:-10px;
+    }
+    .owl-next {
+      position: absolute;
+      right:-10px;
+    }
+
+  }
+  .owl-carousel {
+    position: relative;
+    left:-20px;
+  }
+  .owl-carousel li{
+    list-style: none;
+
+  }
+  .owl-corousel li:first-child {
+    padding-left:0px;
+  }
+  .owl-carousel .owl-controls .owl-buttons div, .owl-theme .owl-controls .owl-buttons div {
+      background:transparent;
+      font-size: 40px;
+      color:white;
+  }
+
+  .owl-carousel .owl-wrapper-outer {
+    overflow: hidden;
+    position: relative;
+    width: 100%;
+    left: -10px;
+  }
+}
+
+#footer {
+  background: black;
+  a {
+    color:white;
+  }
+  h4 {
+    color:red;
+  }
+  p {
+    color:white;
+  }
+}
+
+#copyright {
+  background: #555555;
+  padding: 20px 0;
+}
+
+#heading-breadcrumbs {
+  background: @starplanet-red;
+  h1 {
+    color:white;
+  }
+  .breadcrumb {
+    color:black;
+    padding-right: 15px;
+  }
+  a {
+    color:white;
+  }
+}
+
+#terms {
+  font-size: 11px;
+  ul {
+    list-style-type: decimal;
+    position: relative;
+    left: 0;
+    padding-left: 20px;
+    line-height: 25px;
+  }
+}
+
+.form-control:focus {
+    border-color: #ec1c24;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #ec1c24;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px #ec1c24;
+}
+
+#account {
+  .panel-heading {
+     h3 {
+       font-size: 25px;
+       color: @starplanet-red;
+       border-bottom: solid 5px @starplanet-red;
+     }
+  }
+}
+
+.breadcrumb > li + li:before {
+    content: ">\00a0";
+    color: black;
+}
+
+.nav-pills > li.active > a, .nav-pills > li.active > a:hover, .nav-pills > li.active > a:focus {
+    color: #ffffff;
+    background-color: @starplanet-red;
+}
+
+#membercards {
+
+  img {
+    height: 100%;
+    width: 100%;
+    // padding-left: 10px;
+  }
+  // .front {
+  //   padding-top:10px;
+  //   border:2px solid @starplanet-red;
+  //   border-radius: 5px;
+  //   background: white;
+  // }
+
+  .memberid {
+    position: absolute;
+    bottom: 30%;
+    color: white;
+    right: 15px;
+  }
+  .memberic {
+    position: absolute;
+    bottom: 40%;
+    color: white;
+    right: 15px;
+  }
+  .back {
+    position: relative;
+  }
+  // .front-border {
+  //   margin-top:10px;
+  //   border-top:1px solid @starplanet-red;
+  //   border-bottom:1px solid @starplanet-red;
+  //   height: 20px;
+  // }
+
+}
+
+#video {
+  .video-container {
+  	position:relative;
+  	padding-bottom:56.25%;
+  	padding-top:30px;
+  	height:0;
+  	overflow:hidden;
+  }
+
+  .video-container iframe, .video-container object, .video-container embed {
+  	position:absolute;
+  	top:0;
+  	left:20px;
+  	width:100%;
+  	height:100%;
+  }
+}
+.splanet-history {
+  h3 {
+    margin-top: 50px;
+  }
+}
+
+.margin-to-image-hiw {
+  margin-top:-190px;
+  @media @splanet-media-mobile-max {
+    margin-top:0px;
+  }
+}
+
+.splanet-padding-rep  {
+  padding:0px;
+  @media @splanet-media-mobile-max {
+    padding:15px;
+  }
+}
+
+
+.dashnopaddingright {
+  padding: 0px 0px 0 15px;
+}
+
+.dashnopaddingcenter {
+  padding: 0px;
+}
+
+.dashnopaddingleft {
+  padding: 0px 15px 0 0px;
+}
+
+.dash {
+  text-align: center;
+  font-size: 50px;
+  padding: 0px;
+  line-height: 30px;
+}
+
+#top .social a:hover.mail {
+    background-color: #78a1f7;
+}
+
+.catalog-content {
+  background-color: #ddd;
+}
+
+#rewards-list {
+
+  .reward-items {
+    background-color: transparent;
+    margin:10px;
+    img {
+      @media @splanet-media-tablets-max {
+        height: auto;
+      }
+    }
+
+  }
+  a {
+    text-decoration: none;
+  }
+  .rewards-bottom {
+    position: relative;
+    bottom: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    padding: 20px;
+    background-color: #d32332;
+    // margin-top: 30px;d32332
+    text-align: center;
+    color:white;
+
+  }
+    // .rewards-btn {
+    //   height: 20px;
+    //   overflow: hidden;
+    // }
+  .col-md-3:nth-child(4n+1)
+  {
+    clear:both;
+
+  }
+
+  .item {
+    position: relative;
+    padding: 20px;
+  }
+
+  .available {
+    color: #09BA00;
+    &:after {
+      content: "Available";
+    }
+  }
+  .out-of-stock {
+    color: #7d0101;
+    font-weight: bold;
+    font-size: 16px;
+    &:after {
+      // content: "Out of Stock";
+      content: "Not Available";
+    }
+  }
+  .pagination {
+    margin: 20px auto;
+    display: table;
+    > li {
+      > a {
+        color:@starplanet-red;
+        &:hover {
+          background-color:@starplanet-hover;
+        }
+      }
+
+    }
+    .active {
+      > a {
+        background: @starplanet-red;
+        color:white;
+        border-color: @starplanet-red;
+
+      }
+    }
+
+  }
+}
+
+#rewards-detail {
+  ul {
+    list-style-type: none;
+  }
+
+  .r-details-bottom {
+      text-align: center;
+  }
+
+  .item {
+    border:1px solid #ddd;
+    padding: 20px;
+    margin-right: 40px;
+  }
+
+  .owl-buttons {
+    background:transparent;
+    color:black;
+    top:40%;
+    width: 100%;
+    font-size: 30px;
+
+    .owl-prev {
+      position: absolute;
+      left:0px;
+    }
+    .owl-next {
+      position: absolute;
+      right: 0px;
+    }
+    @media (max-width: 768px) {
+      .owl-prev {
+        left:-15px;
+      }
+      .owl-next {
+        right: -20px;
+      }
+    }
+  }
+
+  .rewards-content {
+
+    padding-left: 40px;
+    input {
+      width: 20%;
+      padding-left: 25px;
+      font-size: 20px;
+      float: left;
+    }
+    .icon-quantity {
+      position: relative;
+      width: 10px;
+      height: 30px;
+      float: left;
+      left:-22px;
+    }
+    .fa {
+      font-size: 25px;
+      cursor: pointer;
+    }
+    .fa-caret-down {
+      position: absolute;
+      top:14px;
+      left:0px;
+      height: 20px;
+    }
+    .fa-caret-up {
+      position: absolute;
+      top:-2px;
+      left:0px;
+      height: 20px;
+    }
+  }
+
+  .owl-pagination {
+    display: none;
+  }
+
+  .owl-carousel .owl-controls .owl-buttons div, .owl-theme .owl-controls .owl-buttons div {
+      background:transparent;
+      font-size: 40px;
+      color:black;
+  }
+
+  .container-may-likes {
+    border:1px solid #ddd;
+  }
+
+  .may-likes {
+
+    .item {
+      border:1px solid #ddd;
+      padding: 20px;
+      margin-right: 10px;
+    }
+
+    .owl-wrapper-outer {
+      right:15px;
+    }
+
+    .owl-carousel {
+      position: absolute;
+    }
+    .owl-prev {
+      left: -10%;
+    }
+    .owl-next {
+      right: -10%;
+    }
+  }
+}
+
+.shipping-address-option {
+  float:none;
+  margin:0 auto;
+  .row {
+    border:1px solid #ddd;
+    padding: 0 20px;
+  }
+}
+
+.address-option {
+  border:1px solid #ddd;
+  padding: 20px;
+}
+
+.order-item {
+  padding:20px;
+  margin: 0 20px 20px 0;
+  background-color: white;
+
+  span {
+    padding-right:10px;
+  }
+  @media @splanet-media-mobile-max{
+    text-align: center;
+    padding:20px;
+    margin: 20px 0px;
+  }
+}
+
+#myorder {
+  .panel-heading {
+     h3 {
+       font-size: 25px;
+       color: @starplanet-red;
+       border-bottom: solid 5px @starplanet-red;
+     }
+  }
+  .sidebar-menu {
+    background-color: transparent;
+  }
+  h3 {
+    font-size: 15px;
+    margin:0px;
+  }
+  span {
+    font-size: 14px;
+  }
+  h5 {
+    font-weight: bold;
+  }
+  h6 {
+    color:@starplanet-red;
+  }
+  .quantity {
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+    font-weight: bold;
+  }
+  .status {
+    padding-top:10px;
+    text-align: center;
+  }
+  .pending {
+    font-size: 20px;
+    &:after {
+      content: "Pending";
+    }
+  }
+  .processing {
+    font-size: 20px;
+    color:#ffbd45;
+    &:after {
+      content: "Processing";
+    }
+  }
+  .delivered {
+    font-size: 20px;
+    color:#00bb00;
+    &:after {
+      content: "Delivered";
+    }
+  }
+  .collected {
+    font-size: 20px;
+    color:#00bb00;
+    &:after {
+      content: "Self Collected";
+    }
+  }
+}
+
+#address {
+  h2 {
+    font-size: 20px;
+    margin: 0px 0px 10px 0px;
+  }
+  .panel-heading {
+     h3 {
+       font-size: 25px;
+       color: @starplanet-red;
+       border-bottom: solid 5px @starplanet-red;
+     }
+  }
+  .sidebar-menu {
+    background-color: transparent;
+  }
+  h3 {
+    font-size: 15px;
+    margin:0px;
+  }
+  span {
+    font-size: 14px;
+  }
+  h5 {
+    font-weight: bold;
+  }
+  h6 {
+    color:@starplanet-red;
+  }
+  .quantity {
+    text-align: center;
+    height: 100px;
+    line-height: 100px;
+    font-weight: bold;
+  }
+  .status {
+    padding-top:10px;
+    text-align: center;
+  }
+  .pending {
+    font-size: 20px;
+    &:after {
+      content: "Pending";
+    }
+  }
+  .processing {
+    font-size: 20px;
+    color:#ffbd45;
+    &:after {
+      content: "Processing";
+    }
+  }
+  .delivered {
+    font-size: 20px;
+    color:#00bb00;
+    &:after {
+      content: "Delivered";
+    }
+  }
+}
+
+.modal-dialog {
+  h6 {
+    color:@starplanet-red;
+  }
+  h5 {
+    color:@starplanet-red;
+    font-size: 25px;
+  }
+}
+
+.login-1 {
+  z-index: 1000;
+}
+.login-2 {
+  z-index: 1002;
+}
+.login-3 {
+  z-index: 1001;
+}
+
+.rewards-category {
+  .btn {
+    border:none;
+    padding:12px 20px;
+  }
+  .btn-default {
+    background-color: #ddd;
+  }
+  .splanet-btn {
+    background-color: #d32332;
+  }
+}
+
+.background-dark {
+  background: #191919;
+}
+
+.page-title {
+  background-color: @starplanet-red;
+  h1 {
+    color:white;
+    margin: 0px;
+    padding: 40px;
+    text-align: center;
+    @media @splanet-media-mobile-max {
+      font-size: 23px;
+    }
+  }
+}
+
+.concert-timedate {
+  width: 100%;
+  border-left: 1px solid @starplanet-red;
+  border-right: 1px solid @starplanet-red;
+
+}
+.timedate {
+  line-height: 0px;
+  font-size: 18px;
+  a{
+    text-decoration: none;
+  }
+
+  td {
+    padding:20px 40px !important;
+    border-top: 1px solid @starplanet-red !important;
+  }
+  @media @splanet-media-mobile-max {
+    font-size: 15px;
+  }
+}
+.table {
+  margin-bottom: 0px;
+
+}
+
+.datedetails {
+  text-align: left;
+  color: @starplanet-red;
+}
+
+.concert-desc {
+  img {
+    width: 100%;
+    border:1px solid black;
+  }
+}
+
+.star-button {
+  background: @starplanet-red;
+  color: white;
+  padding: 13px;
+}
+
+.concert-page {
+  h1 {
+    font-size: 23px;
+  }
+}
+
+.table>thead>tr>th {
+    vertical-align: bottom;
+    border: 1px solid black;
+}
+
+.table-page>tbody>tr>td {
+    border: 1px solid black;
+}
+.footer-banner {
+  .s-button-prev {
+    // background: rgba(0, 0, 0, 0.1);
+    height: 100%;
+    width: 50px;
+    top: 22px;
+    left: 0;
+  }
+  .s-button-next {
+    // background: rgba(0, 0, 0, 0.1);
+    height: 100%;
+    width: 50px;
+    top: 22px;
+    right: 0;
+  }
+  .glyphicon-menu-left {
+    top:40%;
+  }
+  .glyphicon-menu-right {
+    top:40%;
+  }
+  @media @splanet-media-mobile-max {
+    .s-button-prev {
+      display:none;
+    }
+    .s-button-next {
+      display:none;
+    }
+  }
+
+  @media @splanet-media-mobile-max {
+    height:auto;
+  }
+  overflow:auto;
+  padding-bottom: 20px;
+}
+
+.swiper-pagination {
+  background: rgba(0,0,0,0.1);
+  height: 25px;
+  bottom: 0 !important;
+}
+
+.swiper-pagination-bullet {
+  height: 12px;
+  width: 12px;
+  @media @splanet-media-mobile-max {
+    height: 10px;
+    width: 10px;
+  }
+  text-align: center;
+  line-height: 20px;
+  font-size: 12px;
+  color:#000;
+  opacity: 1;
+  background: rgba(0,0,0,0.2);
+}
+
+.swiper-pagination-bullet-active {
+  color:#fff;
+  background: #38a7bb;
+}
+
+.homeportofolio {
+  display: inline-block;
+  float: none;
+
+  @media @splanet-media-mobile-max {
+      float: left;
+  }
+
+  @media @splanet-media-tablets-max {
+      float: left;
+  }
+
+}

@@ -1,0 +1,9 @@
+columns:
+    id:
+        label: ID
+        type: text
+    youtubelink:
+        label: Youtube
+        type: partial
+        path: ~/plugins/nicas/carsforsell/models/youtubelink/iframe.htm
+        sortable: false

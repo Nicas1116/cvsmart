@@ -1,0 +1,10 @@
+name: StaticBanner
+form: $/nicas/carsforsell/models/homestaticbanner/HomeStaticBannerfields.yaml
+modelClass: Nicas\Carsforsell\Models\HomeStaticBanner
+defaultRedirect: nicas/carsforsell/staticbanner
+create:
+    redirect: 'nicas/carsforsell/staticbanner/update/:id'
+    redirectClose: nicas/carsforsell/staticbanner
+update:
+    redirect: nicas/carsforsell/staticbanner
+    redirectClose: nicas/carsforsell/staticbanner

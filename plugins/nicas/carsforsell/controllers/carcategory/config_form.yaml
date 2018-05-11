@@ -1,0 +1,10 @@
+name: CarCategory
+form: $/nicas/carsforsell/models/carcategory/fields.yaml
+modelClass: Nicas\Carsforsell\Models\CarCategory
+defaultRedirect: nicas/carsforsell/carcategory
+create:
+    redirect: 'nicas/carsforsell/carcategory/update/:id'
+    redirectClose: nicas/carsforsell/carcategory
+update:
+    redirect: nicas/carsforsell/carcategory
+    redirectClose: nicas/carsforsell/carcategory

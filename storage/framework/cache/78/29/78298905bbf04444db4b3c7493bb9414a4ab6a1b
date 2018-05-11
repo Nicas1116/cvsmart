@@ -1,0 +1,142 @@
+1525708464a:1:{s:11:"CarList.htm";a:10:{s:8:"fileName";s:11:"CarList.htm";s:7:"content";s:2578:"title = "Car List"
+url = "/car-list"
+layout = "Default"
+is_hidden = 0
+
+[CarsforsellList]
+==
+<div class="carselectpage">
+<div class="container ">
+   <div class="row">
+      <div class="col-md-11 col-sm-12">
+          <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <select class="form-control">
+                  <option>Categories</option>
+                  {% if car_categorieslist %}
+                      {% for slider in car_categorieslist %}
+                      <option value="{{slider }}">{{ slider }}</option>
+                      {% endfor %}
+                    {% endif %}
+                </select>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <select class="form-control">
+                  <option>Brand</option>
+                  {% if car_brandlist %}
+                      {% for slider in car_brandlist %}
+                      <option value="{{slider }}">{{ slider }}</option>
+                      {% endfor %}
+                    {% endif %}
+                </select>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <select class="form-control">
+                  <option>All state</option>
+                  {% if car_statelist %}
+                      {% for slider in car_statelist %}
+                      <option value="{{slider }}">{{ slider }}</option>
+                      {% endfor %}
+                    {% endif %}
+                </select>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-1 col-sm-12">
+          <button class="submitbutton form-control"><i class="fa fa-search"></i></button>
+      </div>
+    </div>
+</div>
+</div>
+<div class="container carlistpage">
+
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+      	<div class="row">
+      		<div class="col-md-12 col-sm-12">
+      	<h1>recommended for you</h1>
+      </div>
+      	</div>
+      	<?php $m=0; ?>
+      	<div class="row carlist_all">
+  			{% for car in carslist %}
+  			<?php $m++; ?>
+				<div class="col-md-4 col-sm-12 carlist_one"><div class="carlist_content" ><img src="{{ car.carlist_image|media }}"/><h2>{{ car.title }}</h2><p class="shortdesc">{{ car.shortdesc }}</p><a href="car/{{ car.slug }}">More Info</a></div></div>
+			 {% endfor %}
+      	</div>
+      	<ul id="pagination" class="pagination-sm"></ul>
+      </div>
+  </div>
+</div>
+<script type="text/javascript">
+  var currentpage = {{ currentpage}};
+  var totalpages =  {{ sizeofcarlist }};
+	
+</script>";s:5:"mtime";i:1525619156;s:6:"markup";s:2479:"<div class="carselectpage">
+<div class="container ">
+   <div class="row">
+      <div class="col-md-11 col-sm-12">
+          <div class="row">
+            <div class="col-md-4 col-sm-12">
+                <select class="form-control">
+                  <option>Categories</option>
+                  {% if car_categorieslist %}
+                      {% for slider in car_categorieslist %}
+                      <option value="{{slider }}">{{ slider }}</option>
+                      {% endfor %}
+                    {% endif %}
+                </select>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <select class="form-control">
+                  <option>Brand</option>
+                  {% if car_brandlist %}
+                      {% for slider in car_brandlist %}
+                      <option value="{{slider }}">{{ slider }}</option>
+                      {% endfor %}
+                    {% endif %}
+                </select>
+            </div>
+            <div class="col-md-4 col-sm-12">
+              <select class="form-control">
+                  <option>All state</option>
+                  {% if car_statelist %}
+                      {% for slider in car_statelist %}
+                      <option value="{{slider }}">{{ slider }}</option>
+                      {% endfor %}
+                    {% endif %}
+                </select>
+            </div>
+          </div>
+      </div>
+      <div class="col-md-1 col-sm-12">
+          <button class="submitbutton form-control"><i class="fa fa-search"></i></button>
+      </div>
+    </div>
+</div>
+</div>
+<div class="container carlistpage">
+
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+      	<div class="row">
+      		<div class="col-md-12 col-sm-12">
+      	<h1>recommended for you</h1>
+      </div>
+      	</div>
+      	<?php $m=0; ?>
+      	<div class="row carlist_all">
+  			{% for car in carslist %}
+  			<?php $m++; ?>
+				<div class="col-md-4 col-sm-12 carlist_one"><div class="carlist_content" ><img src="{{ car.carlist_image|media }}"/><h2>{{ car.title }}</h2><p class="shortdesc">{{ car.shortdesc }}</p><a href="car/{{ car.slug }}">More Info</a></div></div>
+			 {% endfor %}
+      	</div>
+      	<ul id="pagination" class="pagination-sm"></ul>
+      </div>
+  </div>
+</div>
+<script type="text/javascript">
+  var currentpage = {{ currentpage}};
+  var totalpages =  {{ sizeofcarlist }};
+	
+</script>";s:4:"code";N;s:5:"title";s:8:"Car List";s:3:"url";s:9:"/car-list";s:6:"layout";s:7:"Default";s:9:"is_hidden";s:1:"0";s:15:"CarsforsellList";a:0:{}}}

@@ -1,0 +1,6 @@
+fields:
+    car_category:
+        label: 'Car Category'
+        span: auto
+        placeholder: 'Car Category'
+        type: text

@@ -1,0 +1,10 @@
+name: HomeRotateBanner
+form: $/nicas/carsforsell/models/homerotatebanner/fields.yaml
+modelClass: Nicas\Carsforsell\Models\HomeRotateBanner
+defaultRedirect: nicas/carsforsell/homerotatebanner
+create:
+    redirect: 'nicas/carsforsell/homerotatebanner/update/:id'
+    redirectClose: nicas/carsforsell/homerotatebanner
+update:
+    redirect: nicas/carsforsell/homerotatebanner
+    redirectClose: nicas/carsforsell/homerotatebanner

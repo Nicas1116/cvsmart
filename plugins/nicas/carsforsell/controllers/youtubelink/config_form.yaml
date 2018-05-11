@@ -1,0 +1,10 @@
+name: YoutubeLink
+form: $/nicas/carsforsell/models/youtubelink/fields.yaml
+modelClass: Nicas\Carsforsell\Models\YoutubeLink
+defaultRedirect: nicas/carsforsell/youtubelink
+create:
+    redirect: 'nicas/carsforsell/youtubelink/update/:id'
+    redirectClose: nicas/carsforsell/youtubelink
+update:
+    redirect: nicas/carsforsell/youtubelink
+    redirectClose: nicas/carsforsell/youtubelink

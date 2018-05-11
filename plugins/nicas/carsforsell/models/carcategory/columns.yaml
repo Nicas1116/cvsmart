@@ -1,0 +1,13 @@
+columns:
+    id:
+        label: ID
+        type: text
+    car_category:
+        label: 'Car Category'
+        type: text
+    car_brand:
+        label: 'Car Brand'
+        type: text
+    car_model:
+        label: 'Car Mpde;'
+        type: text

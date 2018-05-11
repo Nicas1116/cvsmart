@@ -1,0 +1,10 @@
+fields:
+    link:
+        label: Link
+        span: left
+        type: text
+    staticimage:
+        label: 'Media finder'
+        mode: file
+        span: left
+        type: mediafinder

@@ -1,0 +1,24 @@
+columns:
+    id:
+        label: ID
+        type: text
+    title:
+        label: 'Car Title'
+        type: text
+        searchable: true
+        sortable: true
+    slug:
+        label: slug
+        type: text
+    is_at_home:
+        label: 'At Home'
+        type: text
+    shortdesc:
+        label: 'Short Desc'
+        type: text
+    car_brand:
+        label: 'Car Brand'
+        type: text
+    car_category:
+        label: 'Car Category'
+        type: text

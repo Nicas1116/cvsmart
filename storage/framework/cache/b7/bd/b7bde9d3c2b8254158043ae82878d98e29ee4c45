@@ -1,0 +1,262 @@
+1526037070a:1:{s:7:"Car.htm";a:10:{s:8:"fileName";s:7:"Car.htm";s:7:"content";s:2256:"title = "Car"
+
+url = "/car/:slug"
+
+layout = "Default"
+
+is_hidden = 0
+
+
+
+[Carsdetail]
+
+==
+{% partial 'CarSelectPage' %}
+
+<div class="container carlistpage">
+
+	<div class="row">
+
+      <div class="col-md-12 col-sm-12">
+
+      	<h1>{{ carsdetail.title }}</h1>
+
+      </div>
+
+  </div>
+
+    <div class="row">
+
+      <div class="col-md-10 col-sm-12">
+
+      <div id="slider" class="flexslider">
+
+  		<ul class="slides">
+
+
+
+      	{% if carsdetail.carimages %}
+
+	        {% for carimage in carsdetail.carimages %}
+
+	        <li>
+
+	   			{% if carimage.isvideo %}
+
+	   			<iframe style="width:100%;display: block;height:550px;border:none;" src="https://www.youtube.com/embed/{{ carimage.carvideo }}"></iframe>
+
+	   			{% else %}
+
+	          <a href="{{ carimage.carimages|media }}" style="background-image: url({{ carimage.carimages|media }});" data-lity class="slider-content">
+
+	          	{% endif %}
+
+	          </a>
+
+	    </li>
+
+	        {% endfor %}
+
+	      {% endif %}
+
+	     </ul>
+
+      </div>
+
+      </div>
+
+      <div class="col-md-2 col-sm-12">
+
+      	<div id="carousel">
+
+  		{% if carsdetail.carimages %}
+
+	        {% for key,carimage in carsdetail.carimages %}
+
+	       
+
+	   		<a style="background-image: url({{ carimage.carimages|media }});" class="slider-content con-{{ key }}" slideno="{{ key }}">
+
+	   			{% if carimage.isvideo %}
+
+	   			<span class="videobg"></span>
+
+	   			{% endif %}
+
+	          	
+
+	          </a>
+
+
+
+	        {% endfor %}
+
+	      {% endif %}
+
+      </div>
+
+      </div>
+
+  </div>
+
+  <div class="row">
+
+      <div class="col-md-4 col-sm-12">
+
+      	<h2>SPECIFICATION</h2>
+
+      	<p>{{ carsdetail.specification|raw }}</p>
+
+      </div>
+
+      <div class="col-md-4 col-sm-12">
+
+      	<h2>Seller/owner contact</h2>
+
+      	<p>{{ carsdetail.sellercontact|raw }}</p>
+
+      	<h2>disclaimer</h2>
+
+      	<p>{{ carsdetail.disclaimer|raw }}</p>
+
+      </div>
+
+      <div class="col-md-4 col-sm-12">
+
+      	<h2>price</h2>
+
+      	<p>{{ carsdetail.price }}</p>
+
+      	<h2>Car loan monthly installment*</h2>
+
+      	<p>{{ carsdetail.carloaninstallment }}</p>
+
+      </div>
+
+  </div>
+
+</div>";s:5:"mtime";i:1525715436;s:6:"markup";s:2154:"{% partial 'CarSelectPage' %}
+
+<div class="container carlistpage">
+
+	<div class="row">
+
+      <div class="col-md-12 col-sm-12">
+
+      	<h1>{{ carsdetail.title }}</h1>
+
+      </div>
+
+  </div>
+
+    <div class="row">
+
+      <div class="col-md-10 col-sm-12">
+
+      <div id="slider" class="flexslider">
+
+  		<ul class="slides">
+
+
+
+      	{% if carsdetail.carimages %}
+
+	        {% for carimage in carsdetail.carimages %}
+
+	        <li>
+
+	   			{% if carimage.isvideo %}
+
+	   			<iframe style="width:100%;display: block;height:550px;border:none;" src="https://www.youtube.com/embed/{{ carimage.carvideo }}"></iframe>
+
+	   			{% else %}
+
+	          <a href="{{ carimage.carimages|media }}" style="background-image: url({{ carimage.carimages|media }});" data-lity class="slider-content">
+
+	          	{% endif %}
+
+	          </a>
+
+	    </li>
+
+	        {% endfor %}
+
+	      {% endif %}
+
+	     </ul>
+
+      </div>
+
+      </div>
+
+      <div class="col-md-2 col-sm-12">
+
+      	<div id="carousel">
+
+  		{% if carsdetail.carimages %}
+
+	        {% for key,carimage in carsdetail.carimages %}
+
+	       
+
+	   		<a style="background-image: url({{ carimage.carimages|media }});" class="slider-content con-{{ key }}" slideno="{{ key }}">
+
+	   			{% if carimage.isvideo %}
+
+	   			<span class="videobg"></span>
+
+	   			{% endif %}
+
+	          	
+
+	          </a>
+
+
+
+	        {% endfor %}
+
+	      {% endif %}
+
+      </div>
+
+      </div>
+
+  </div>
+
+  <div class="row">
+
+      <div class="col-md-4 col-sm-12">
+
+      	<h2>SPECIFICATION</h2>
+
+      	<p>{{ carsdetail.specification|raw }}</p>
+
+      </div>
+
+      <div class="col-md-4 col-sm-12">
+
+      	<h2>Seller/owner contact</h2>
+
+      	<p>{{ carsdetail.sellercontact|raw }}</p>
+
+      	<h2>disclaimer</h2>
+
+      	<p>{{ carsdetail.disclaimer|raw }}</p>
+
+      </div>
+
+      <div class="col-md-4 col-sm-12">
+
+      	<h2>price</h2>
+
+      	<p>{{ carsdetail.price }}</p>
+
+      	<h2>Car loan monthly installment*</h2>
+
+      	<p>{{ carsdetail.carloaninstallment }}</p>
+
+      </div>
+
+  </div>
+
+</div>";s:4:"code";N;s:5:"title";s:3:"Car";s:3:"url";s:10:"/car/:slug";s:6:"layout";s:7:"Default";s:9:"is_hidden";s:1:"0";s:10:"Carsdetail";a:0:{}}}

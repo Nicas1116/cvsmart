@@ -1,0 +1,40 @@
+plugin:
+    name: 'carsforsell::lang.plugin.name'
+    description: 'carsforsell::lang.plugin.description'
+    author: Nicas
+    icon: oc-icon-car
+    homepage: ''
+navigation:
+    main-menu-item:
+        label: Cars
+        url: nicas/carsforsell/carselling
+        icon: icon-car
+        permissions:
+            - cars-permission
+        sideMenu:
+            car-category:
+                label: 'Car Category'
+                url: nicas/carsforsell/carcategory
+                icon: icon-car
+                permissions:
+                    - cars-permission
+    main-menu-item2:
+        label: 'Static Banner'
+        url: nicas/carsforsell/staticbanner
+        icon: icon-image
+        permissions:
+            - cars-permission
+    main-menu-item3:
+        label: 'Youtube Home'
+        url: nicas/carsforsell/youtubelink
+        icon: icon-youtube
+    main-menu-item4:
+        label: 'Rotate Banner'
+        url: nicas/carsforsell/homerotatebanner
+        icon: icon-image
+        permissions:
+            - cars-permission
+permissions:
+    cars-permission:
+        tab: Cars
+        label: Cars

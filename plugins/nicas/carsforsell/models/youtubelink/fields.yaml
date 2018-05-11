@@ -1,0 +1,5 @@
+fields:
+    youtubelink:
+        label: 'Youtube Link'
+        span: left
+        type: text

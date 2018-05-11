@@ -1,0 +1,12 @@
+list: $/nicas/carsforsell/models/carcategory/columns.yaml
+modelClass: Nicas\Carsforsell\Models\CarCategory
+title: CarCategory
+noRecordsMessage: 'backend::lang.list.no_records'
+showSetup: true
+showCheckboxes: true
+recordsPerPage: 20
+toolbar:
+    buttons: list_toolbar
+    search:
+        prompt: 'backend::lang.list.search_prompt'
+recordUrl: 'nicas/carsforsell/carcategory/update/:id'

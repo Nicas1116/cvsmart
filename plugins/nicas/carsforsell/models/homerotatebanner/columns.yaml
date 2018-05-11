@@ -1,0 +1,15 @@
+columns:
+    id:
+        label: id
+        type: text
+        searchable: false
+    imagelink:
+        label: 'Image Link'
+        type: text
+        searchable: true
+    imagebanner:
+        label: 'Image Banner'
+        type: text
+    sorting:
+        label: Sorting
+        type: number

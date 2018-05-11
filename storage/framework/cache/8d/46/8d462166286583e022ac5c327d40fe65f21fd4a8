@@ -1,0 +1,373 @@
+1525708464a:1:{s:8:"Home.htm";a:12:{s:8:"fileName";s:8:"Home.htm";s:7:"content";s:8252:"title = "Home"
+url = "/"
+layout = "Default"
+is_hidden = 0
+
+[Carshome]
+[StaticBannerList]
+[YoutubeLinkList]
+==
+
+  <section id="home">
+      <!-- *** HOMEPAGE CAROUSEL ***
+      _________________________________________________________ -->
+      <!-- Slider main container -->
+      <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+
+              {% if carsforlisthome %}
+                {% for slider in carsforlisthome %}
+                <div class="swiper-slide col-md-12">
+                  <a href="/car/{{ slider.slug }}" style="background-image: url({{ slider.homepagebanner|media }});" class="slider-content"></a>
+                </div>
+                {% endfor %}
+              {% endif %}
+          </div>
+
+
+          <div class="swiper-pagination" style="background: transparent;"></div>
+          <div class="s-button-prev">
+            <span class="fa fa-angle-left"></span>
+          </div>
+          <div class="s-button-next">
+             <span class="fa fa-angle-right"></span>
+          </div>
+      </div>
+
+      <!-- *** HOMEPAGE CAROUSEL END *** -->
+  </section>
+   <section id="homesearch">
+<div class="container">
+
+    <div class="row">
+      <div class="col-md-8 col-sm-12">
+       	<div class="search_container">
+       		<script type="text/javascript">
+       		</script>
+       		<form action="/car-list" method="POST">
+       			<h2>Find used car for sale</h2>
+       			<div class="row">
+		            <div class="col-md-6 col-sm-12">
+		                <select name="brand" class="form-control">
+		                  <option>All Brands</option>
+		                  {% if car_brandlist %}
+			                {% for slider in car_brandlist %}
+			                <option value="{{slider }}">{{ slider }}</option>
+			                {% endfor %}
+			              {% endif %}
+		                </select>
+		            </div>
+		            <div class="col-md-6 col-sm-12">
+		              <select name="models" class="form-control">
+		                  <option>All Models</option>
+		                  {% if car_modellist %}
+			                {% for slider in car_modellist %}
+			                <option value="{{slider }}">{{ slider }}</option>
+			                {% endfor %}
+			              {% endif %}
+		                </select>
+		            </div>
+		            <div class="col-md-6 col-sm-12">
+		              <select name="states" class="form-control">
+		                  <option>All state</option>
+		                  {% if car_statelist %}
+			                {% for slider in car_statelist %}
+			                <option value="{{slider }}">{{ slider }}</option>
+			                {% endfor %}
+			              {% endif %}
+		                </select>
+		            </div>
+		            <div class="col-md-6 col-sm-12">
+		              <select name="prices" class="form-control">
+		                  <option>All Prices</option>
+		                  {% if car_pricelist %}
+			                {% for slider in car_pricelist %}
+			                <option value="{{slider }}">{{ slider }}</option>
+			                {% endfor %}
+			              {% endif %}
+		                </select>
+		            </div>
+		            <div class="col-md-12 col-sm-12">
+		            	<button class="btn-search">SEARCH</button>
+		            </div>
+		        </div>
+       		</form>
+       		<form action="/car-list">
+       			<h2>Find modify car accessories</h2>
+       			<div class="row">
+		            <div class="col-md-6 col-sm-12">
+		                <select class="form-control">
+		                  <option>Brand</option>
+		                  {% if car_brandlist %}
+			                {% for slider in car_brandlist %}
+			                <option value="{{slider }}">{{ slider }}</option>
+			                {% endfor %}
+			              {% endif %}
+		                </select>
+		            </div>
+		            <div class="col-md-6 col-sm-12">
+		              <select class="form-control">
+		                  <option>Categories</option>
+		                  {% if car_categorieslist %}
+			                {% for slider in car_categorieslist %}
+			                <option value="{{slider }}">{{ slider }}</option>
+			                {% endfor %}
+			              {% endif %}
+		                </select>
+		            </div>
+		            <div class="col-md-12 col-sm-12">
+		            	<button class="btn-search">SEARCH</button>
+		            </div>
+		        </div>
+       		</form>
+       	</div>
+      </div>
+      <div class="col-md-1 col-sm-12 "></div>
+      <div class="col-md-3 col-sm-12 ">
+       		<div class="home_sidebanner swiper-container">
+	          <!-- Additional required wrapper -->
+	          <div class="swiper-wrapper">
+
+	              {% if youtubelinklist %}
+	                {% for slider in youtubelinklist %}
+	                <div class="swiper-slide col-md-12">
+	                  <a href="https://www.youtube.com/watch?v={{ slider.video_id }}" data-lity style="background-image: url(http://img.youtube.com/vi/{{ slider.video_id }}/mqdefault.jpg);" class="slider-content youtubelink"><span class="videobg"></span></a>
+	                </div>
+	                {% endfor %}
+	              {% endif %}
+	          </div>
+
+
+	          <div class="swiper-pagination"></div>
+	          <div class="hidden s-button-prev">
+	            <span class="fa fa-angle-left"></span>
+	          </div>
+	          <div class="hidden s-button-next">
+	             <span class="fa fa-angle-right"></span>
+	          </div>
+	      </div>
+	      <div class="static_sidebanner">
+	      	<div class="home_sidebanner swiper-container">
+	          <!-- Additional required wrapper -->
+	          <div class="swiper-wrapper">
+	          	{% if homestaticbanner %}
+	      	 {% for banner in homestaticbanner %}
+	      	 <div class="swiper-slide">
+	      		<a href="{{ banner.link }}"><img src="{{ banner.staticimage|media }}"></a>
+	      	</div>
+	      		 {% endfor %}
+	      		 {% endif %}
+	      		 <div class="swiper-pagination"></div>
+	          <div class="hidden s-button-prev">
+	            <span class="fa fa-angle-left"></span>
+	          </div>
+	          <div class="hidden s-button-next">
+	             <span class="fa fa-angle-right"></span>
+	          </div>
+	      </div>
+	      </div>
+      </div>
+    </div>
+    <!-- /.col-md-3 -->
+  </div>
+</section>
+
+<section id="homeaboutus">
+	<div class="container">
+
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+      	<h2>About us</h2>
+	<p>It’s time to know a little bit about us! CV Smart Auto Trading is a brainchild of 2 passionate car enthusiasts. We might be small in size but both of us have a big heart and share the same vision. Finally, we decided that it was the right time to do something different in life. We gave up on what we use to do and pursue what we have always dream of.<br/>
+<br/>
+There is a saying '<span>Love the car that you owned and treat it as one of a kind</span>'. By keeping this saying in mind, we wanted to share our passion and knowledge for cars to the public. Although a car is just a vehicle for transportation, getting us from one destination to another. That might sound uninspiring at all but let us change your mind about that because we are able to spark things up and make it more than just an ordinary vehicle. We modify cars with hand-picked accessories that we sell in our shops. We are also experts in fine tuning and make them AWESOME again.<br/>
+<br/>
+In CV Smart Auto Trading, we sell genuine second-hand luxury cars too. Drop by to our show room and you will be spoilt with lots of exceptional and exclusive choices there.<br/>
+<br/>
+There are lots of cool pictures showcasing what CV Smart Auto Trading has to offer in the official fan page, feel free to <a href="http://www.facebook.com/">check it out</a>. We update all the upcoming promotions from time to time as well, so make sure you don’t miss out by staying with us and you will find yourself lost in the wondrous world of CV Smart Auto Trading. </p>
+</div>
+</div>
+</div>
+</section>";s:5:"mtime";i:1525618650;s:6:"markup";s:8129:"<section id="home">
+      <!-- *** HOMEPAGE CAROUSEL ***
+      _________________________________________________________ -->
+      <!-- Slider main container -->
+      <div class="swiper-container">
+          <!-- Additional required wrapper -->
+          <div class="swiper-wrapper">
+
+              {% if carsforlisthome %}
+                {% for slider in carsforlisthome %}
+                <div class="swiper-slide col-md-12">
+                  <a href="/car/{{ slider.slug }}" style="background-image: url({{ slider.homepagebanner|media }});" class="slider-content"></a>
+                </div>
+                {% endfor %}
+              {% endif %}
+          </div>
+
+
+          <div class="swiper-pagination" style="background: transparent;"></div>
+          <div class="s-button-prev">
+            <span class="fa fa-angle-left"></span>
+          </div>
+          <div class="s-button-next">
+             <span class="fa fa-angle-right"></span>
+          </div>
+      </div>
+
+      <!-- *** HOMEPAGE CAROUSEL END *** -->
+  </section>
+   <section id="homesearch">
+<div class="container">
+
+    <div class="row">
+      <div class="col-md-8 col-sm-12">
+       	<div class="search_container">
+       		<script type="text/javascript">
+       		</script>
+       		<form action="/car-list" method="POST">
+       			<h2>Find used car for sale</h2>
+       			<div class="row">
+		            <div class="col-md-6 col-sm-12">
+		                <select name="brand" class="form-control">
+		                  <option>All Brands</option>
+		                  {% if car_brandlist %}
+			                {% for slider in car_brandlist %}
+			                <option value="{{slider }}">{{ slider }}</option>
+			                {% endfor %}
+			              {% endif %}
+		                </select>
+		            </div>
+		            <div class="col-md-6 col-sm-12">
+		              <select name="models" class="form-control">
+		                  <option>All Models</option>
+		                  {% if car_modellist %}
+			                {% for slider in car_modellist %}
+			                <option value="{{slider }}">{{ slider }}</option>
+			                {% endfor %}
+			              {% endif %}
+		                </select>
+		            </div>
+		            <div class="col-md-6 col-sm-12">
+		              <select name="states" class="form-control">
+		                  <option>All state</option>
+		                  {% if car_statelist %}
+			                {% for slider in car_statelist %}
+			                <option value="{{slider }}">{{ slider }}</option>
+			                {% endfor %}
+			              {% endif %}
+		                </select>
+		            </div>
+		            <div class="col-md-6 col-sm-12">
+		              <select name="prices" class="form-control">
+		                  <option>All Prices</option>
+		                  {% if car_pricelist %}
+			                {% for slider in car_pricelist %}
+			                <option value="{{slider }}">{{ slider }}</option>
+			                {% endfor %}
+			              {% endif %}
+		                </select>
+		            </div>
+		            <div class="col-md-12 col-sm-12">
+		            	<button class="btn-search">SEARCH</button>
+		            </div>
+		        </div>
+       		</form>
+       		<form action="/car-list">
+       			<h2>Find modify car accessories</h2>
+       			<div class="row">
+		            <div class="col-md-6 col-sm-12">
+		                <select class="form-control">
+		                  <option>Brand</option>
+		                  {% if car_brandlist %}
+			                {% for slider in car_brandlist %}
+			                <option value="{{slider }}">{{ slider }}</option>
+			                {% endfor %}
+			              {% endif %}
+		                </select>
+		            </div>
+		            <div class="col-md-6 col-sm-12">
+		              <select class="form-control">
+		                  <option>Categories</option>
+		                  {% if car_categorieslist %}
+			                {% for slider in car_categorieslist %}
+			                <option value="{{slider }}">{{ slider }}</option>
+			                {% endfor %}
+			              {% endif %}
+		                </select>
+		            </div>
+		            <div class="col-md-12 col-sm-12">
+		            	<button class="btn-search">SEARCH</button>
+		            </div>
+		        </div>
+       		</form>
+       	</div>
+      </div>
+      <div class="col-md-1 col-sm-12 "></div>
+      <div class="col-md-3 col-sm-12 ">
+       		<div class="home_sidebanner swiper-container">
+	          <!-- Additional required wrapper -->
+	          <div class="swiper-wrapper">
+
+	              {% if youtubelinklist %}
+	                {% for slider in youtubelinklist %}
+	                <div class="swiper-slide col-md-12">
+	                  <a href="https://www.youtube.com/watch?v={{ slider.video_id }}" data-lity style="background-image: url(http://img.youtube.com/vi/{{ slider.video_id }}/mqdefault.jpg);" class="slider-content youtubelink"><span class="videobg"></span></a>
+	                </div>
+	                {% endfor %}
+	              {% endif %}
+	          </div>
+
+
+	          <div class="swiper-pagination"></div>
+	          <div class="hidden s-button-prev">
+	            <span class="fa fa-angle-left"></span>
+	          </div>
+	          <div class="hidden s-button-next">
+	             <span class="fa fa-angle-right"></span>
+	          </div>
+	      </div>
+	      <div class="static_sidebanner">
+	      	<div class="home_sidebanner swiper-container">
+	          <!-- Additional required wrapper -->
+	          <div class="swiper-wrapper">
+	          	{% if homestaticbanner %}
+	      	 {% for banner in homestaticbanner %}
+	      	 <div class="swiper-slide">
+	      		<a href="{{ banner.link }}"><img src="{{ banner.staticimage|media }}"></a>
+	      	</div>
+	      		 {% endfor %}
+	      		 {% endif %}
+	      		 <div class="swiper-pagination"></div>
+	          <div class="hidden s-button-prev">
+	            <span class="fa fa-angle-left"></span>
+	          </div>
+	          <div class="hidden s-button-next">
+	             <span class="fa fa-angle-right"></span>
+	          </div>
+	      </div>
+	      </div>
+      </div>
+    </div>
+    <!-- /.col-md-3 -->
+  </div>
+</section>
+
+<section id="homeaboutus">
+	<div class="container">
+
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+      	<h2>About us</h2>
+	<p>It’s time to know a little bit about us! CV Smart Auto Trading is a brainchild of 2 passionate car enthusiasts. We might be small in size but both of us have a big heart and share the same vision. Finally, we decided that it was the right time to do something different in life. We gave up on what we use to do and pursue what we have always dream of.<br/>
+<br/>
+There is a saying '<span>Love the car that you owned and treat it as one of a kind</span>'. By keeping this saying in mind, we wanted to share our passion and knowledge for cars to the public. Although a car is just a vehicle for transportation, getting us from one destination to another. That might sound uninspiring at all but let us change your mind about that because we are able to spark things up and make it more than just an ordinary vehicle. We modify cars with hand-picked accessories that we sell in our shops. We are also experts in fine tuning and make them AWESOME again.<br/>
+<br/>
+In CV Smart Auto Trading, we sell genuine second-hand luxury cars too. Drop by to our show room and you will be spoilt with lots of exceptional and exclusive choices there.<br/>
+<br/>
+There are lots of cool pictures showcasing what CV Smart Auto Trading has to offer in the official fan page, feel free to <a href="http://www.facebook.com/">check it out</a>. We update all the upcoming promotions from time to time as well, so make sure you don’t miss out by staying with us and you will find yourself lost in the wondrous world of CV Smart Auto Trading. </p>
+</div>
+</div>
+</div>
+</section>";s:4:"code";N;s:5:"title";s:4:"Home";s:3:"url";s:1:"/";s:6:"layout";s:7:"Default";s:9:"is_hidden";s:1:"0";s:8:"Carshome";a:0:{}s:16:"StaticBannerList";a:0:{}s:15:"YoutubeLinkList";a:0:{}}}
