@@ -52,8 +52,8 @@ is_hidden = 0
        			<h2>Find used car for sale</h2>
        			<div class="row">
 		            <div class="col-md-6 col-sm-12">
-		                <select name="brand" class="form-control custom-select car_brand_select">
-		                  <option>All Brands</option>
+		                <select name="car_brand_select" class="form-control custom-select car_brand_select">
+		                  <option  value="">All Brands</option>
 		                  {% if car_brandlist %}
 			                {% for slider in car_brandlist %}
 			                <option value="{{slider }}">{{ slider }}</option>
@@ -62,8 +62,8 @@ is_hidden = 0
 		                </select>
 		            </div>
 		            <div class="col-md-6 col-sm-12">
-		              <select name="models" class="form-control custom-select car_model_select" disabled>
-		                  <option>All Models</option>
+		              <select name="car_models_select" class="form-control custom-select car_model_select" disabled>
+		                  <option value="">All Models</option>
 		                  {% if car_modellist %}
 			                {% for slider in car_modellist %}
 			                <option value="{{slider }}">{{ slider }}</option>
@@ -72,8 +72,8 @@ is_hidden = 0
 		                </select>
 		            </div>
 		            <div class="col-md-6 col-sm-12">
-		              <select name="states" class="form-control custom-select">
-		                  <option>All state</option>
+		              <select name="car_state_select" class="form-control custom-select">
+		                  <option  value="">All state</option>
 		                  {% if car_statelist %}
 			                {% for slider in car_statelist %}
 			                <option value="{{slider }}">{{ slider }}</option>
@@ -82,8 +82,8 @@ is_hidden = 0
 		                </select>
 		            </div>
 		            <div class="col-md-6 col-sm-12">
-		              <select name="prices" class="form-control custom-select">
-		                  <option>All Prices</option>
+		              <select name="car_prices_select" class="form-control custom-select">
+		                  <option  value="">All Prices</option>
 		                  {% if car_pricelist %}
 			                {% for slider in car_pricelist %}
 			                <option value="{{slider }}">{{ slider }}</option>
@@ -100,8 +100,8 @@ is_hidden = 0
        			<h2>Find modify car accessories</h2>
        			<div class="row">
 		            <div class="col-md-6 col-sm-12">
-		                <select class="form-control custom-select car_accessories_brand">
-		                  <option>All Brand</option>
+		                <select name="car_accessories_brand" class="form-control custom-select car_accessories_brand">
+		                  <option  value="">All Brand</option>
 		                  {% if car_brandlist %}
 			                {% for slider in car_brandlist %}
 			                <option value="{{slider }}">{{ slider }}</option>
@@ -110,8 +110,8 @@ is_hidden = 0
 		                </select>
 		            </div>
 		            <div class="col-md-6 col-sm-12">
-		              <select class="form-control custom-select car_accessories_category" disabled>
-		                  <option>All Categories</option>
+		              <select name="car_accessories_category" class="form-control custom-select car_accessories_category" disabled>
+		                  <option value="">All Categories</option>
 		                  {% if car_categorieslist %}
 			                {% for slider in car_categorieslist %}
 			                <option value="{{slider }}">{{ slider }}</option>

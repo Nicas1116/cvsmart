@@ -140,7 +140,7 @@ class CarsforsellList extends ComponentBase
   }else{
    $allCarList =$carListModel->toArray();
   }
-  
+  echo json_encode(Input::post());
   if(Input::post('car_brand_select')){
     foreach ($allCarList as $key => $carList) {
       if(Input::post('car_brand_select')){

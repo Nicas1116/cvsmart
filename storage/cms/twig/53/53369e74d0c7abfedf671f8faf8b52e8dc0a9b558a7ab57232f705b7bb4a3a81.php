@@ -79,7 +79,7 @@ class __TwigTemplate_94eb9d144d0610f59eb42f2a39f911ffe5b00d76243550f2a902d3900a3
        \t\t\t<div class=\"row\">
 \t\t            <div class=\"col-md-6 col-sm-12\">
 \t\t                <select name=\"brand\" class=\"form-control custom-select car_brand_select\">
-\t\t                  <option>All Brands</option>
+\t\t                  <option  value=\"\">All Brands</option>
 \t\t                  ";
         // line 46
         if (($context["car_brandlist"] ?? null)) {
@@ -107,7 +107,7 @@ class __TwigTemplate_94eb9d144d0610f59eb42f2a39f911ffe5b00d76243550f2a902d3900a3
 \t\t            </div>
 \t\t            <div class=\"col-md-6 col-sm-12\">
 \t\t              <select name=\"models\" class=\"form-control custom-select car_model_select\" disabled>
-\t\t                  <option>All Models</option>
+\t\t                  <option value=\"\">All Models</option>
 \t\t                  ";
         // line 56
         if (($context["car_modellist"] ?? null)) {
@@ -135,7 +135,7 @@ class __TwigTemplate_94eb9d144d0610f59eb42f2a39f911ffe5b00d76243550f2a902d3900a3
 \t\t            </div>
 \t\t            <div class=\"col-md-6 col-sm-12\">
 \t\t              <select name=\"states\" class=\"form-control custom-select\">
-\t\t                  <option>All state</option>
+\t\t                  <option  value=\"\">All state</option>
 \t\t                  ";
         // line 66
         if (($context["car_statelist"] ?? null)) {
@@ -163,7 +163,7 @@ class __TwigTemplate_94eb9d144d0610f59eb42f2a39f911ffe5b00d76243550f2a902d3900a3
 \t\t            </div>
 \t\t            <div class=\"col-md-6 col-sm-12\">
 \t\t              <select name=\"prices\" class=\"form-control custom-select\">
-\t\t                  <option>All Prices</option>
+\t\t                  <option  value=\"\">All Prices</option>
 \t\t                  ";
         // line 76
         if (($context["car_pricelist"] ?? null)) {
@@ -199,7 +199,7 @@ class __TwigTemplate_94eb9d144d0610f59eb42f2a39f911ffe5b00d76243550f2a902d3900a3
        \t\t\t<div class=\"row\">
 \t\t            <div class=\"col-md-6 col-sm-12\">
 \t\t                <select class=\"form-control custom-select car_accessories_brand\">
-\t\t                  <option>All Brand</option>
+\t\t                  <option  value=\"\">All Brand</option>
 \t\t                  ";
         // line 94
         if (($context["car_brandlist"] ?? null)) {
@@ -227,7 +227,7 @@ class __TwigTemplate_94eb9d144d0610f59eb42f2a39f911ffe5b00d76243550f2a902d3900a3
 \t\t            </div>
 \t\t            <div class=\"col-md-6 col-sm-12\">
 \t\t              <select class=\"form-control custom-select car_accessories_category\" disabled>
-\t\t                  <option>All Categories</option>
+\t\t                  <option value=\"\">All Categories</option>
 \t\t                  ";
         // line 104
         if (($context["car_categorieslist"] ?? null)) {
@@ -374,7 +374,6 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
         // line 187
         echo ($context["car_accesortlist"] ?? null);
         echo "');
-\tconsole.log(carcategory)
 \t\$(document).ready(function(){
 \t\tvar dbrand = new Array();
 \t\t\$.each(carcategory,function(i,a){
@@ -387,7 +386,7 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 \t\t\$(\".car_brand_select\").change(function(){
 \t\t\tvar car_brand_select_val = \$(this).val();
 \t\t\tvar dmodel = new Array();
-\t\t\t\$(\".car_model_select\").html(\"<option>All Models</option>\")
+\t\t\t\$(\".car_model_select\").html(\"<option value=''>All Models</option>\")
 \t\t\t\$.each(carcategory,function(i,a){
 \t\t\t\tif(a.brand == car_brand_select_val){
 \t\t\t\t\tif(\$.inArray(a.model, dmodel) < 0 ){
@@ -410,7 +409,7 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 \t\t\$(\".car_accessories_brand\").change(function(){
 \t\t\tvar car_brand_select_val = \$(this).val();
 \t\t\tvar dmodel = new Array();
-\t\t\t\$(\".car_accessories_category\").html(\"<option>All Categories</option>\")
+\t\t\t\$(\".car_accessories_category\").html(\"<option value=''>All Categories</option>\")
 \t\t\t\$.each(carcategory,function(i,a){
 \t\t\t\tif(a.brand == car_brand_select_val){
 \t\t\t\t\tif(\$.inArray(a.model, dmodel) < 0 ){
@@ -487,7 +486,7 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
        \t\t\t<div class=\"row\">
 \t\t            <div class=\"col-md-6 col-sm-12\">
 \t\t                <select name=\"brand\" class=\"form-control custom-select car_brand_select\">
-\t\t                  <option>All Brands</option>
+\t\t                  <option  value=\"\">All Brands</option>
 \t\t                  {% if car_brandlist %}
 \t\t\t                {% for slider in car_brandlist %}
 \t\t\t                <option value=\"{{slider }}\">{{ slider }}</option>
@@ -497,7 +496,7 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 \t\t            </div>
 \t\t            <div class=\"col-md-6 col-sm-12\">
 \t\t              <select name=\"models\" class=\"form-control custom-select car_model_select\" disabled>
-\t\t                  <option>All Models</option>
+\t\t                  <option value=\"\">All Models</option>
 \t\t                  {% if car_modellist %}
 \t\t\t                {% for slider in car_modellist %}
 \t\t\t                <option value=\"{{slider }}\">{{ slider }}</option>
@@ -507,7 +506,7 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 \t\t            </div>
 \t\t            <div class=\"col-md-6 col-sm-12\">
 \t\t              <select name=\"states\" class=\"form-control custom-select\">
-\t\t                  <option>All state</option>
+\t\t                  <option  value=\"\">All state</option>
 \t\t                  {% if car_statelist %}
 \t\t\t                {% for slider in car_statelist %}
 \t\t\t                <option value=\"{{slider }}\">{{ slider }}</option>
@@ -517,7 +516,7 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 \t\t            </div>
 \t\t            <div class=\"col-md-6 col-sm-12\">
 \t\t              <select name=\"prices\" class=\"form-control custom-select\">
-\t\t                  <option>All Prices</option>
+\t\t                  <option  value=\"\">All Prices</option>
 \t\t                  {% if car_pricelist %}
 \t\t\t                {% for slider in car_pricelist %}
 \t\t\t                <option value=\"{{slider }}\">{{ slider }}</option>
@@ -535,7 +534,7 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
        \t\t\t<div class=\"row\">
 \t\t            <div class=\"col-md-6 col-sm-12\">
 \t\t                <select class=\"form-control custom-select car_accessories_brand\">
-\t\t                  <option>All Brand</option>
+\t\t                  <option  value=\"\">All Brand</option>
 \t\t                  {% if car_brandlist %}
 \t\t\t                {% for slider in car_brandlist %}
 \t\t\t                <option value=\"{{slider }}\">{{ slider }}</option>
@@ -545,7 +544,7 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 \t\t            </div>
 \t\t            <div class=\"col-md-6 col-sm-12\">
 \t\t              <select class=\"form-control custom-select car_accessories_category\" disabled>
-\t\t                  <option>All Categories</option>
+\t\t                  <option value=\"\">All Categories</option>
 \t\t                  {% if car_categorieslist %}
 \t\t\t                {% for slider in car_categorieslist %}
 \t\t\t                <option value=\"{{slider }}\">{{ slider }}</option>
@@ -630,7 +629,6 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 <script type=\"text/javascript\">
 \tvar carcategory = JSON.parse('{{ car_categorylist|raw }}');
 \tvar car_accesor = JSON.parse('{{ car_accesortlist|raw }}');
-\tconsole.log(carcategory)
 \t\$(document).ready(function(){
 \t\tvar dbrand = new Array();
 \t\t\$.each(carcategory,function(i,a){
@@ -643,7 +641,7 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 \t\t\$(\".car_brand_select\").change(function(){
 \t\t\tvar car_brand_select_val = \$(this).val();
 \t\t\tvar dmodel = new Array();
-\t\t\t\$(\".car_model_select\").html(\"<option>All Models</option>\")
+\t\t\t\$(\".car_model_select\").html(\"<option value=''>All Models</option>\")
 \t\t\t\$.each(carcategory,function(i,a){
 \t\t\t\tif(a.brand == car_brand_select_val){
 \t\t\t\t\tif(\$.inArray(a.model, dmodel) < 0 ){
@@ -666,7 +664,7 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 \t\t\$(\".car_accessories_brand\").change(function(){
 \t\t\tvar car_brand_select_val = \$(this).val();
 \t\t\tvar dmodel = new Array();
-\t\t\t\$(\".car_accessories_category\").html(\"<option>All Categories</option>\")
+\t\t\t\$(\".car_accessories_category\").html(\"<option value=''>All Categories</option>\")
 \t\t\t\$.each(carcategory,function(i,a){
 \t\t\t\tif(a.brand == car_brand_select_val){
 \t\t\t\t\tif(\$.inArray(a.model, dmodel) < 0 ){

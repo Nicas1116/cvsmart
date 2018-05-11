@@ -1,4 +1,4 @@
-1526060075a:1:{s:8:"Home.htm";a:13:{s:8:"fileName";s:8:"Home.htm";s:7:"content";s:10475:"title = "Home"
+1526064258a:1:{s:8:"Home.htm";a:13:{s:8:"fileName";s:8:"Home.htm";s:7:"content";s:10565:"title = "Home"
 url = "/"
 layout = "Default"
 is_hidden = 0
@@ -52,8 +52,8 @@ is_hidden = 0
        			<h2>Find used car for sale</h2>
        			<div class="row">
 		            <div class="col-md-6 col-sm-12">
-		                <select name="brand" class="form-control custom-select car_brand_select">
-		                  <option>All Brands</option>
+		                <select name="car_brand_select" class="form-control custom-select car_brand_select">
+		                  <option  value="">All Brands</option>
 		                  {% if car_brandlist %}
 			                {% for slider in car_brandlist %}
 			                <option value="{{slider }}">{{ slider }}</option>
@@ -62,8 +62,8 @@ is_hidden = 0
 		                </select>
 		            </div>
 		            <div class="col-md-6 col-sm-12">
-		              <select name="models" class="form-control custom-select car_model_select" disabled>
-		                  <option>All Models</option>
+		              <select name="car_models_select" class="form-control custom-select car_model_select" disabled>
+		                  <option value="">All Models</option>
 		                  {% if car_modellist %}
 			                {% for slider in car_modellist %}
 			                <option value="{{slider }}">{{ slider }}</option>
@@ -72,8 +72,8 @@ is_hidden = 0
 		                </select>
 		            </div>
 		            <div class="col-md-6 col-sm-12">
-		              <select name="states" class="form-control custom-select">
-		                  <option>All state</option>
+		              <select name="car_state_select" class="form-control custom-select">
+		                  <option  value="">All state</option>
 		                  {% if car_statelist %}
 			                {% for slider in car_statelist %}
 			                <option value="{{slider }}">{{ slider }}</option>
@@ -83,7 +83,7 @@ is_hidden = 0
 		            </div>
 		            <div class="col-md-6 col-sm-12">
 		              <select name="prices" class="form-control custom-select">
-		                  <option>All Prices</option>
+		                  <option  value="">All Prices</option>
 		                  {% if car_pricelist %}
 			                {% for slider in car_pricelist %}
 			                <option value="{{slider }}">{{ slider }}</option>
@@ -101,7 +101,7 @@ is_hidden = 0
        			<div class="row">
 		            <div class="col-md-6 col-sm-12">
 		                <select class="form-control custom-select car_accessories_brand">
-		                  <option>All Brand</option>
+		                  <option  value="">All Brand</option>
 		                  {% if car_brandlist %}
 			                {% for slider in car_brandlist %}
 			                <option value="{{slider }}">{{ slider }}</option>
@@ -111,7 +111,7 @@ is_hidden = 0
 		            </div>
 		            <div class="col-md-6 col-sm-12">
 		              <select class="form-control custom-select car_accessories_category" disabled>
-		                  <option>All Categories</option>
+		                  <option value="">All Categories</option>
 		                  {% if car_categorieslist %}
 			                {% for slider in car_categorieslist %}
 			                <option value="{{slider }}">{{ slider }}</option>
@@ -244,7 +244,7 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 			$(".car_accessories_category").select2("destroy").select2();
 		})
 	})
-</script>";s:5:"mtime";i:1526059472;s:6:"markup";s:10328:"<section id="home">
+</script>";s:5:"mtime";i:1526063649;s:6:"markup";s:10418:"<section id="home">
   	<div class="container">
       <!-- *** HOMEPAGE CAROUSEL ***
       _________________________________________________________ -->
@@ -287,8 +287,8 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
        			<h2>Find used car for sale</h2>
        			<div class="row">
 		            <div class="col-md-6 col-sm-12">
-		                <select name="brand" class="form-control custom-select car_brand_select">
-		                  <option>All Brands</option>
+		                <select name="car_brand_select" class="form-control custom-select car_brand_select">
+		                  <option  value="">All Brands</option>
 		                  {% if car_brandlist %}
 			                {% for slider in car_brandlist %}
 			                <option value="{{slider }}">{{ slider }}</option>
@@ -297,8 +297,8 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 		                </select>
 		            </div>
 		            <div class="col-md-6 col-sm-12">
-		              <select name="models" class="form-control custom-select car_model_select" disabled>
-		                  <option>All Models</option>
+		              <select name="car_models_select" class="form-control custom-select car_model_select" disabled>
+		                  <option value="">All Models</option>
 		                  {% if car_modellist %}
 			                {% for slider in car_modellist %}
 			                <option value="{{slider }}">{{ slider }}</option>
@@ -307,8 +307,8 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 		                </select>
 		            </div>
 		            <div class="col-md-6 col-sm-12">
-		              <select name="states" class="form-control custom-select">
-		                  <option>All state</option>
+		              <select name="car_state_select" class="form-control custom-select">
+		                  <option  value="">All state</option>
 		                  {% if car_statelist %}
 			                {% for slider in car_statelist %}
 			                <option value="{{slider }}">{{ slider }}</option>
@@ -318,7 +318,7 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 		            </div>
 		            <div class="col-md-6 col-sm-12">
 		              <select name="prices" class="form-control custom-select">
-		                  <option>All Prices</option>
+		                  <option  value="">All Prices</option>
 		                  {% if car_pricelist %}
 			                {% for slider in car_pricelist %}
 			                <option value="{{slider }}">{{ slider }}</option>
@@ -336,7 +336,7 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
        			<div class="row">
 		            <div class="col-md-6 col-sm-12">
 		                <select class="form-control custom-select car_accessories_brand">
-		                  <option>All Brand</option>
+		                  <option  value="">All Brand</option>
 		                  {% if car_brandlist %}
 			                {% for slider in car_brandlist %}
 			                <option value="{{slider }}">{{ slider }}</option>
@@ -346,7 +346,7 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 		            </div>
 		            <div class="col-md-6 col-sm-12">
 		              <select class="form-control custom-select car_accessories_category" disabled>
-		                  <option>All Categories</option>
+		                  <option value="">All Categories</option>
 		                  {% if car_categorieslist %}
 			                {% for slider in car_categorieslist %}
 			                <option value="{{slider }}">{{ slider }}</option>
