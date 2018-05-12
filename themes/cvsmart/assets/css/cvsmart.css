@@ -422,7 +422,7 @@ section, div.section{margin-bottom: 0px;}
 .swiper-slide img {
   width: 100%;
 }
-.swiper-slide .slider-content{height: 500px;background-size: cover;background-position: center center;background-repeat: no-repeat;}
+.swiper-slide .slider-content{height: auto;background-size: cover;background-position: center center;background-repeat: no-repeat;}
 .swiper-pagination-bullet{background-color: #11193a}
 .swiper-pagination-bullet-active{background-color: #fff}
 
@@ -521,6 +521,8 @@ section, div.section{margin-bottom: 0px;}
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+#home .containerd{max-width: 1400px;margin: 0 auto;}
+.slider-content img{visibility: hidden;}
 #homeaboutus .container p a,#homeaboutus .container p span{color:#fff;}
 #homeaboutus .container p a{text-decoration:underline;}
 .swiper-pagination:after{content: " ";display: block;position: absolute;top: 0px;left: -26px;}

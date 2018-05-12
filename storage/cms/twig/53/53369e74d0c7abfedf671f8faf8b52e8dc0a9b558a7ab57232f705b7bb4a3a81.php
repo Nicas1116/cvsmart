@@ -17,7 +17,7 @@ class __TwigTemplate_94eb9d144d0610f59eb42f2a39f911ffe5b00d76243550f2a902d3900a3
     {
         // line 1
         echo "<section id=\"home\">
-  \t<div class=\"container\">
+  \t<div class=\"containerd\">
       <!-- *** HOMEPAGE CAROUSEL ***
       _________________________________________________________ -->
       <!-- Slider main container -->
@@ -40,7 +40,9 @@ class __TwigTemplate_94eb9d144d0610f59eb42f2a39f911ffe5b00d76243550f2a902d3900a3
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["slider"], "imagelink", array()), "html", null, true);
                 echo "\" style=\"background-image: url(";
                 echo $this->env->getExtension('System\Twig\Extension')->mediaFilter(twig_get_attribute($this->env, $this->getSourceContext(), $context["slider"], "imagebanner", array()));
-                echo ");\" class=\"slider-content\"></a>
+                echo ");\" class=\"slider-content\"><img src=\"";
+                echo $this->env->getExtension('System\Twig\Extension')->mediaFilter(twig_get_attribute($this->env, $this->getSourceContext(), $context["slider"], "imagebanner", array()));
+                echo "\"/></a>
                 </div>
                 ";
             }
@@ -78,43 +80,25 @@ class __TwigTemplate_94eb9d144d0610f59eb42f2a39f911ffe5b00d76243550f2a902d3900a3
        \t\t\t<h2>Find used car for sale</h2>
        \t\t\t<div class=\"row\">
 \t\t            <div class=\"col-md-6 col-sm-12\">
-\t\t                <select name=\"brand\" class=\"form-control custom-select car_brand_select\">
+\t\t                <select name=\"car_brand_select\" class=\"form-control custom-select car_brand_select\">
 \t\t                  <option  value=\"\">All Brands</option>
-\t\t                  ";
-        // line 46
-        if (($context["car_brandlist"] ?? null)) {
-            // line 47
-            echo "\t\t\t                ";
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(($context["car_brandlist"] ?? null));
-            foreach ($context['_seq'] as $context["_key"] => $context["slider"]) {
-                // line 48
-                echo "\t\t\t                <option value=\"";
-                echo twig_escape_filter($this->env, $context["slider"], "html", null, true);
-                echo "\">";
-                echo twig_escape_filter($this->env, $context["slider"], "html", null, true);
-                echo "</option>
-\t\t\t                ";
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['slider'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 50
-            echo "\t\t\t              ";
-        }
-        // line 51
-        echo "\t\t                </select>
+\t\t                </select>
 \t\t            </div>
 \t\t            <div class=\"col-md-6 col-sm-12\">
-\t\t              <select name=\"models\" class=\"form-control custom-select car_model_select\" disabled>
+\t\t              <select name=\"car_models_select\" class=\"form-control custom-select car_model_select\">
 \t\t                  <option value=\"\">All Models</option>
+\t\t                </select>
+\t\t            </div>
+\t\t            <div class=\"col-md-6 col-sm-12\">
+\t\t              <select name=\"car_state_select\" class=\"form-control custom-select\">
+\t\t                  <option  value=\"\">All state</option>
 \t\t                  ";
         // line 56
-        if (($context["car_modellist"] ?? null)) {
+        if (($context["car_statelist"] ?? null)) {
             // line 57
             echo "\t\t\t                ";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(($context["car_modellist"] ?? null));
+            $context['_seq'] = twig_ensure_traversable(($context["car_statelist"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["slider"]) {
                 // line 58
                 echo "\t\t\t                <option value=\"";
@@ -134,15 +118,15 @@ class __TwigTemplate_94eb9d144d0610f59eb42f2a39f911ffe5b00d76243550f2a902d3900a3
         echo "\t\t                </select>
 \t\t            </div>
 \t\t            <div class=\"col-md-6 col-sm-12\">
-\t\t              <select name=\"states\" class=\"form-control custom-select\">
-\t\t                  <option  value=\"\">All state</option>
+\t\t              <select name=\"car_prices_select\" class=\"form-control custom-select\">
+\t\t                  <option  value=\"\">All Prices</option>
 \t\t                  ";
         // line 66
-        if (($context["car_statelist"] ?? null)) {
+        if (($context["car_pricelist"] ?? null)) {
             // line 67
             echo "\t\t\t                ";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(($context["car_statelist"] ?? null));
+            $context['_seq'] = twig_ensure_traversable(($context["car_pricelist"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["slider"]) {
                 // line 68
                 echo "\t\t\t                <option value=\"";
@@ -161,99 +145,27 @@ class __TwigTemplate_94eb9d144d0610f59eb42f2a39f911ffe5b00d76243550f2a902d3900a3
         // line 71
         echo "\t\t                </select>
 \t\t            </div>
-\t\t            <div class=\"col-md-6 col-sm-12\">
-\t\t              <select name=\"prices\" class=\"form-control custom-select\">
-\t\t                  <option  value=\"\">All Prices</option>
-\t\t                  ";
-        // line 76
-        if (($context["car_pricelist"] ?? null)) {
-            // line 77
-            echo "\t\t\t                ";
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(($context["car_pricelist"] ?? null));
-            foreach ($context['_seq'] as $context["_key"] => $context["slider"]) {
-                // line 78
-                echo "\t\t\t                <option value=\"";
-                echo twig_escape_filter($this->env, $context["slider"], "html", null, true);
-                echo "\">";
-                echo twig_escape_filter($this->env, $context["slider"], "html", null, true);
-                echo "</option>
-\t\t\t                ";
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['slider'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 80
-            echo "\t\t\t              ";
-        }
-        // line 81
-        echo "\t\t                </select>
-\t\t            </div>
 \t\t            <div class=\"col-md-12 col-sm-12\">
+\t\t            \t<input type=\"hidden\" name=\"isfromhome\" value=\"1\">
 \t\t            \t<button class=\"btn-search\">SEARCH</button>
 \t\t            </div>
 \t\t        </div>
        \t\t</form>
-       \t\t<form action=\"/cvsmart/car-list\">
+       \t\t<form action=\"/cvsmart/car-list\" method=\"POST\">
        \t\t\t<h2>Find modify car accessories</h2>
        \t\t\t<div class=\"row\">
 \t\t            <div class=\"col-md-6 col-sm-12\">
-\t\t                <select class=\"form-control custom-select car_accessories_brand\">
+\t\t                <select name=\"car_accessories_brand\" class=\"form-control custom-select car_accessories_brand\">
 \t\t                  <option  value=\"\">All Brand</option>
-\t\t                  ";
-        // line 94
-        if (($context["car_brandlist"] ?? null)) {
-            // line 95
-            echo "\t\t\t                ";
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(($context["car_brandlist"] ?? null));
-            foreach ($context['_seq'] as $context["_key"] => $context["slider"]) {
-                // line 96
-                echo "\t\t\t                <option value=\"";
-                echo twig_escape_filter($this->env, $context["slider"], "html", null, true);
-                echo "\">";
-                echo twig_escape_filter($this->env, $context["slider"], "html", null, true);
-                echo "</option>
-\t\t\t                ";
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['slider'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 98
-            echo "\t\t\t              ";
-        }
-        // line 99
-        echo "\t\t                </select>
+\t\t                </select>
 \t\t            </div>
 \t\t            <div class=\"col-md-6 col-sm-12\">
-\t\t              <select class=\"form-control custom-select car_accessories_category\" disabled>
+\t\t              <select name=\"car_accessories_category\" class=\"form-control custom-select car_accessories_category\">
 \t\t                  <option value=\"\">All Categories</option>
-\t\t                  ";
-        // line 104
-        if (($context["car_categorieslist"] ?? null)) {
-            // line 105
-            echo "\t\t\t                ";
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(($context["car_categorieslist"] ?? null));
-            foreach ($context['_seq'] as $context["_key"] => $context["slider"]) {
-                // line 106
-                echo "\t\t\t                <option value=\"";
-                echo twig_escape_filter($this->env, $context["slider"], "html", null, true);
-                echo "\">";
-                echo twig_escape_filter($this->env, $context["slider"], "html", null, true);
-                echo "</option>
-\t\t\t                ";
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['slider'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 108
-            echo "\t\t\t              ";
-        }
-        // line 109
-        echo "\t\t                </select>
+\t\t                </select>
 \t\t            </div>
 \t\t            <div class=\"col-md-12 col-sm-12\">
+\t\t            \t<input type=\"hidden\" name=\"isfromhome\" value=\"1\">
 \t\t            \t<button class=\"btn-search\">SEARCH</button>
 \t\t            </div>
 \t\t        </div>
@@ -267,17 +179,17 @@ class __TwigTemplate_94eb9d144d0610f59eb42f2a39f911ffe5b00d76243550f2a902d3900a3
 \t          <div class=\"swiper-wrapper\">
 
 \t              ";
-        // line 124
+        // line 106
         if (($context["youtubelinklist"] ?? null)) {
-            // line 125
+            // line 107
             echo "\t                ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable(($context["youtubelinklist"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["slider"]) {
-                // line 126
+                // line 108
                 echo "\t                <div class=\"swiper-slide col-md-12\">
 \t                  <a href=\"https://www.youtube.com/watch?v=";
-                // line 127
+                // line 109
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["slider"], "video_id", array()), "html", null, true);
                 echo "\" data-lity style=\"background-image: url(http://img.youtube.com/vi/";
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["slider"], "video_id", array()), "html", null, true);
@@ -288,10 +200,10 @@ class __TwigTemplate_94eb9d144d0610f59eb42f2a39f911ffe5b00d76243550f2a902d3900a3
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['slider'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 130
+            // line 112
             echo "\t              ";
         }
-        // line 131
+        // line 113
         echo "\t          </div>
 
 
@@ -308,17 +220,17 @@ class __TwigTemplate_94eb9d144d0610f59eb42f2a39f911ffe5b00d76243550f2a902d3900a3
 \t          <!-- Additional required wrapper -->
 \t          <div class=\"swiper-wrapper\">
 \t          \t";
-        // line 146
+        // line 128
         if (($context["homestaticbanner"] ?? null)) {
-            // line 147
+            // line 129
             echo "\t      \t ";
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable(($context["homestaticbanner"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["banner"]) {
-                // line 148
+                // line 130
                 echo "\t      \t <div class=\"swiper-slide\">
 \t      \t\t<a href=\"";
-                // line 149
+                // line 131
                 echo twig_escape_filter($this->env, twig_get_attribute($this->env, $this->getSourceContext(), $context["banner"], "link", array()), "html", null, true);
                 echo "\"><img src=\"";
                 echo $this->env->getExtension('System\Twig\Extension')->mediaFilter(twig_get_attribute($this->env, $this->getSourceContext(), $context["banner"], "staticimage", array()));
@@ -329,10 +241,10 @@ class __TwigTemplate_94eb9d144d0610f59eb42f2a39f911ffe5b00d76243550f2a902d3900a3
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['banner'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 152
+            // line 134
             echo "\t      \t\t ";
         }
-        // line 153
+        // line 135
         echo "\t      \t\t <div class=\"swiper-pagination\"></div>
 \t          <div class=\"hidden s-button-prev\">
 \t            <span class=\"fa fa-angle-left\"></span>
@@ -367,11 +279,11 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 </section>
 <script type=\"text/javascript\">
 \tvar carcategory = JSON.parse('";
-        // line 186
+        // line 168
         echo ($context["car_categorylist"] ?? null);
         echo "');
 \tvar car_accesor = JSON.parse('";
-        // line 187
+        // line 169
         echo ($context["car_accesortlist"] ?? null);
         echo "');
 \t\$(document).ready(function(){
@@ -385,19 +297,26 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 \t\t\$(\".car_brand_select\").select2();
 \t\t\$(\".car_brand_select\").change(function(){
 \t\t\tvar car_brand_select_val = \$(this).val();
-\t\t\tvar dmodel = new Array();
-\t\t\t\$(\".car_model_select\").html(\"<option value=''>All Models</option>\")
-\t\t\t\$.each(carcategory,function(i,a){
-\t\t\t\tif(a.brand == car_brand_select_val){
-\t\t\t\t\tif(\$.inArray(a.model, dmodel) < 0 ){
-\t\t\t\t\t\tdmodel.push(a.model)
-\t\t\t\t\t\t\$(\".car_model_select\").append(\"<option value='\"+a.model+\"'>\"+a.model+\"</option>\");
+\t\t\tif(car_brand_select_val!=\"\"){
+\t\t\t\tvar dmodel = new Array();
+\t\t\t\t\$(\".car_model_select\").html(\"<option value=''>All Models</option>\")
+\t\t\t\t\$.each(carcategory,function(i,a){
+\t\t\t\t\tif(a.brand == car_brand_select_val){
+\t\t\t\t\t\tif(\$.inArray(a.model, dmodel) < 0 ){
+\t\t\t\t\t\t\tdmodel.push(a.model)
+\t\t\t\t\t\t\t\$(\".car_model_select\").append(\"<option value='\"+a.model+\"'>\"+a.model+\"</option>\");
+\t\t\t\t\t\t}
 \t\t\t\t\t}
-\t\t\t\t}
-\t\t\t})
-\t\t\t\$(\".car_model_select\").removeAttr(\"disabled\");
-\t\t\t\$(\".car_model_select\").select2(\"destroy\").select2();
+\t\t\t\t})
+\t\t\t\t\$(\".car_model_select\").removeAttr(\"disabled\");
+\t\t\t\t\$(\".car_model_select\").select2();
+\t\t\t}else{
+\t\t\t\t\$(\".car_model_select\").html(\"<option value=''>All Models</option>\")
+\t\t\t\t\$(\".car_model_select\").attr(\"disabled\",\"\");
+\t\t\t\t\$(\".car_model_select\").select2();
+\t\t\t}
 \t\t})
+\t\t\$(\".car_brand_select\").trigger(\"change\")
 \t\tvar abrand = new Array();
 \t\t\$.each(car_accesor,function(i,a){
 \t\t\tif(\$.inArray(a.brand, abrand) < 0 ){
@@ -408,19 +327,28 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 \t\t\$(\".car_accessories_brand\").select2();
 \t\t\$(\".car_accessories_brand\").change(function(){
 \t\t\tvar car_brand_select_val = \$(this).val();
-\t\t\tvar dmodel = new Array();
-\t\t\t\$(\".car_accessories_category\").html(\"<option value=''>All Categories</option>\")
-\t\t\t\$.each(carcategory,function(i,a){
-\t\t\t\tif(a.brand == car_brand_select_val){
-\t\t\t\t\tif(\$.inArray(a.model, dmodel) < 0 ){
-\t\t\t\t\t\tdmodel.push(a.model)
-\t\t\t\t\t\t\$(\".car_accessories_category\").append(\"<option value='\"+a.category+\"'>\"+a.category+\"</option>\");
+\t\t\tif(car_brand_select_val!=\"\"){
+\t\t\t\tvar dmodel = new Array();
+\t\t\t\t\$(\".car_accessories_category\").html(\"<option value=''>All Categories</option>\")
+\t\t\t\t\$.each(car_accesor,function(i,a){
+\t\t\t\t\tconsole.log(a.brand,car_brand_select_val);
+\t\t\t\t\tif(a.brand == car_brand_select_val){
+\t\t\t\t\t\tif(\$.inArray(a.model, dmodel) < 0 ){
+\t\t\t\t\t\t\tdmodel.push(a.category)
+\t\t\t\t\t\t\t\$(\".car_accessories_category\").append(\"<option value='\"+a.category+\"'>\"+a.category+\"</option>\");
+\t\t\t\t\t\t}
 \t\t\t\t\t}
-\t\t\t\t}
-\t\t\t})
-\t\t\t\$(\".car_accessories_category\").removeAttr(\"disabled\");
-\t\t\t\$(\".car_accessories_category\").select2(\"destroy\").select2();
-\t\t})
+\t\t\t\t})
+\t\t\t\t\$(\".car_accessories_category\").removeAttr(\"disabled\");
+\t\t\t\t\$(\".car_accessories_category\").select2();
+\t\t\t}else{
+\t\t\t\t\$(\".car_accessories_category\").html(\"<option value=''>All Categories</option>\")
+\t\t\t\t\$(\".car_accessories_category\").attr(\"disabled\",\"\");
+\t\t\t\t\$(\".car_accessories_category\").select2();
+\t\t\t}
+\t\t\t
+\t\t});
+\t\t\$(\".car_accessories_brand\").trigger(\"change\")
 \t})
 </script>";
     }
@@ -437,13 +365,13 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 
     public function getDebugInfo()
     {
-        return array (  375 => 187,  371 => 186,  336 => 153,  333 => 152,  322 => 149,  319 => 148,  314 => 147,  312 => 146,  295 => 131,  292 => 130,  281 => 127,  278 => 126,  273 => 125,  271 => 124,  254 => 109,  251 => 108,  240 => 106,  235 => 105,  233 => 104,  226 => 99,  223 => 98,  212 => 96,  207 => 95,  205 => 94,  190 => 81,  187 => 80,  176 => 78,  171 => 77,  169 => 76,  162 => 71,  159 => 70,  148 => 68,  143 => 67,  141 => 66,  134 => 61,  131 => 60,  120 => 58,  115 => 57,  113 => 56,  106 => 51,  103 => 50,  92 => 48,  87 => 47,  85 => 46,  54 => 17,  51 => 16,  40 => 13,  37 => 12,  32 => 11,  30 => 10,  19 => 1,);
+        return array (  287 => 169,  283 => 168,  248 => 135,  245 => 134,  234 => 131,  231 => 130,  226 => 129,  224 => 128,  207 => 113,  204 => 112,  193 => 109,  190 => 108,  185 => 107,  183 => 106,  146 => 71,  143 => 70,  132 => 68,  127 => 67,  125 => 66,  118 => 61,  115 => 60,  104 => 58,  99 => 57,  97 => 56,  56 => 17,  53 => 16,  40 => 13,  37 => 12,  32 => 11,  30 => 10,  19 => 1,);
     }
 
     public function getSourceContext()
     {
         return new Twig_Source("<section id=\"home\">
-  \t<div class=\"container\">
+  \t<div class=\"containerd\">
       <!-- *** HOMEPAGE CAROUSEL ***
       _________________________________________________________ -->
       <!-- Slider main container -->
@@ -454,7 +382,7 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
               {% if homerotatebanner %}
                 {% for slider in homerotatebanner %}
                 <div class=\"swiper-slide col-md-12\">
-                  <a href=\"/cvsmart/car/{{ slider.imagelink }}\" style=\"background-image: url({{ slider.imagebanner|media }});\" class=\"slider-content\"></a>
+                  <a href=\"/cvsmart/car/{{ slider.imagelink }}\" style=\"background-image: url({{ slider.imagebanner|media }});\" class=\"slider-content\"><img src=\"{{ slider.imagebanner|media }}\"/></a>
                 </div>
                 {% endfor %}
               {% endif %}
@@ -485,27 +413,17 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
        \t\t\t<h2>Find used car for sale</h2>
        \t\t\t<div class=\"row\">
 \t\t            <div class=\"col-md-6 col-sm-12\">
-\t\t                <select name=\"brand\" class=\"form-control custom-select car_brand_select\">
+\t\t                <select name=\"car_brand_select\" class=\"form-control custom-select car_brand_select\">
 \t\t                  <option  value=\"\">All Brands</option>
-\t\t                  {% if car_brandlist %}
-\t\t\t                {% for slider in car_brandlist %}
-\t\t\t                <option value=\"{{slider }}\">{{ slider }}</option>
-\t\t\t                {% endfor %}
-\t\t\t              {% endif %}
 \t\t                </select>
 \t\t            </div>
 \t\t            <div class=\"col-md-6 col-sm-12\">
-\t\t              <select name=\"models\" class=\"form-control custom-select car_model_select\" disabled>
+\t\t              <select name=\"car_models_select\" class=\"form-control custom-select car_model_select\">
 \t\t                  <option value=\"\">All Models</option>
-\t\t                  {% if car_modellist %}
-\t\t\t                {% for slider in car_modellist %}
-\t\t\t                <option value=\"{{slider }}\">{{ slider }}</option>
-\t\t\t                {% endfor %}
-\t\t\t              {% endif %}
 \t\t                </select>
 \t\t            </div>
 \t\t            <div class=\"col-md-6 col-sm-12\">
-\t\t              <select name=\"states\" class=\"form-control custom-select\">
+\t\t              <select name=\"car_state_select\" class=\"form-control custom-select\">
 \t\t                  <option  value=\"\">All state</option>
 \t\t                  {% if car_statelist %}
 \t\t\t                {% for slider in car_statelist %}
@@ -515,7 +433,7 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 \t\t                </select>
 \t\t            </div>
 \t\t            <div class=\"col-md-6 col-sm-12\">
-\t\t              <select name=\"prices\" class=\"form-control custom-select\">
+\t\t              <select name=\"car_prices_select\" class=\"form-control custom-select\">
 \t\t                  <option  value=\"\">All Prices</option>
 \t\t                  {% if car_pricelist %}
 \t\t\t                {% for slider in car_pricelist %}
@@ -525,34 +443,26 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 \t\t                </select>
 \t\t            </div>
 \t\t            <div class=\"col-md-12 col-sm-12\">
+\t\t            \t<input type=\"hidden\" name=\"isfromhome\" value=\"1\">
 \t\t            \t<button class=\"btn-search\">SEARCH</button>
 \t\t            </div>
 \t\t        </div>
        \t\t</form>
-       \t\t<form action=\"/cvsmart/car-list\">
+       \t\t<form action=\"/cvsmart/car-list\" method=\"POST\">
        \t\t\t<h2>Find modify car accessories</h2>
        \t\t\t<div class=\"row\">
 \t\t            <div class=\"col-md-6 col-sm-12\">
-\t\t                <select class=\"form-control custom-select car_accessories_brand\">
+\t\t                <select name=\"car_accessories_brand\" class=\"form-control custom-select car_accessories_brand\">
 \t\t                  <option  value=\"\">All Brand</option>
-\t\t                  {% if car_brandlist %}
-\t\t\t                {% for slider in car_brandlist %}
-\t\t\t                <option value=\"{{slider }}\">{{ slider }}</option>
-\t\t\t                {% endfor %}
-\t\t\t              {% endif %}
 \t\t                </select>
 \t\t            </div>
 \t\t            <div class=\"col-md-6 col-sm-12\">
-\t\t              <select class=\"form-control custom-select car_accessories_category\" disabled>
+\t\t              <select name=\"car_accessories_category\" class=\"form-control custom-select car_accessories_category\">
 \t\t                  <option value=\"\">All Categories</option>
-\t\t                  {% if car_categorieslist %}
-\t\t\t                {% for slider in car_categorieslist %}
-\t\t\t                <option value=\"{{slider }}\">{{ slider }}</option>
-\t\t\t                {% endfor %}
-\t\t\t              {% endif %}
 \t\t                </select>
 \t\t            </div>
 \t\t            <div class=\"col-md-12 col-sm-12\">
+\t\t            \t<input type=\"hidden\" name=\"isfromhome\" value=\"1\">
 \t\t            \t<button class=\"btn-search\">SEARCH</button>
 \t\t            </div>
 \t\t        </div>
@@ -640,19 +550,26 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 \t\t\$(\".car_brand_select\").select2();
 \t\t\$(\".car_brand_select\").change(function(){
 \t\t\tvar car_brand_select_val = \$(this).val();
-\t\t\tvar dmodel = new Array();
-\t\t\t\$(\".car_model_select\").html(\"<option value=''>All Models</option>\")
-\t\t\t\$.each(carcategory,function(i,a){
-\t\t\t\tif(a.brand == car_brand_select_val){
-\t\t\t\t\tif(\$.inArray(a.model, dmodel) < 0 ){
-\t\t\t\t\t\tdmodel.push(a.model)
-\t\t\t\t\t\t\$(\".car_model_select\").append(\"<option value='\"+a.model+\"'>\"+a.model+\"</option>\");
+\t\t\tif(car_brand_select_val!=\"\"){
+\t\t\t\tvar dmodel = new Array();
+\t\t\t\t\$(\".car_model_select\").html(\"<option value=''>All Models</option>\")
+\t\t\t\t\$.each(carcategory,function(i,a){
+\t\t\t\t\tif(a.brand == car_brand_select_val){
+\t\t\t\t\t\tif(\$.inArray(a.model, dmodel) < 0 ){
+\t\t\t\t\t\t\tdmodel.push(a.model)
+\t\t\t\t\t\t\t\$(\".car_model_select\").append(\"<option value='\"+a.model+\"'>\"+a.model+\"</option>\");
+\t\t\t\t\t\t}
 \t\t\t\t\t}
-\t\t\t\t}
-\t\t\t})
-\t\t\t\$(\".car_model_select\").removeAttr(\"disabled\");
-\t\t\t\$(\".car_model_select\").select2(\"destroy\").select2();
+\t\t\t\t})
+\t\t\t\t\$(\".car_model_select\").removeAttr(\"disabled\");
+\t\t\t\t\$(\".car_model_select\").select2();
+\t\t\t}else{
+\t\t\t\t\$(\".car_model_select\").html(\"<option value=''>All Models</option>\")
+\t\t\t\t\$(\".car_model_select\").attr(\"disabled\",\"\");
+\t\t\t\t\$(\".car_model_select\").select2();
+\t\t\t}
 \t\t})
+\t\t\$(\".car_brand_select\").trigger(\"change\")
 \t\tvar abrand = new Array();
 \t\t\$.each(car_accesor,function(i,a){
 \t\t\tif(\$.inArray(a.brand, abrand) < 0 ){
@@ -663,19 +580,28 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 \t\t\$(\".car_accessories_brand\").select2();
 \t\t\$(\".car_accessories_brand\").change(function(){
 \t\t\tvar car_brand_select_val = \$(this).val();
-\t\t\tvar dmodel = new Array();
-\t\t\t\$(\".car_accessories_category\").html(\"<option value=''>All Categories</option>\")
-\t\t\t\$.each(carcategory,function(i,a){
-\t\t\t\tif(a.brand == car_brand_select_val){
-\t\t\t\t\tif(\$.inArray(a.model, dmodel) < 0 ){
-\t\t\t\t\t\tdmodel.push(a.model)
-\t\t\t\t\t\t\$(\".car_accessories_category\").append(\"<option value='\"+a.category+\"'>\"+a.category+\"</option>\");
+\t\t\tif(car_brand_select_val!=\"\"){
+\t\t\t\tvar dmodel = new Array();
+\t\t\t\t\$(\".car_accessories_category\").html(\"<option value=''>All Categories</option>\")
+\t\t\t\t\$.each(car_accesor,function(i,a){
+\t\t\t\t\tconsole.log(a.brand,car_brand_select_val);
+\t\t\t\t\tif(a.brand == car_brand_select_val){
+\t\t\t\t\t\tif(\$.inArray(a.model, dmodel) < 0 ){
+\t\t\t\t\t\t\tdmodel.push(a.category)
+\t\t\t\t\t\t\t\$(\".car_accessories_category\").append(\"<option value='\"+a.category+\"'>\"+a.category+\"</option>\");
+\t\t\t\t\t\t}
 \t\t\t\t\t}
-\t\t\t\t}
-\t\t\t})
-\t\t\t\$(\".car_accessories_category\").removeAttr(\"disabled\");
-\t\t\t\$(\".car_accessories_category\").select2(\"destroy\").select2();
-\t\t})
+\t\t\t\t})
+\t\t\t\t\$(\".car_accessories_category\").removeAttr(\"disabled\");
+\t\t\t\t\$(\".car_accessories_category\").select2();
+\t\t\t}else{
+\t\t\t\t\$(\".car_accessories_category\").html(\"<option value=''>All Categories</option>\")
+\t\t\t\t\$(\".car_accessories_category\").attr(\"disabled\",\"\");
+\t\t\t\t\$(\".car_accessories_category\").select2();
+\t\t\t}
+\t\t\t
+\t\t});
+\t\t\$(\".car_accessories_brand\").trigger(\"change\")
 \t})
 </script>", "D:\\xampp\\htdocs\\cars\\cvsmart/themes/cvsmart/pages/Home.htm", "");
     }

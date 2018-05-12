@@ -122,65 +122,204 @@ class CarsforsellList extends ComponentBase
       $sizeofcarlist = CarsforsellModel::orderBy('id')->get()->count();
 
     $carListModel = CarsforsellModel::orderBy('id')->get();//->forPage($pageno,6);
-     $allCarList = array();
-    if(Input::post('car_category_select')){
-   
-    foreach ($carListModel as $key => $carList) {
+     $allCarList = $carListModel->toArray();
+     if(Input::post('isfromhome') && Input::post('isfromhome')==1){
+         if(Input::post('car_accessories_brand')){
+          $num=array();
+          foreach ($allCarList as $key => $carList) {
+            $found = true;
+            if(Input::post('car_accessories_brand')){
+              if(is_array($carList["car_accessories"])){
+              foreach ($carList["car_accessories"] as $carlist_accessories) {
+                  if(Input::post('car_accessories_brand') == $carlist_accessories["brand"]){
+                    $found = false;
+                  }
+              }
+             }
+            }
+            if($found){
+               $num[]=$key;
+            }
+          }
+          for ($i=sizeof($num)-1; $i >= 0 ; $i--) { 
+            array_splice($allCarList, $num[$i],1);
+          }
+         }
+         if(Input::post('car_accessories_category')){
+          $num=array();
+          foreach ($allCarList as $key => $carList) {
+            $found = true;
+            if(Input::post('car_accessories_category')){
+              if(is_array($carList["car_accessories"])){
+              foreach ($carList["car_accessories"] as $carlist_accessories) {
+                if(Input::post('car_accessories_category') == $carlist_accessories["category"]){
+                  $found = false;
+                }
+              }
+             }
+            }
+            if($found){
+               $num[]=$key;
+            }
+          }
+          for ($i=sizeof($num)-1; $i >= 0 ; $i--) { 
+            array_splice($allCarList, $num[$i],1);
+          }
+         }
+
+         if(Input::post('car_brand_select')){
+          $num=array();
+          foreach ($allCarList as $key => $carList) {
+            $found = true;
+            if(Input::post('car_brand_select')){
+              if(is_array($carList["car_category"])){
+              foreach ($carList["car_category"] as $carlist_category) {
+                if(Input::post('car_brand_select') == $carlist_category["brand"]){
+                   $found = false;
+                }
+              }
+             }
+            }
+            if($found){
+               $num[]=$key;
+            }
+          }
+          for ($i=sizeof($num)-1; $i >= 0 ; $i--) { 
+            array_splice($allCarList, $num[$i],1);
+          }
+         }
+
+         if(Input::post('car_models_select')){
+          $num=array();
+          foreach ($allCarList as $key => $carList) {
+            $found = true;
+            if(Input::post('car_models_select')){
+              if(is_array($carList["car_category"])){
+              foreach ($carList["car_category"] as $carlist_category) {
+                if(Input::post('car_models_select') == $carlist_category["model"]){
+                   $found = false;
+                }
+              }
+             }
+            }
+            if($found){
+               $num[]=$key;
+            }
+          }
+          for ($i=sizeof($num)-1; $i >= 0 ; $i--) { 
+            array_splice($allCarList, $num[$i],1);
+          }
+         }
+
+         if(Input::post('car_state_select')){
+          $num=array();
+          foreach ($allCarList as $key => $carList) {
+            $found = true;
+            if(Input::post('car_state_select')){
+              if(Input::post('car_state_select') == $carList["car_states"]){
+                   $found = false;
+                }
+            }
+            if($found){
+               $num[]=$key;
+            }
+          }
+          for ($i=sizeof($num)-1; $i >= 0 ; $i--) { 
+            array_splice($allCarList, $num[$i],1);
+          }
+         }
+
+         if(Input::post('car_prices_select')){
+          $num=array();
+          foreach ($allCarList as $key => $carList) {
+            $found = true;
+            if(Input::post('car_prices_select')){
+              if(Input::post('car_prices_select') == $carList["car_price"]){
+                   $found = false;
+                }
+            }
+            if($found){
+               $num[]=$key;
+            }
+          }
+          for ($i=sizeof($num)-1; $i >= 0 ; $i--) { 
+            array_splice($allCarList, $num[$i],1);
+          }
+         }
+     }else{
+          if(Input::post('car_category_select')){
+            $num=array();
+    foreach ($allCarList as $key => $carList) {
+      $found = true;
       if(Input::post('car_category_select')){
         if(is_array($carList["car_category"])){
         foreach ($carList["car_category"] as $carlist_category) {
           if(Input::post('car_category_select') == $carlist_category["category"]){
-            $allCarList[] = $carList;
+            $found = false;
           }
         }
        }
       }
-      
+      if($found){
+               $num[]=$key;
+            }
     }
-  }else{
-   $allCarList =$carListModel->toArray();
+    for ($i=sizeof($num)-1; $i >= 0 ; $i--) { 
+            array_splice($allCarList, $num[$i],1);
+          }
   }
-  echo json_encode(Input::post());
+
   if(Input::post('car_brand_select')){
+    $num=array();
     foreach ($allCarList as $key => $carList) {
+       $found = true;
       if(Input::post('car_brand_select')){
         if(is_array($carList["car_category"])){
         foreach ($carList["car_category"] as $carlist_category) {
-          if(Input::post('car_brand_select') != $carlist_category["brand"]){
-            array_splice($allCarList, $key,1);
+          if(Input::post('car_brand_select') == $carlist_category["brand"]){
+            $found = false;
           }
         }
        }
       }
-      
-    }
-  }
-
-  if(Input::post('car_state_select')){
-     if(Input::post('car_state_select')){
-    $num=array();
-    foreach ($allCarList as $key => $carList) {
-      echo $key."-".Input::post('car_state_select')."==".$carList["car_states"].":".(Input::post('car_state_select') != $carList["car_states"])."<br/>";
-     if(Input::post('car_state_select') != $carList["car_states"]){
-      $num[]=$key;
-        
-      }
-      
+       if($found){
+               $num[]=$key;
+            }
     }
     for ($i=sizeof($num)-1; $i >= 0 ; $i--) { 
-      echo $num[$i];
-      array_splice($allCarList, $num[$i],1);
-    }
-    }
+            array_splice($allCarList, $num[$i],1);
+          }
   }
+  if(Input::post('car_state_select')){
+          $num=array();
+          foreach ($allCarList as $key => $carList) {
+            $found = true;
+            if(Input::post('car_state_select')){
+              if(Input::post('car_state_select') == $carList["car_states"]){
+                   $found = false;
+                }
+            }
+            if($found){
+               $num[]=$key;
+            }
+          }
+          for ($i=sizeof($num)-1; $i >= 0 ; $i--) { 
+            array_splice($allCarList, $num[$i],1);
+          }
+         }
+     }
+
 
   //echo json_encode($allCarList);
+   $sizeofallCarList = sizeof($allCarList);
+     $allCarList=array_splice($allCarList,($pageno-1) * 6,6);
+     $this->page['params'] = json_encode(Input::post());
       $this->page['car_accesortlist'] = json_encode($car_accessories);
       $this->page['car_categorylist'] = json_encode($car_category);
       $this->page['car_statelist'] = $car_states;
       $this->page['carslist'] = $allCarList;
       $this->page['currentpage'] = $pageno;
-      $this->page['sizeofcarlist'] = ceil($sizeofcarlist/6);;
+      $this->page['sizeofcarlist'] = ceil($sizeofallCarList/6);;
 
     }
 

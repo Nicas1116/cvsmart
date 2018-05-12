@@ -57,3 +57,6 @@
 1.0.20:
     - 'Drop table nicas_carsforsell_carcategory'
     - builder_table_delete_nicas_carsforsell_carcategory.php
+1.0.21:
+    - 'Updated table nicas_carsforsell_car'
+    - builder_table_update_nicas_carsforsell_car_6.php

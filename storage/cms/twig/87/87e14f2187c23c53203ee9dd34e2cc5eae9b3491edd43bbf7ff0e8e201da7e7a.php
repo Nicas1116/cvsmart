@@ -25,41 +25,23 @@ class __TwigTemplate_cc40b168bd0785c5d79ae97b3a6b3507d5fe57de03ea751595d2774ade2
             <div class=\"col-md-4 col-sm-12\">
                 <select name=\"car_category_select\" class=\"form-control custom-select car_category_select\">
                   <option value=\"\">All Categories</option>
-                  ";
-        // line 10
-        if (($context["car_categorieslist"] ?? null)) {
-            // line 11
-            echo "                      ";
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(($context["car_categorieslist"] ?? null));
-            foreach ($context['_seq'] as $context["_key"] => $context["slider"]) {
-                // line 12
-                echo "                      <option value=\"";
-                echo twig_escape_filter($this->env, $context["slider"], "html", null, true);
-                echo "\">";
-                echo twig_escape_filter($this->env, $context["slider"], "html", null, true);
-                echo "</option>
-                      ";
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['slider'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 14
-            echo "                    ";
-        }
-        // line 15
-        echo "                </select>
+                </select>
             </div>
             <div class=\"col-md-4 col-sm-12\">
               <select name=\"car_brand_select\" class=\"form-control custom-select car_brand_select\" disabled>
                   <option value=\"\">All Brand</option>
+                </select>
+            </div>
+            <div class=\"col-md-4 col-sm-12\">
+              <select name=\"car_state_select\" class=\"form-control custom-select\">
+                  <option value=\"\">All state</option>
                   ";
         // line 20
-        if (($context["car_brandlist"] ?? null)) {
+        if (($context["car_statelist"] ?? null)) {
             // line 21
             echo "                      ";
             $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(($context["car_brandlist"] ?? null));
+            $context['_seq'] = twig_ensure_traversable(($context["car_statelist"] ?? null));
             foreach ($context['_seq'] as $context["_key"] => $context["slider"]) {
                 // line 22
                 echo "                      <option value=\"";
@@ -76,34 +58,6 @@ class __TwigTemplate_cc40b168bd0785c5d79ae97b3a6b3507d5fe57de03ea751595d2774ade2
             echo "                    ";
         }
         // line 25
-        echo "                </select>
-            </div>
-            <div class=\"col-md-4 col-sm-12\">
-              <select name=\"car_state_select\" class=\"form-control custom-select\">
-                  <option value=\"\">All state</option>
-                  ";
-        // line 30
-        if (($context["car_statelist"] ?? null)) {
-            // line 31
-            echo "                      ";
-            $context['_parent'] = $context;
-            $context['_seq'] = twig_ensure_traversable(($context["car_statelist"] ?? null));
-            foreach ($context['_seq'] as $context["_key"] => $context["slider"]) {
-                // line 32
-                echo "                      <option value=\"";
-                echo twig_escape_filter($this->env, $context["slider"], "html", null, true);
-                echo "\">";
-                echo twig_escape_filter($this->env, $context["slider"], "html", null, true);
-                echo "</option>
-                      ";
-            }
-            $_parent = $context['_parent'];
-            unset($context['_seq'], $context['_iterated'], $context['_key'], $context['slider'], $context['_parent'], $context['loop']);
-            $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 34
-            echo "                    ";
-        }
-        // line 35
         echo "                </select>
             </div>
           </div>
@@ -129,7 +83,7 @@ class __TwigTemplate_cc40b168bd0785c5d79ae97b3a6b3507d5fe57de03ea751595d2774ade2
 
     public function getDebugInfo()
     {
-        return array (  107 => 35,  104 => 34,  93 => 32,  88 => 31,  86 => 30,  79 => 25,  76 => 24,  65 => 22,  60 => 21,  58 => 20,  51 => 15,  48 => 14,  37 => 12,  32 => 11,  30 => 10,  19 => 1,);
+        return array (  61 => 25,  58 => 24,  47 => 22,  42 => 21,  40 => 20,  19 => 1,);
     }
 
     public function getSourceContext()
@@ -143,21 +97,11 @@ class __TwigTemplate_cc40b168bd0785c5d79ae97b3a6b3507d5fe57de03ea751595d2774ade2
             <div class=\"col-md-4 col-sm-12\">
                 <select name=\"car_category_select\" class=\"form-control custom-select car_category_select\">
                   <option value=\"\">All Categories</option>
-                  {% if car_categorieslist %}
-                      {% for slider in car_categorieslist %}
-                      <option value=\"{{slider }}\">{{ slider }}</option>
-                      {% endfor %}
-                    {% endif %}
                 </select>
             </div>
             <div class=\"col-md-4 col-sm-12\">
               <select name=\"car_brand_select\" class=\"form-control custom-select car_brand_select\" disabled>
                   <option value=\"\">All Brand</option>
-                  {% if car_brandlist %}
-                      {% for slider in car_brandlist %}
-                      <option value=\"{{slider }}\">{{ slider }}</option>
-                      {% endfor %}
-                    {% endif %}
                 </select>
             </div>
             <div class=\"col-md-4 col-sm-12\">

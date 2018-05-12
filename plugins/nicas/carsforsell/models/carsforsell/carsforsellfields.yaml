@@ -71,6 +71,15 @@ tabs:
                         label: Category
                         span: full
                         type: text
+        car_price:
+            label: 'Car Price'
+            span: auto
+            options:
+                30000-50000: 30000-50000
+                50001-100000: 50001-100000
+                100000++: 100000++
+            type: dropdown
+            tab: 'Basic Info'
         carimages:
             label: 'Car Banner'
             prompt: 'Add new Images'

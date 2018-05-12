@@ -16,3 +16,13 @@ columns:
     shortdesc:
         label: 'Short Desc'
         type: text
+    car_category:
+        label: Car Category
+        type: partial
+        path: ~/plugins/nicas/carsforsell/models/carsforsell/category.htm
+        sortable: false
+    car_accessories:
+        label: Car Accessories
+        type: partial
+        path: ~/plugins/nicas/carsforsell/models/carsforsell/accessories.htm
+        sortable: false

@@ -1,4 +1,4 @@
-1526064168a:1:{s:11:"CarList.htm";a:10:{s:8:"fileName";s:11:"CarList.htm";s:7:"content";s:3099:"title = "Car List"
+1526092540a:1:{s:11:"CarList.htm";a:10:{s:8:"fileName";s:11:"CarList.htm";s:7:"content";s:3939:"title = "Car List"
 url = "/car-list"
 layout = "Default"
 is_hidden = 0
@@ -29,7 +29,8 @@ is_hidden = 0
 <script type="text/javascript">
   var currentpage = {{ currentpage}};
   var totalpages =  {{ sizeofcarlist }};
-	
+	var params = JSON.parse('{{ params|raw }}');
+  console.log(params);
 </script>
 <script type="text/javascript">
   var carcategory = JSON.parse('{{ car_categorylist|raw }}');
@@ -39,26 +40,44 @@ is_hidden = 0
     $.each(carcategory,function(i,a){
       if($.inArray(a.category, dbrand) < 0 ){
         dbrand.push(a.category)
-        $(".car_category_select").append("<option value='"+a.category+"'>"+a.category+"</option>");
+        if(params.car_category_select==a.category){
+          $(".car_category_select").append("<option selected value='"+a.category+"'>"+a.category+"</option>");
+          params.car_category_select="";
+        }else{
+          $(".car_category_select").append("<option value='"+a.category+"'>"+a.category+"</option>");
+        }
       }
     })
     $(".car_category_select").select2();
-
+    
     $(".car_category_select").change(function(){
       var car_brand_select_val = $(this).val();
-      var dmodel = new Array();
-      $(".car_brand_select").html("<option value=''>All Brands</option>")
-      $.each(carcategory,function(i,a){
-        if(a.category == car_brand_select_val){
-          if($.inArray(a.brand, dmodel) < 0 ){
-            dmodel.push(a.brand)
-            $(".car_brand_select").append("<option value='"+a.brand+"'>"+a.brand+"</option>");
+      if(car_brand_select_val!=""){
+        var dmodel = new Array();
+        $(".car_brand_select").html("<option value=''>All Brands</option>")
+        $.each(carcategory,function(i,a){
+          if(a.category == car_brand_select_val){
+            if($.inArray(a.brand, dmodel) < 0 ){
+              dmodel.push(a.brand)
+              if(params.car_brand_select==a.brand){
+              $(".car_brand_select").append("<option selected value='"+a.brand+"'>"+a.brand+"</option>");
+              params.car_brand_select="";
+              }else{
+              $(".car_brand_select").append("<option value='"+a.brand+"'>"+a.brand+"</option>");
+              }
+            }
           }
-        }
-      })
-      $(".car_brand_select").removeAttr("disabled");
-      $(".car_brand_select").select2("destroy").select2();
+        })
+        $(".car_brand_select").removeAttr("disabled");
+        $(".car_brand_select").select2();
+      }else{
+        $(".car_brand_select").html("<option value=''>All Brands</option>")
+        $(".car_brand_select").attr("disabled","");
+        $(".car_brand_select").select2();
+      }
     })
+    $(".car_category_select").trigger("change");
+
     var abrand = new Array();
     $.each(car_accesor,function(i,a){
       if($.inArray(a.brand, abrand) < 0 ){
@@ -83,7 +102,7 @@ is_hidden = 0
       $(".car_accessories_category").select2("destroy").select2();
     })
   })
-</script>";s:5:"mtime";i:1526059452;s:6:"markup";s:3000:"{% partial 'CarSelectPage' %}
+</script>";s:5:"mtime";i:1526091938;s:6:"markup";s:3840:"{% partial 'CarSelectPage' %}
 <div class="container carlistpage">
 
     <div class="row">
@@ -107,7 +126,8 @@ is_hidden = 0
 <script type="text/javascript">
   var currentpage = {{ currentpage}};
   var totalpages =  {{ sizeofcarlist }};
-	
+	var params = JSON.parse('{{ params|raw }}');
+  console.log(params);
 </script>
 <script type="text/javascript">
   var carcategory = JSON.parse('{{ car_categorylist|raw }}');
@@ -117,26 +137,44 @@ is_hidden = 0
     $.each(carcategory,function(i,a){
       if($.inArray(a.category, dbrand) < 0 ){
         dbrand.push(a.category)
-        $(".car_category_select").append("<option value='"+a.category+"'>"+a.category+"</option>");
+        if(params.car_category_select==a.category){
+          $(".car_category_select").append("<option selected value='"+a.category+"'>"+a.category+"</option>");
+          params.car_category_select="";
+        }else{
+          $(".car_category_select").append("<option value='"+a.category+"'>"+a.category+"</option>");
+        }
       }
     })
     $(".car_category_select").select2();
-
+    
     $(".car_category_select").change(function(){
       var car_brand_select_val = $(this).val();
-      var dmodel = new Array();
-      $(".car_brand_select").html("<option value=''>All Brands</option>")
-      $.each(carcategory,function(i,a){
-        if(a.category == car_brand_select_val){
-          if($.inArray(a.brand, dmodel) < 0 ){
-            dmodel.push(a.brand)
-            $(".car_brand_select").append("<option value='"+a.brand+"'>"+a.brand+"</option>");
+      if(car_brand_select_val!=""){
+        var dmodel = new Array();
+        $(".car_brand_select").html("<option value=''>All Brands</option>")
+        $.each(carcategory,function(i,a){
+          if(a.category == car_brand_select_val){
+            if($.inArray(a.brand, dmodel) < 0 ){
+              dmodel.push(a.brand)
+              if(params.car_brand_select==a.brand){
+              $(".car_brand_select").append("<option selected value='"+a.brand+"'>"+a.brand+"</option>");
+              params.car_brand_select="";
+              }else{
+              $(".car_brand_select").append("<option value='"+a.brand+"'>"+a.brand+"</option>");
+              }
+            }
           }
-        }
-      })
-      $(".car_brand_select").removeAttr("disabled");
-      $(".car_brand_select").select2("destroy").select2();
+        })
+        $(".car_brand_select").removeAttr("disabled");
+        $(".car_brand_select").select2();
+      }else{
+        $(".car_brand_select").html("<option value=''>All Brands</option>")
+        $(".car_brand_select").attr("disabled","");
+        $(".car_brand_select").select2();
+      }
     })
+    $(".car_category_select").trigger("change");
+
     var abrand = new Array();
     $.each(car_accesor,function(i,a){
       if($.inArray(a.brand, abrand) < 0 ){

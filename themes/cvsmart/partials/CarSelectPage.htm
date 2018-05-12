@@ -7,21 +7,11 @@
             <div class="col-md-4 col-sm-12">
                 <select name="car_category_select" class="form-control custom-select car_category_select">
                   <option value="">All Categories</option>
-                  {% if car_categorieslist %}
-                      {% for slider in car_categorieslist %}
-                      <option value="{{slider }}">{{ slider }}</option>
-                      {% endfor %}
-                    {% endif %}
                 </select>
             </div>
             <div class="col-md-4 col-sm-12">
               <select name="car_brand_select" class="form-control custom-select car_brand_select" disabled>
                   <option value="">All Brand</option>
-                  {% if car_brandlist %}
-                      {% for slider in car_brandlist %}
-                      <option value="{{slider }}">{{ slider }}</option>
-                      {% endfor %}
-                    {% endif %}
                 </select>
             </div>
             <div class="col-md-4 col-sm-12">
