@@ -14,23 +14,42 @@ $(document).ready(function(){
       });
   }
 
-   if($('.home_sidebanner.swiper-container').length>0){
-var mySwiper = new Swiper('.home_sidebanner.swiper-container', {
-  autoplay: true,
+   if($('.home_sidebanner.youtubelinklist.swiper-container').length>0){
+var mySwiper = new Swiper('.home_sidebanner.youtubelinklist.swiper-container', {
+  autoplay: {
+    delay: 3000,
+  },
    speed: 500,
   loop: true,
   pagination: {
-    el: '.home_sidebanner .swiper-pagination',
+    el: '.home_sidebanner.youtubelinklist .swiper-pagination',
     type: 'bullets',
     clickable: true
   },
-  nextButton: '.home_sidebanner .s-button-next',
-  prevButton: '.home_sidebanner .s-button-prev',
+  nextButton: '.home_sidebanner.youtubelinklist .s-button-next',
+  prevButton: '.home_sidebanner.youtubelinklist .s-button-prev',
 });
 
 
 }
+   if($('.home_sidebanner.homestaticbanner.swiper-container').length>0){
+var mySwiper = new Swiper('.home_sidebanner.homestaticbanner.swiper-container', {
+  autoplay: {
+    delay: 2000,
+  },
+   speed: 500,
+  loop: true,
+  pagination: {
+    el: '.home_sidebanner.homestaticbanner .swiper-pagination',
+    type: 'bullets',
+    clickable: true
+  },
+  nextButton: '.home_sidebanner.homestaticbanner .s-button-next',
+  prevButton: '.home_sidebanner.homestaticbanner .s-button-prev',
+});
 
+
+}
    if($('#home .swiper-container').length>0){
 var mySwiper = new Swiper('#home .swiper-container', {
   autoplay: true,

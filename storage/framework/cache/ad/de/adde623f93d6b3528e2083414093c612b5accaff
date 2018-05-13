@@ -1,4 +1,4 @@
-1526216370a:1:{s:8:"Home.htm";a:13:{s:8:"fileName";s:8:"Home.htm";s:7:"content";s:4958:"title = "Home"
+1526217256a:1:{s:8:"Home.htm";a:13:{s:8:"fileName";s:8:"Home.htm";s:7:"content";s:4991:"title = "Home"
 url = "/"
 layout = "Default"
 is_hidden = 0
@@ -49,7 +49,7 @@ is_hidden = 0
       </div>
       <div class="col-md-1 col-sm-12 "></div>
       <div class="col-md-3 col-sm-12 ">
-       		<div class="home_sidebanner swiper-container">
+       		<div class="home_sidebanner youtubelinklist swiper-container">
 	          <!-- Additional required wrapper -->
 	          <div class="swiper-wrapper">
 
@@ -72,7 +72,7 @@ is_hidden = 0
 	          </div>
 	      </div>
 	      <div class="static_sidebanner">
-	      	<div class="home_sidebanner swiper-container">
+	      	<div class="home_sidebanner homestaticbanner swiper-container">
 	          <!-- Additional required wrapper -->
 	          <div class="swiper-wrapper">
 	          	{% if homestaticbanner %}
@@ -141,7 +141,7 @@ is_hidden = 0
 		})
 		$(".car_accessories_brand").select2();
 	})
-</script>";s:5:"mtime";i:1526215128;s:6:"markup";s:4811:"<section id="home">
+</script>";s:5:"mtime";i:1526216604;s:6:"markup";s:4844:"<section id="home">
   	<div class="containerd">
       <!-- *** HOMEPAGE CAROUSEL ***
       _________________________________________________________ -->
@@ -181,7 +181,7 @@ is_hidden = 0
       </div>
       <div class="col-md-1 col-sm-12 "></div>
       <div class="col-md-3 col-sm-12 ">
-       		<div class="home_sidebanner swiper-container">
+       		<div class="home_sidebanner youtubelinklist swiper-container">
 	          <!-- Additional required wrapper -->
 	          <div class="swiper-wrapper">
 
@@ -204,7 +204,7 @@ is_hidden = 0
 	          </div>
 	      </div>
 	      <div class="static_sidebanner">
-	      	<div class="home_sidebanner swiper-container">
+	      	<div class="home_sidebanner homestaticbanner swiper-container">
 	          <!-- Additional required wrapper -->
 	          <div class="swiper-wrapper">
 	          	{% if homestaticbanner %}

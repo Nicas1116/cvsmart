@@ -82,7 +82,7 @@ class __TwigTemplate_94eb9d144d0610f59eb42f2a39f911ffe5b00d76243550f2a902d3900a3
         echo "      </div>
       <div class=\"col-md-1 col-sm-12 \"></div>
       <div class=\"col-md-3 col-sm-12 \">
-       \t\t<div class=\"home_sidebanner swiper-container\">
+       \t\t<div class=\"home_sidebanner youtubelinklist swiper-container\">
 \t          <!-- Additional required wrapper -->
 \t          <div class=\"swiper-wrapper\">
 
@@ -124,7 +124,7 @@ class __TwigTemplate_94eb9d144d0610f59eb42f2a39f911ffe5b00d76243550f2a902d3900a3
 \t          </div>
 \t      </div>
 \t      <div class=\"static_sidebanner\">
-\t      \t<div class=\"home_sidebanner swiper-container\">
+\t      \t<div class=\"home_sidebanner homestaticbanner swiper-container\">
 \t          <!-- Additional required wrapper -->
 \t          <div class=\"swiper-wrapper\">
 \t          \t";
@@ -278,7 +278,7 @@ class __TwigTemplate_94eb9d144d0610f59eb42f2a39f911ffe5b00d76243550f2a902d3900a3
       </div>
       <div class=\"col-md-1 col-sm-12 \"></div>
       <div class=\"col-md-3 col-sm-12 \">
-       \t\t<div class=\"home_sidebanner swiper-container\">
+       \t\t<div class=\"home_sidebanner youtubelinklist swiper-container\">
 \t          <!-- Additional required wrapper -->
 \t          <div class=\"swiper-wrapper\">
 
@@ -301,7 +301,7 @@ class __TwigTemplate_94eb9d144d0610f59eb42f2a39f911ffe5b00d76243550f2a902d3900a3
 \t          </div>
 \t      </div>
 \t      <div class=\"static_sidebanner\">
-\t      \t<div class=\"home_sidebanner swiper-container\">
+\t      \t<div class=\"home_sidebanner homestaticbanner swiper-container\">
 \t          <!-- Additional required wrapper -->
 \t          <div class=\"swiper-wrapper\">
 \t          \t{% if homestaticbanner %}
