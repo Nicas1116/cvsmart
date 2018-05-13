@@ -41,10 +41,15 @@ var mySwiper = new Swiper('#home .swiper-container', {
     type: 'bullets',
     clickable: true
   },
-  nextButton: '#home .s-button-next',
-  prevButton: '#home .s-button-prev',
+  nextButton: $('#home .s-button-next'),
+  prevButton: $('#home .s-button-prev'),
 });
-
+$("#home .s-button-next").click(function(){
+mySwiper.slideNext();
+});
+$("#home .s-button-prev").click(function(){
+mySwiper.slidePrev();
+});
 
 }
 

@@ -1,0 +1,16 @@
+columns:
+    id:
+        label: ID
+        type: text
+    title:
+        label: 'Car Title'
+        type: text
+        searchable: true
+        sortable: true
+    slug:
+        label: slug
+        type: text
+    car_brand:
+        label: 'Car accessories Brand'
+        type: partial
+        path: ~/plugins/nicas/carsforsell/models/carsforsell/category.htm

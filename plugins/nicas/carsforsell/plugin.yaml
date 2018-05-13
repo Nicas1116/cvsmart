@@ -6,11 +6,16 @@ plugin:
     homepage: ''
 navigation:
     main-menu-item:
-        label: Cars
+        label: 'Used Cars'
         url: nicas/carsforsell/carselling
         icon: icon-car
         permissions:
             - cars-permission
+        sideMenu:
+            car-accessories:
+                label: 'Car Accessories'
+                url: nicas/carsforsell/caraccessories
+                icon: icon-car
     main-menu-item2:
         label: 'Static Banner'
         url: nicas/carsforsell/staticbanner

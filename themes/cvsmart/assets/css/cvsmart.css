@@ -401,11 +401,11 @@ html[xmlns] .flexslider .slides {
 }
 section, div.section{margin-bottom: 0px;}
 #layout-header{position: relative;z-index: 999;}
-.contact-us-page{padding: 70px 0 60px;}
+.contact-us-page{padding: 50px 0 50px;}
 #homesearch,.carlistpage{padding: 50px 0;}
 .carselectpage{background:#252525;padding: 50px 0 50px;}
 .search_container button,.submitbutton{background:transparent;border-color: transparent;display:  block;height:  auto;padding:  0px;}
-.submitbutton i.fa{font-size: 15px;line-height: 1;color:#a0a0a0;height:  auto;line-height: 45px;}
+.submitbutton i.fa{font-size: 15px;line-height: 1;color:#a0a0a0;height:  auto;line-height: 40px;}
 .search_container select{font-family: 'AileronBold';width: 100%;display: block;background-color: rgba(0,0,0,0.7);background-image:  url(../img/form_select_bg.png);background-repeat:  no-repeat;background-position: center right 20px;padding: 13px 20px;height: auto;font-size: 16px;line-height: 1;color:#fff;box-shadow: none!important;border-color: rgba(128, 128, 128, 0.7)!important;text-transform: uppercase;-webkit-appearance:  none;-moz-apperance: none;}
 
 .select2-container--default .select2-selection,.carselectpage select{font-family: 'AileronBold';width: 100%;display: block;background-color: #252525;/* background-image:  url(../img/form_select_bg.png); */background-repeat:  no-repeat;background-position: center right 20px;padding: 13px 20px;height: auto;font-size: 14px;line-height: 1;color:#fff;box-shadow: none!important;border-color: rgba(128, 128, 128, 1)!important;text-transform: uppercase;-webkit-appearance:  none;-moz-apperance: none;}
@@ -456,8 +456,8 @@ section, div.section{margin-bottom: 0px;}
   font-size: 48px;
   opacity:  0.4;
   display:  block;
-  -webkit-transition: * 1s; /* Safari */
-  transition: * 1s;
+  -webkit-transition: all 0.5s; /* Safari */
+  transition: all 0.5s;
 }
 .s-button-next:hover,
 .s-button-prev:hover {

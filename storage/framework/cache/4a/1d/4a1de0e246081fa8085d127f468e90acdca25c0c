@@ -1,0 +1,129 @@
+1526216416a:1:{s:12:"HomeForm.htm";a:5:{s:8:"fileName";s:12:"HomeForm.htm";s:7:"content";s:2463:"<div class="search_container">
+<form action="/cvsmart/car-list" method="POST">
+	<h2>Find used car for sale</h2>
+	<div class="row">
+    <div class="col-md-6 col-sm-12">
+        <select name="car_brand_select" class="form-control custom-select car_brand_select">
+          <option  value="">All Brands</option>
+        </select>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <select name="car_models_select" class="form-control custom-select car_model_select">
+          <option value="">All Models</option>
+        </select>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <select name="car_state_select" class="form-control custom-select">
+          <option  value="">All state</option>
+          {% if car_statelist %}
+            {% for slider in car_statelist %}
+            <option value="{{slider }}">{{ slider }}</option>
+            {% endfor %}
+          {% endif %}
+        </select>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <select name="car_prices_select" class="form-control custom-select">
+          <option  value="">All Prices</option>
+          {% if car_pricelist %}
+            {% for slider in car_pricelist %}
+            <option value="{{slider }}">{{ slider }}</option>
+            {% endfor %}
+          {% endif %}
+        </select>
+    </div>
+    <div class="col-md-12 col-sm-12">
+    	<input type="hidden" name="car_category_select" value="used-cars">
+    	<button class="btn-search">SEARCH</button>
+    </div>
+</div>
+</form>
+<form action="/cvsmart/car-list" method="POST">
+	<h2>Find modify car accessories</h2>
+	<div class="row">
+    <div class="col-md-6 col-sm-12">
+        <select name="car_brand_select" class="form-control custom-select car_accessories_brand">
+          <option  value="">All Brand</option>
+        </select>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <select name="car_prices_select" class="form-control custom-select car_accessories_category">
+          <option value="">All Prices</option>
+          {% if car_pricelist %}
+            {% for slider in caraccessories_pricelist %}
+            <option value="{{slider }}">{{ slider }}</option>
+            {% endfor %}
+          {% endif %}
+        </select>
+    </div>
+    <div class="col-md-12 col-sm-12">
+    	<input type="hidden" name="car_category_select" value="accessories">
+    	<button class="btn-search">SEARCH</button>
+    </div>
+</div>
+</form>
+</div>";s:5:"mtime";i:1526215092;s:6:"markup";s:2463:"<div class="search_container">
+<form action="/cvsmart/car-list" method="POST">
+	<h2>Find used car for sale</h2>
+	<div class="row">
+    <div class="col-md-6 col-sm-12">
+        <select name="car_brand_select" class="form-control custom-select car_brand_select">
+          <option  value="">All Brands</option>
+        </select>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <select name="car_models_select" class="form-control custom-select car_model_select">
+          <option value="">All Models</option>
+        </select>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <select name="car_state_select" class="form-control custom-select">
+          <option  value="">All state</option>
+          {% if car_statelist %}
+            {% for slider in car_statelist %}
+            <option value="{{slider }}">{{ slider }}</option>
+            {% endfor %}
+          {% endif %}
+        </select>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <select name="car_prices_select" class="form-control custom-select">
+          <option  value="">All Prices</option>
+          {% if car_pricelist %}
+            {% for slider in car_pricelist %}
+            <option value="{{slider }}">{{ slider }}</option>
+            {% endfor %}
+          {% endif %}
+        </select>
+    </div>
+    <div class="col-md-12 col-sm-12">
+    	<input type="hidden" name="car_category_select" value="used-cars">
+    	<button class="btn-search">SEARCH</button>
+    </div>
+</div>
+</form>
+<form action="/cvsmart/car-list" method="POST">
+	<h2>Find modify car accessories</h2>
+	<div class="row">
+    <div class="col-md-6 col-sm-12">
+        <select name="car_brand_select" class="form-control custom-select car_accessories_brand">
+          <option  value="">All Brand</option>
+        </select>
+    </div>
+    <div class="col-md-6 col-sm-12">
+      <select name="car_prices_select" class="form-control custom-select car_accessories_category">
+          <option value="">All Prices</option>
+          {% if car_pricelist %}
+            {% for slider in caraccessories_pricelist %}
+            <option value="{{slider }}">{{ slider }}</option>
+            {% endfor %}
+          {% endif %}
+        </select>
+    </div>
+    <div class="col-md-12 col-sm-12">
+    	<input type="hidden" name="car_category_select" value="accessories">
+    	<button class="btn-search">SEARCH</button>
+    </div>
+</div>
+</form>
+</div>";s:4:"code";N;}}

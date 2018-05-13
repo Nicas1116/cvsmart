@@ -43,10 +43,6 @@ tabs:
             tab: 'Basic Info'
             form:
                 fields:
-                    category:
-                        label: Category
-                        span: full
-                        type: text
                     brand:
                         label: Brand
                         span: full
@@ -55,25 +51,9 @@ tabs:
                         label: Model
                         span: full
                         type: text
-        car_accessories:
-            label: 'Car Accessories'
-            prompt: 'Add new item'
-            span: right
-            type: repeater
-            tab: 'Basic Info'
-            form:
-                fields:
-                    brand:
-                        label: Brand
-                        span: full
-                        type: text
-                    category:
-                        label: Category
-                        span: full
-                        type: text
         car_price:
             label: 'Car Price'
-            span: auto
+            span: left
             options:
                 30000-50000: 30000-50000
                 50001-100000: 50001-100000
@@ -141,18 +121,3 @@ tabs:
             span: left
             type: text
             tab: 'Detail Info'
-        is_at_home:
-            label: 'Show at Home Page'
-            span: left
-            type: checkbox
-            tab: 'Home Page'
-        homepagebanner:
-            label: 'Homepage Banner'
-            mode: file
-            span: left
-            trigger:
-                action: show
-                field: is_at_home
-                condition: checked
-            type: mediafinder
-            tab: 'Home Page'

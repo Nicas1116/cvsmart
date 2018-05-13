@@ -7,6 +7,7 @@ class Plugin extends PluginBase
     public function registerComponents()
     {
     	return [
+            'Nicas\Carsforsell\Components\Carsaccessoriesdetail' => 'Carsaccessoriesdetail',
             'Nicas\Carsforsell\Components\Carsdetail' => 'Carsdetail',
             'Nicas\Carsforsell\Components\CarsforsellList' => 'CarsforsellList',
             'Nicas\Carsforsell\Components\Carshome' => 'Carshome',

@@ -60,3 +60,27 @@
 1.0.21:
     - 'Updated table nicas_carsforsell_car'
     - builder_table_update_nicas_carsforsell_car_6.php
+1.0.22:
+    - 'Created table nicas_carsforsell_caraccessories'
+    - builder_table_create_nicas_carsforsell_caraccessories.php
+1.0.23:
+    - 'Updated table nicas_carsforsell_caraccessories'
+    - builder_table_update_nicas_carsforsell_caraccessories.php
+1.0.24:
+    - 'Updated table nicas_carsforsell_caraccessories'
+    - builder_table_update_nicas_carsforsell_caraccessories_2.php
+1.0.25:
+    - 'Updated table nicas_carsforsell_car'
+    - builder_table_update_nicas_carsforsell_car_7.php
+1.0.26:
+    - 'Updated table nicas_carsforsell_caraccessories'
+    - builder_table_update_nicas_carsforsell_caraccessories_3.php
+1.0.27:
+    - 'Updated table nicas_carsforsell_caraccessories'
+    - builder_table_update_nicas_carsforsell_caraccessories_4.php
+1.0.28:
+    - 'Updated table nicas_carsforsell_caraccessories'
+    - builder_table_update_nicas_carsforsell_caraccessories_5.php
+1.0.29:
+    - 'Updated table nicas_carsforsell_car'
+    - builder_table_update_nicas_carsforsell_car_8.php

@@ -1,4 +1,4 @@
-1526092471a:1:{s:8:"Home.htm";a:13:{s:8:"fileName";s:8:"Home.htm";s:7:"content";s:10464:"title = "Home"
+1526216370a:1:{s:8:"Home.htm";a:13:{s:8:"fileName";s:8:"Home.htm";s:7:"content";s:4958:"title = "Home"
 url = "/"
 layout = "Default"
 is_hidden = 0
@@ -45,68 +45,7 @@ is_hidden = 0
 
     <div class="row">
       <div class="col-md-8 col-sm-12">
-       	<div class="search_container">
-       		<script type="text/javascript">
-       		</script>
-       		<form action="/cvsmart/car-list" method="POST">
-       			<h2>Find used car for sale</h2>
-       			<div class="row">
-		            <div class="col-md-6 col-sm-12">
-		                <select name="car_brand_select" class="form-control custom-select car_brand_select">
-		                  <option  value="">All Brands</option>
-		                </select>
-		            </div>
-		            <div class="col-md-6 col-sm-12">
-		              <select name="car_models_select" class="form-control custom-select car_model_select">
-		                  <option value="">All Models</option>
-		                </select>
-		            </div>
-		            <div class="col-md-6 col-sm-12">
-		              <select name="car_state_select" class="form-control custom-select">
-		                  <option  value="">All state</option>
-		                  {% if car_statelist %}
-			                {% for slider in car_statelist %}
-			                <option value="{{slider }}">{{ slider }}</option>
-			                {% endfor %}
-			              {% endif %}
-		                </select>
-		            </div>
-		            <div class="col-md-6 col-sm-12">
-		              <select name="car_prices_select" class="form-control custom-select">
-		                  <option  value="">All Prices</option>
-		                  {% if car_pricelist %}
-			                {% for slider in car_pricelist %}
-			                <option value="{{slider }}">{{ slider }}</option>
-			                {% endfor %}
-			              {% endif %}
-		                </select>
-		            </div>
-		            <div class="col-md-12 col-sm-12">
-		            	<input type="hidden" name="isfromhome" value="1">
-		            	<button class="btn-search">SEARCH</button>
-		            </div>
-		        </div>
-       		</form>
-       		<form action="/cvsmart/car-list" method="POST">
-       			<h2>Find modify car accessories</h2>
-       			<div class="row">
-		            <div class="col-md-6 col-sm-12">
-		                <select name="car_accessories_brand" class="form-control custom-select car_accessories_brand">
-		                  <option  value="">All Brand</option>
-		                </select>
-		            </div>
-		            <div class="col-md-6 col-sm-12">
-		              <select name="car_accessories_category" class="form-control custom-select car_accessories_category">
-		                  <option value="">All Categories</option>
-		                </select>
-		            </div>
-		            <div class="col-md-12 col-sm-12">
-		            	<input type="hidden" name="isfromhome" value="1">
-		            	<button class="btn-search">SEARCH</button>
-		            </div>
-		        </div>
-       		</form>
-       	</div>
+       	{% partial 'HomeForm' %}
       </div>
       <div class="col-md-1 col-sm-12 "></div>
       <div class="col-md-3 col-sm-12 ">
@@ -158,23 +97,7 @@ is_hidden = 0
   </div>
 </section>
 
-<section id="homeaboutus">
-	<div class="container">
 
-    <div class="row">
-      <div class="col-md-12 col-sm-12">
-      	<h2>About us</h2>
-	<p>It’s time to know a little bit about us! CV Smart Auto Trading is a brainchild of 2 passionate car enthusiasts. We might be small in size but both of us have a big heart and share the same vision. Finally, we decided that it was the right time to do something different in life. We gave up on what we use to do and pursue what we have always dream of.<br/>
-<br/>
-There is a saying '<span>Love the car that you owned and treat it as one of a kind</span>'. By keeping this saying in mind, we wanted to share our passion and knowledge for cars to the public. Although a car is just a vehicle for transportation, getting us from one destination to another. That might sound uninspiring at all but let us change your mind about that because we are able to spark things up and make it more than just an ordinary vehicle. We modify cars with hand-picked accessories that we sell in our shops. We are also experts in fine tuning and make them AWESOME again.<br/>
-<br/>
-In CV Smart Auto Trading, we sell genuine second-hand luxury cars too. Drop by to our show room and you will be spoilt with lots of exceptional and exclusive choices there.<br/>
-<br/>
-There are lots of cool pictures showcasing what CV Smart Auto Trading has to offer in the official fan page, feel free to <a href="http://www.facebook.com/">check it out</a>. We update all the upcoming promotions from time to time as well, so make sure you don’t miss out by staying with us and you will find yourself lost in the wondrous world of CV Smart Auto Trading. </p>
-</div>
-</div>
-</div>
-</section>
 <script type="text/javascript">
 	var carcategory = JSON.parse('{{ car_categorylist|raw }}');
 	var car_accesor = JSON.parse('{{ car_accesortlist|raw }}');
@@ -217,32 +140,8 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 			}
 		})
 		$(".car_accessories_brand").select2();
-		$(".car_accessories_brand").change(function(){
-			var car_brand_select_val = $(this).val();
-			if(car_brand_select_val!=""){
-				var dmodel = new Array();
-				$(".car_accessories_category").html("<option value=''>All Categories</option>")
-				$.each(car_accesor,function(i,a){
-					console.log(a.brand,car_brand_select_val);
-					if(a.brand == car_brand_select_val){
-						if($.inArray(a.model, dmodel) < 0 ){
-							dmodel.push(a.category)
-							$(".car_accessories_category").append("<option value='"+a.category+"'>"+a.category+"</option>");
-						}
-					}
-				})
-				$(".car_accessories_category").removeAttr("disabled");
-				$(".car_accessories_category").select2();
-			}else{
-				$(".car_accessories_category").html("<option value=''>All Categories</option>")
-				$(".car_accessories_category").attr("disabled","");
-				$(".car_accessories_category").select2();
-			}
-			
-		});
-		$(".car_accessories_brand").trigger("change")
 	})
-</script>";s:5:"mtime";i:1526091870;s:6:"markup";s:10317:"<section id="home">
+</script>";s:5:"mtime";i:1526215128;s:6:"markup";s:4811:"<section id="home">
   	<div class="containerd">
       <!-- *** HOMEPAGE CAROUSEL ***
       _________________________________________________________ -->
@@ -278,68 +177,7 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 
     <div class="row">
       <div class="col-md-8 col-sm-12">
-       	<div class="search_container">
-       		<script type="text/javascript">
-       		</script>
-       		<form action="/cvsmart/car-list" method="POST">
-       			<h2>Find used car for sale</h2>
-       			<div class="row">
-		            <div class="col-md-6 col-sm-12">
-		                <select name="car_brand_select" class="form-control custom-select car_brand_select">
-		                  <option  value="">All Brands</option>
-		                </select>
-		            </div>
-		            <div class="col-md-6 col-sm-12">
-		              <select name="car_models_select" class="form-control custom-select car_model_select">
-		                  <option value="">All Models</option>
-		                </select>
-		            </div>
-		            <div class="col-md-6 col-sm-12">
-		              <select name="car_state_select" class="form-control custom-select">
-		                  <option  value="">All state</option>
-		                  {% if car_statelist %}
-			                {% for slider in car_statelist %}
-			                <option value="{{slider }}">{{ slider }}</option>
-			                {% endfor %}
-			              {% endif %}
-		                </select>
-		            </div>
-		            <div class="col-md-6 col-sm-12">
-		              <select name="car_prices_select" class="form-control custom-select">
-		                  <option  value="">All Prices</option>
-		                  {% if car_pricelist %}
-			                {% for slider in car_pricelist %}
-			                <option value="{{slider }}">{{ slider }}</option>
-			                {% endfor %}
-			              {% endif %}
-		                </select>
-		            </div>
-		            <div class="col-md-12 col-sm-12">
-		            	<input type="hidden" name="isfromhome" value="1">
-		            	<button class="btn-search">SEARCH</button>
-		            </div>
-		        </div>
-       		</form>
-       		<form action="/cvsmart/car-list" method="POST">
-       			<h2>Find modify car accessories</h2>
-       			<div class="row">
-		            <div class="col-md-6 col-sm-12">
-		                <select name="car_accessories_brand" class="form-control custom-select car_accessories_brand">
-		                  <option  value="">All Brand</option>
-		                </select>
-		            </div>
-		            <div class="col-md-6 col-sm-12">
-		              <select name="car_accessories_category" class="form-control custom-select car_accessories_category">
-		                  <option value="">All Categories</option>
-		                </select>
-		            </div>
-		            <div class="col-md-12 col-sm-12">
-		            	<input type="hidden" name="isfromhome" value="1">
-		            	<button class="btn-search">SEARCH</button>
-		            </div>
-		        </div>
-       		</form>
-       	</div>
+       	{% partial 'HomeForm' %}
       </div>
       <div class="col-md-1 col-sm-12 "></div>
       <div class="col-md-3 col-sm-12 ">
@@ -391,23 +229,7 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
   </div>
 </section>
 
-<section id="homeaboutus">
-	<div class="container">
 
-    <div class="row">
-      <div class="col-md-12 col-sm-12">
-      	<h2>About us</h2>
-	<p>It’s time to know a little bit about us! CV Smart Auto Trading is a brainchild of 2 passionate car enthusiasts. We might be small in size but both of us have a big heart and share the same vision. Finally, we decided that it was the right time to do something different in life. We gave up on what we use to do and pursue what we have always dream of.<br/>
-<br/>
-There is a saying '<span>Love the car that you owned and treat it as one of a kind</span>'. By keeping this saying in mind, we wanted to share our passion and knowledge for cars to the public. Although a car is just a vehicle for transportation, getting us from one destination to another. That might sound uninspiring at all but let us change your mind about that because we are able to spark things up and make it more than just an ordinary vehicle. We modify cars with hand-picked accessories that we sell in our shops. We are also experts in fine tuning and make them AWESOME again.<br/>
-<br/>
-In CV Smart Auto Trading, we sell genuine second-hand luxury cars too. Drop by to our show room and you will be spoilt with lots of exceptional and exclusive choices there.<br/>
-<br/>
-There are lots of cool pictures showcasing what CV Smart Auto Trading has to offer in the official fan page, feel free to <a href="http://www.facebook.com/">check it out</a>. We update all the upcoming promotions from time to time as well, so make sure you don’t miss out by staying with us and you will find yourself lost in the wondrous world of CV Smart Auto Trading. </p>
-</div>
-</div>
-</div>
-</section>
 <script type="text/javascript">
 	var carcategory = JSON.parse('{{ car_categorylist|raw }}');
 	var car_accesor = JSON.parse('{{ car_accesortlist|raw }}');
@@ -450,29 +272,5 @@ There are lots of cool pictures showcasing what CV Smart Auto Trading has to off
 			}
 		})
 		$(".car_accessories_brand").select2();
-		$(".car_accessories_brand").change(function(){
-			var car_brand_select_val = $(this).val();
-			if(car_brand_select_val!=""){
-				var dmodel = new Array();
-				$(".car_accessories_category").html("<option value=''>All Categories</option>")
-				$.each(car_accesor,function(i,a){
-					console.log(a.brand,car_brand_select_val);
-					if(a.brand == car_brand_select_val){
-						if($.inArray(a.model, dmodel) < 0 ){
-							dmodel.push(a.category)
-							$(".car_accessories_category").append("<option value='"+a.category+"'>"+a.category+"</option>");
-						}
-					}
-				})
-				$(".car_accessories_category").removeAttr("disabled");
-				$(".car_accessories_category").select2();
-			}else{
-				$(".car_accessories_category").html("<option value=''>All Categories</option>")
-				$(".car_accessories_category").attr("disabled","");
-				$(".car_accessories_category").select2();
-			}
-			
-		});
-		$(".car_accessories_brand").trigger("change")
 	})
 </script>";s:4:"code";N;s:5:"title";s:4:"Home";s:3:"url";s:1:"/";s:6:"layout";s:7:"Default";s:9:"is_hidden";s:1:"0";s:8:"Carshome";a:0:{}s:20:"HomeRotateBannerList";a:0:{}s:16:"StaticBannerList";a:0:{}s:15:"YoutubeLinkList";a:0:{}}}

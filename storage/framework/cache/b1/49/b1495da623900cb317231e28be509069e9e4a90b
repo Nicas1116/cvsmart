@@ -1,4 +1,4 @@
-1526092540a:1:{s:11:"CarList.htm";a:10:{s:8:"fileName";s:11:"CarList.htm";s:7:"content";s:3939:"title = "Car List"
+1526216674a:1:{s:11:"CarList.htm";a:10:{s:8:"fileName";s:11:"CarList.htm";s:7:"content";s:1126:"title = "Car List"
 url = "/car-list"
 layout = "Default"
 is_hidden = 0
@@ -12,14 +12,16 @@ is_hidden = 0
       <div class="col-md-12 col-sm-12">
       	<div class="row">
       		<div class="col-md-12 col-sm-12">
-      	<h1>recommended for you</h1>
+      	<h1>{{head_title}}</h1>
       </div>
       	</div>
       	<?php $m=0; ?>
       	<div class="row carlist_all">
   			{% for car in carslist %}
   			<?php $m++; ?>
-				<div class="col-md-4 col-sm-12 carlist_one"><div class="carlist_content" ><img src="{{ car.carlist_image|media }}"/><h2>{{ car.title }}</h2><p class="shortdesc">{{ car.shortdesc }}</p><a href="/cvsmart/car/{{ car.slug }}">More Info</a></div></div>
+				<div class="col-md-4 col-sm-12 carlist_one"><div class="carlist_content" >
+          <div class="carlist_img"><img src="{{ car.carlist_image|media }}"/></div>
+        <h2>{{ car.title }}</h2><p class="shortdesc">{{ car.shortdesc }}</p><a {% if car.isaccessories %} href="/cvsmart/caraccessories/{{ car.slug }}" {% else %}href="/cvsmart/car/{{ car.slug }}" {% endif %}>More Info</a></div></div>
 			 {% endfor %}
       	</div>
       	<ul id="pagination" class="pagination-sm"></ul>
@@ -29,94 +31,25 @@ is_hidden = 0
 <script type="text/javascript">
   var currentpage = {{ currentpage}};
   var totalpages =  {{ sizeofcarlist }};
-	var params = JSON.parse('{{ params|raw }}');
-  console.log(params);
-</script>
-<script type="text/javascript">
-  var carcategory = JSON.parse('{{ car_categorylist|raw }}');
-  var car_accesor = JSON.parse('{{ car_accesortlist|raw }}');
-  $(document).ready(function(){
-    var dbrand = new Array();
-    $.each(carcategory,function(i,a){
-      if($.inArray(a.category, dbrand) < 0 ){
-        dbrand.push(a.category)
-        if(params.car_category_select==a.category){
-          $(".car_category_select").append("<option selected value='"+a.category+"'>"+a.category+"</option>");
-          params.car_category_select="";
-        }else{
-          $(".car_category_select").append("<option value='"+a.category+"'>"+a.category+"</option>");
-        }
-      }
-    })
-    $(".car_category_select").select2();
-    
-    $(".car_category_select").change(function(){
-      var car_brand_select_val = $(this).val();
-      if(car_brand_select_val!=""){
-        var dmodel = new Array();
-        $(".car_brand_select").html("<option value=''>All Brands</option>")
-        $.each(carcategory,function(i,a){
-          if(a.category == car_brand_select_val){
-            if($.inArray(a.brand, dmodel) < 0 ){
-              dmodel.push(a.brand)
-              if(params.car_brand_select==a.brand){
-              $(".car_brand_select").append("<option selected value='"+a.brand+"'>"+a.brand+"</option>");
-              params.car_brand_select="";
-              }else{
-              $(".car_brand_select").append("<option value='"+a.brand+"'>"+a.brand+"</option>");
-              }
-            }
-          }
-        })
-        $(".car_brand_select").removeAttr("disabled");
-        $(".car_brand_select").select2();
-      }else{
-        $(".car_brand_select").html("<option value=''>All Brands</option>")
-        $(".car_brand_select").attr("disabled","");
-        $(".car_brand_select").select2();
-      }
-    })
-    $(".car_category_select").trigger("change");
 
-    var abrand = new Array();
-    $.each(car_accesor,function(i,a){
-      if($.inArray(a.brand, abrand) < 0 ){
-        abrand.push(a.brand)
-        $(".car_accessories_brand").append("<option value='"+a.brand+"'>"+a.brand+"</option>");
-      }
-    })
-    $(".car_accessories_brand").select2();
-    $(".car_accessories_brand").change(function(){
-      var car_brand_select_val = $(this).val();
-      var dmodel = new Array();
-      $(".car_accessories_category").html("<option>All Categories</option>")
-      $.each(carcategory,function(i,a){
-        if(a.brand == car_brand_select_val){
-          if($.inArray(a.model, dmodel) < 0 ){
-            dmodel.push(a.model)
-            $(".car_accessories_category").append("<option value='"+a.category+"'>"+a.category+"</option>");
-          }
-        }
-      })
-      $(".car_accessories_category").removeAttr("disabled");
-      $(".car_accessories_category").select2("destroy").select2();
-    })
-  })
-</script>";s:5:"mtime";i:1526091938;s:6:"markup";s:3840:"{% partial 'CarSelectPage' %}
+</script>
+";s:5:"mtime";i:1526216031;s:6:"markup";s:1025:"{% partial 'CarSelectPage' %}
 <div class="container carlistpage">
 
     <div class="row">
       <div class="col-md-12 col-sm-12">
       	<div class="row">
       		<div class="col-md-12 col-sm-12">
-      	<h1>recommended for you</h1>
+      	<h1>{{head_title}}</h1>
       </div>
       	</div>
       	<?php $m=0; ?>
       	<div class="row carlist_all">
   			{% for car in carslist %}
   			<?php $m++; ?>
-				<div class="col-md-4 col-sm-12 carlist_one"><div class="carlist_content" ><img src="{{ car.carlist_image|media }}"/><h2>{{ car.title }}</h2><p class="shortdesc">{{ car.shortdesc }}</p><a href="/cvsmart/car/{{ car.slug }}">More Info</a></div></div>
+				<div class="col-md-4 col-sm-12 carlist_one"><div class="carlist_content" >
+          <div class="carlist_img"><img src="{{ car.carlist_image|media }}"/></div>
+        <h2>{{ car.title }}</h2><p class="shortdesc">{{ car.shortdesc }}</p><a {% if car.isaccessories %} href="/cvsmart/caraccessories/{{ car.slug }}" {% else %}href="/cvsmart/car/{{ car.slug }}" {% endif %}>More Info</a></div></div>
 			 {% endfor %}
       	</div>
       	<ul id="pagination" class="pagination-sm"></ul>
@@ -126,77 +59,5 @@ is_hidden = 0
 <script type="text/javascript">
   var currentpage = {{ currentpage}};
   var totalpages =  {{ sizeofcarlist }};
-	var params = JSON.parse('{{ params|raw }}');
-  console.log(params);
-</script>
-<script type="text/javascript">
-  var carcategory = JSON.parse('{{ car_categorylist|raw }}');
-  var car_accesor = JSON.parse('{{ car_accesortlist|raw }}');
-  $(document).ready(function(){
-    var dbrand = new Array();
-    $.each(carcategory,function(i,a){
-      if($.inArray(a.category, dbrand) < 0 ){
-        dbrand.push(a.category)
-        if(params.car_category_select==a.category){
-          $(".car_category_select").append("<option selected value='"+a.category+"'>"+a.category+"</option>");
-          params.car_category_select="";
-        }else{
-          $(".car_category_select").append("<option value='"+a.category+"'>"+a.category+"</option>");
-        }
-      }
-    })
-    $(".car_category_select").select2();
-    
-    $(".car_category_select").change(function(){
-      var car_brand_select_val = $(this).val();
-      if(car_brand_select_val!=""){
-        var dmodel = new Array();
-        $(".car_brand_select").html("<option value=''>All Brands</option>")
-        $.each(carcategory,function(i,a){
-          if(a.category == car_brand_select_val){
-            if($.inArray(a.brand, dmodel) < 0 ){
-              dmodel.push(a.brand)
-              if(params.car_brand_select==a.brand){
-              $(".car_brand_select").append("<option selected value='"+a.brand+"'>"+a.brand+"</option>");
-              params.car_brand_select="";
-              }else{
-              $(".car_brand_select").append("<option value='"+a.brand+"'>"+a.brand+"</option>");
-              }
-            }
-          }
-        })
-        $(".car_brand_select").removeAttr("disabled");
-        $(".car_brand_select").select2();
-      }else{
-        $(".car_brand_select").html("<option value=''>All Brands</option>")
-        $(".car_brand_select").attr("disabled","");
-        $(".car_brand_select").select2();
-      }
-    })
-    $(".car_category_select").trigger("change");
 
-    var abrand = new Array();
-    $.each(car_accesor,function(i,a){
-      if($.inArray(a.brand, abrand) < 0 ){
-        abrand.push(a.brand)
-        $(".car_accessories_brand").append("<option value='"+a.brand+"'>"+a.brand+"</option>");
-      }
-    })
-    $(".car_accessories_brand").select2();
-    $(".car_accessories_brand").change(function(){
-      var car_brand_select_val = $(this).val();
-      var dmodel = new Array();
-      $(".car_accessories_category").html("<option>All Categories</option>")
-      $.each(carcategory,function(i,a){
-        if(a.brand == car_brand_select_val){
-          if($.inArray(a.model, dmodel) < 0 ){
-            dmodel.push(a.model)
-            $(".car_accessories_category").append("<option value='"+a.category+"'>"+a.category+"</option>");
-          }
-        }
-      })
-      $(".car_accessories_category").removeAttr("disabled");
-      $(".car_accessories_category").select2("destroy").select2();
-    })
-  })
 </script>";s:4:"code";N;s:5:"title";s:8:"Car List";s:3:"url";s:9:"/car-list";s:6:"layout";s:7:"Default";s:9:"is_hidden";s:1:"0";s:15:"CarsforsellList";a:0:{}}}

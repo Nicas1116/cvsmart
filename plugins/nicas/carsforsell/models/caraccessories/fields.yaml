@@ -1,0 +1,124 @@
+tabs:
+    fields:
+        title:
+            label: Title
+            span: auto
+            required: 1
+            type: text
+            tab: 'Basic Info'
+        slug:
+            label: 'slug (LINK)'
+            span: auto
+            required: 1
+            type: text
+            tab: 'Basic Info'
+        car_states:
+            label: States
+            span: auto
+            type: text
+            tab: 'Basic Info'
+        shortdesc:
+            label: 'Short Desc'
+            span: auto
+            required: 1
+            type: text
+            tab: 'Basic Info'
+        carlist_image:
+            label: 'Carlist Image'
+            mode: file
+            span: auto
+            type: mediafinder
+            tab: 'Basic Info'
+        created_at:
+            label: 'Date Published'
+            mode: datetime
+            span: auto
+            type: datepicker
+            tab: 'Basic Info'
+        car_category:
+            label: 'Car Accessories Brand'
+            prompt: 'Add new item'
+            span: left
+            type: repeater
+            tab: 'Basic Info'
+            form:
+                fields:
+                    brand:
+                        label: Brand
+                        span: full
+                        type: text
+                    model:
+                        label: Model
+                        span: full
+                        type: text
+        car_price:
+            label: 'Car Accessories Prices'
+            options:
+                '<100': '<100'
+                300-500: 300-500
+                501-1000: 501-1000
+                1000++: 1000++
+            span: auto
+            type: dropdown
+            tab: 'Basic Info'
+        carimages:
+            label: 'Car Banner'
+            prompt: 'Add new Images'
+            maxItems: '5'
+            span: full
+            type: repeater
+            tab: 'Detail Info'
+            form:
+                fields:
+                    carimages:
+                        label: 'Car Banner'
+                        prompt: 'Add new Images'
+                        span: auto
+                        maxItems: '5'
+                        type: mediafinder
+                    isvideo:
+                        label: 'Is Video'
+                        span: left
+                        type: checkbox
+                    carvideo:
+                        label: 'Car Video'
+                        span: left
+                        trigger:
+                            action: show
+                            field: isvideo
+                            condition: checked
+                        type: text
+        longdesc:
+            label: 'Long Desc'
+            size: ''
+            span: left
+            type: richeditor
+            tab: 'Detail Info'
+        specification:
+            label: Specification
+            size: ''
+            span: left
+            type: richeditor
+            tab: 'Detail Info'
+        sellercontact:
+            label: 'Seller Contact'
+            size: ''
+            span: left
+            type: richeditor
+            tab: 'Detail Info'
+        disclaimer:
+            label: Disclaimer
+            size: ''
+            span: left
+            type: richeditor
+            tab: 'Detail Info'
+        price:
+            label: Price
+            span: left
+            type: text
+            tab: 'Detail Info'
+        carloaninstallment:
+            label: 'Car Loan Installment'
+            span: left
+            type: text
+            tab: 'Detail Info'

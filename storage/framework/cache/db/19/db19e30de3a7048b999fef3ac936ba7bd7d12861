@@ -1,4 +1,4 @@
-1526092228a:1:{s:13:"ContactUs.htm";a:9:{s:8:"fileName";s:13:"ContactUs.htm";s:7:"content";s:1022:"title = "Contact Us"
+1526216370a:1:{s:13:"ContactUs.htm";a:9:{s:8:"fileName";s:13:"ContactUs.htm";s:7:"content";s:2745:"title = "Contact Us"
 url = "/contact-us/"
 layout = "Default"
 is_hidden = 0
@@ -25,7 +25,25 @@ is_hidden = 0
       </div>
     </div>
   </div>
-</div>";s:5:"mtime";i:1526045521;s:6:"markup";s:939:"<div class="contact-us-page">
+</div>
+
+<section id="homeaboutus">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <h2>About us</h2>
+  <p>It’s time to know a little bit about us! CV Smart Auto Trading is a brainchild of 2 passionate car enthusiasts. We might be small in size but both of us have a big heart and share the same vision. Finally, we decided that it was the right time to do something different in life. We gave up on what we use to do and pursue what we have always dream of.<br/>
+<br/>
+There is a saying '<span>Love the car that you owned and treat it as one of a kind</span>'. By keeping this saying in mind, we wanted to share our passion and knowledge for cars to the public. Although a car is just a vehicle for transportation, getting us from one destination to another. That might sound uninspiring at all but let us change your mind about that because we are able to spark things up and make it more than just an ordinary vehicle. We modify cars with hand-picked accessories that we sell in our shops. We are also experts in fine tuning and make them AWESOME again.<br/>
+<br/>
+In CV Smart Auto Trading, we sell genuine second-hand luxury cars too. Drop by to our show room and you will be spoilt with lots of exceptional and exclusive choices there.<br/>
+<br/>
+There are lots of cool pictures showcasing what CV Smart Auto Trading has to offer in the official fan page, feel free to <a href="http://www.facebook.com/">check it out</a>. We update all the upcoming promotions from time to time as well, so make sure you don’t miss out by staying with us and you will find yourself lost in the wondrous world of CV Smart Auto Trading. </p>
+</div>
+</div>
+</div>
+</section>";s:5:"mtime";i:1526176189;s:6:"markup";s:2662:"<div class="contact-us-page">
 <div class="container">
 
     <div class="row">
@@ -47,4 +65,22 @@ is_hidden = 0
       </div>
     </div>
   </div>
-</div>";s:4:"code";N;s:5:"title";s:10:"Contact Us";s:3:"url";s:12:"/contact-us/";s:6:"layout";s:7:"Default";s:9:"is_hidden";s:1:"0";}}
+</div>
+
+<section id="homeaboutus">
+  <div class="container">
+
+    <div class="row">
+      <div class="col-md-12 col-sm-12">
+        <h2>About us</h2>
+  <p>It’s time to know a little bit about us! CV Smart Auto Trading is a brainchild of 2 passionate car enthusiasts. We might be small in size but both of us have a big heart and share the same vision. Finally, we decided that it was the right time to do something different in life. We gave up on what we use to do and pursue what we have always dream of.<br/>
+<br/>
+There is a saying '<span>Love the car that you owned and treat it as one of a kind</span>'. By keeping this saying in mind, we wanted to share our passion and knowledge for cars to the public. Although a car is just a vehicle for transportation, getting us from one destination to another. That might sound uninspiring at all but let us change your mind about that because we are able to spark things up and make it more than just an ordinary vehicle. We modify cars with hand-picked accessories that we sell in our shops. We are also experts in fine tuning and make them AWESOME again.<br/>
+<br/>
+In CV Smart Auto Trading, we sell genuine second-hand luxury cars too. Drop by to our show room and you will be spoilt with lots of exceptional and exclusive choices there.<br/>
+<br/>
+There are lots of cool pictures showcasing what CV Smart Auto Trading has to offer in the official fan page, feel free to <a href="http://www.facebook.com/">check it out</a>. We update all the upcoming promotions from time to time as well, so make sure you don’t miss out by staying with us and you will find yourself lost in the wondrous world of CV Smart Auto Trading. </p>
+</div>
+</div>
+</div>
+</section>";s:4:"code";N;s:5:"title";s:10:"Contact Us";s:3:"url";s:12:"/contact-us/";s:6:"layout";s:7:"Default";s:9:"is_hidden";s:1:"0";}}

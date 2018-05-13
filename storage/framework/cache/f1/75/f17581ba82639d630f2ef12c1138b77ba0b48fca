@@ -1,22 +1,24 @@
-1526092800a:1:{s:17:"CarSelectPage.htm";a:5:{s:8:"fileName";s:17:"CarSelectPage.htm";s:7:"content";s:1375:"<div class="carselectpage">
+1526216788a:1:{s:17:"CarSelectPage.htm";a:5:{s:8:"fileName";s:17:"CarSelectPage.htm";s:7:"content";s:6996:"<div class="carselectpage">
 <div class="container ">
-  <form method="POST">
+  <form action="/cvsmart/car-list" method="POST">
    <div class="row">
       <div class="col-md-11 col-sm-12">
           <div class="row">
             <div class="col-md-4 col-sm-12">
                 <select name="car_category_select" class="form-control custom-select car_category_select">
-                  <option value="">All Categories</option>
+                  <option value="">All</option>
+                  <option value="used-cars">Used Cars</option>
+                  <option value="accessories">Accessories</option>
                 </select>
             </div>
             <div class="col-md-4 col-sm-12">
               <select name="car_brand_select" class="form-control custom-select car_brand_select" disabled>
-                  <option value="">All Brand</option>
+                  <option value="">All Brands</option>
                 </select>
             </div>
             <div class="col-md-4 col-sm-12">
-              <select name="car_state_select" class="form-control custom-select">
-                  <option value="">All state</option>
+              <select name="car_state_select" class="form-control custom-select car_state_select" disabled>
+                  <option value="">All states</option>
                   {% if car_statelist %}
                       {% for slider in car_statelist %}
                       <option value="{{slider }}">{{ slider }}</option>
@@ -32,25 +34,159 @@
     </div>
   </form>
 </div>
-</div>";s:5:"mtime";i:1526089905;s:6:"markup";s:1375:"<div class="carselectpage">
+</div>
+<script type="text/javascript">
+  var carcategory = JSON.parse('{{ car_categorylist|raw }}');
+  var car_accesor = JSON.parse('{{ car_accesortlist|raw }}');
+  var params = JSON.parse('{{ params|raw }}');
+  console.log(params);
+  $(document).ready(function(){
+
+    $(".car_category_select").change(function(){
+      var car_brand_select_val = $(this).val();
+      if(car_brand_select_val=="accessories"){
+          thearray = car_accesor;
+        }else if(car_brand_select_val=="used-cars"){
+          thearray = carcategory;
+        }
+      switch(car_brand_select_val){
+        case "used-cars":
+        case "accessories":
+            var dmodel = new Array();
+            $(".car_brand_select").html("<option value=''>All Brands</option>")
+            $.each(thearray,function(i,a){
+                if($.inArray(a.brand, dmodel) < 0 ){
+                  dmodel.push(a.brand)
+                  if(params.car_brand_select==a.brand){
+                  $(".car_brand_select").append("<option selected value='"+a.brand+"'>"+a.brand+"</option>");
+                  }else{
+                  $(".car_brand_select").append("<option value='"+a.brand+"'>"+a.brand+"</option>");
+                  }
+                }
+            })
+            $(".car_brand_select").removeAttr("disabled");
+            $(".car_brand_select").select2();
+
+            var dmodel = new Array();
+            $(".car_state_select").html("<option value=''>All States</option>");
+            $.each(thearray,function(i,a){
+                if($.inArray(a.states, dmodel) < 0 ){
+                  dmodel.push(a.states)
+                  if(params.car_state_select==a.states){
+                  $(".car_state_select").append("<option selected value='"+a.states+"'>"+a.states+"</option>");
+                  }else{
+                  $(".car_state_select").append("<option value='"+a.states+"'>"+a.states+"</option>");
+                  }
+                }
+            })
+            $(".car_state_select").removeAttr("disabled");
+            $(".car_state_select").select2();
+        break;
+        default:
+        $(".car_state_select").attr("disabled","disabled");
+        $(".car_brand_select").attr("disabled","disabled");
+        $(".car_brand_select").html("<option value=''>All Brands</option>")
+        $(".car_state_select").html("<option value=''>All States</option>")
+        break;
+      }
+    });
+    $(".car_brand_select").change(function(){
+       var car_brand_select_val = $(this).val();
+        var car_category_select_val = $(".car_category_select").val();
+        var car_states_select_val = $(".car_state_select").val();
+       
+        var  thearray=false;
+        if(car_category_select_val=="accessories"){
+          thearray = car_accesor;
+        }else if(car_category_select_val=="used-cars"){
+          thearray = carcategory;
+        }
+       var dmodel = new Array();
+       $(".car_state_select").html("<option value=''>All States</option>");
+       $.each(thearray,function(i,a){
+          var dsstate = true;
+           if(car_brand_select_val!=""){dsstate = a.brand == car_brand_select_val;}
+          if(dsstate){
+            if($.inArray(a.states, dmodel) < 0 ){
+              dmodel.push(a.states)
+              if(params.car_state_select==a.states){
+                $(".car_state_select").append("<option selected value='"+a.states+"'>"+a.states+"</option>");
+              }else{
+                $(".car_state_select").append("<option value='"+a.states+"'>"+a.states+"</option>");
+              }
+            }
+          }
+      })
+    })
+    /*$(".car_state_select").change(function(){
+       var car_brand_select_val = $(this).val();
+        var car_category_select_val = $(".car_category_select").val();
+        var car_state_select_val = $(".car_brand_select").val();
+        console.log(car_state_select_val);
+        if(car_state_select_val!=""){
+          return true;
+        }
+        var  thearray=false;
+        if(car_category_select_val=="accessories"){
+          thearray = car_accesor;
+        }else if(car_category_select_val=="used-cars"){
+          thearray = carcategory;
+        }
+       var dmodel = new Array();
+       $(".car_brand_select").html("<option value=''>All Brands</option>");
+       $.each(thearray,function(i,a){
+          var dsstate = true;
+           if(car_brand_select_val!=""){dsstate = a.states == car_brand_select_val;}
+          if(dsstate){
+            if($.inArray(a.brand, dmodel) < 0 ){
+              dmodel.push(a.brand)
+              if(params.car_state_select==a.states){
+                $(".car_brand_select").append("<option selected value='"+a.brand+"'>"+a.brand+"</option>");
+                params.car_state_select="";
+              }else{
+                $(".car_brand_select").append("<option value='"+a.brand+"'>"+a.brand+"</option>");
+              }
+            }
+          }
+      })
+    })*/
+    if(params){
+      if(params.car_category_select){
+        $(".car_category_select").val(params.car_category_select);
+      }
+    }
+    $(".car_category_select").select2();
+     $(".car_category_select").trigger("change");
+     console.log(params);
+     if(params){
+      if(params.car_brand_select){
+        $(".car_brand_select").trigger("change");
+        params.car_brand_select="";
+        params.car_state_select="";
+      }
+    }
+  })
+</script>";s:5:"mtime";i:1526216187;s:6:"markup";s:6996:"<div class="carselectpage">
 <div class="container ">
-  <form method="POST">
+  <form action="/cvsmart/car-list" method="POST">
    <div class="row">
       <div class="col-md-11 col-sm-12">
           <div class="row">
             <div class="col-md-4 col-sm-12">
                 <select name="car_category_select" class="form-control custom-select car_category_select">
-                  <option value="">All Categories</option>
+                  <option value="">All</option>
+                  <option value="used-cars">Used Cars</option>
+                  <option value="accessories">Accessories</option>
                 </select>
             </div>
             <div class="col-md-4 col-sm-12">
               <select name="car_brand_select" class="form-control custom-select car_brand_select" disabled>
-                  <option value="">All Brand</option>
+                  <option value="">All Brands</option>
                 </select>
             </div>
             <div class="col-md-4 col-sm-12">
-              <select name="car_state_select" class="form-control custom-select">
-                  <option value="">All state</option>
+              <select name="car_state_select" class="form-control custom-select car_state_select" disabled>
+                  <option value="">All states</option>
                   {% if car_statelist %}
                       {% for slider in car_statelist %}
                       <option value="{{slider }}">{{ slider }}</option>
@@ -66,4 +202,136 @@
     </div>
   </form>
 </div>
-</div>";s:4:"code";N;}}
+</div>
+<script type="text/javascript">
+  var carcategory = JSON.parse('{{ car_categorylist|raw }}');
+  var car_accesor = JSON.parse('{{ car_accesortlist|raw }}');
+  var params = JSON.parse('{{ params|raw }}');
+  console.log(params);
+  $(document).ready(function(){
+
+    $(".car_category_select").change(function(){
+      var car_brand_select_val = $(this).val();
+      if(car_brand_select_val=="accessories"){
+          thearray = car_accesor;
+        }else if(car_brand_select_val=="used-cars"){
+          thearray = carcategory;
+        }
+      switch(car_brand_select_val){
+        case "used-cars":
+        case "accessories":
+            var dmodel = new Array();
+            $(".car_brand_select").html("<option value=''>All Brands</option>")
+            $.each(thearray,function(i,a){
+                if($.inArray(a.brand, dmodel) < 0 ){
+                  dmodel.push(a.brand)
+                  if(params.car_brand_select==a.brand){
+                  $(".car_brand_select").append("<option selected value='"+a.brand+"'>"+a.brand+"</option>");
+                  }else{
+                  $(".car_brand_select").append("<option value='"+a.brand+"'>"+a.brand+"</option>");
+                  }
+                }
+            })
+            $(".car_brand_select").removeAttr("disabled");
+            $(".car_brand_select").select2();
+
+            var dmodel = new Array();
+            $(".car_state_select").html("<option value=''>All States</option>");
+            $.each(thearray,function(i,a){
+                if($.inArray(a.states, dmodel) < 0 ){
+                  dmodel.push(a.states)
+                  if(params.car_state_select==a.states){
+                  $(".car_state_select").append("<option selected value='"+a.states+"'>"+a.states+"</option>");
+                  }else{
+                  $(".car_state_select").append("<option value='"+a.states+"'>"+a.states+"</option>");
+                  }
+                }
+            })
+            $(".car_state_select").removeAttr("disabled");
+            $(".car_state_select").select2();
+        break;
+        default:
+        $(".car_state_select").attr("disabled","disabled");
+        $(".car_brand_select").attr("disabled","disabled");
+        $(".car_brand_select").html("<option value=''>All Brands</option>")
+        $(".car_state_select").html("<option value=''>All States</option>")
+        break;
+      }
+    });
+    $(".car_brand_select").change(function(){
+       var car_brand_select_val = $(this).val();
+        var car_category_select_val = $(".car_category_select").val();
+        var car_states_select_val = $(".car_state_select").val();
+       
+        var  thearray=false;
+        if(car_category_select_val=="accessories"){
+          thearray = car_accesor;
+        }else if(car_category_select_val=="used-cars"){
+          thearray = carcategory;
+        }
+       var dmodel = new Array();
+       $(".car_state_select").html("<option value=''>All States</option>");
+       $.each(thearray,function(i,a){
+          var dsstate = true;
+           if(car_brand_select_val!=""){dsstate = a.brand == car_brand_select_val;}
+          if(dsstate){
+            if($.inArray(a.states, dmodel) < 0 ){
+              dmodel.push(a.states)
+              if(params.car_state_select==a.states){
+                $(".car_state_select").append("<option selected value='"+a.states+"'>"+a.states+"</option>");
+              }else{
+                $(".car_state_select").append("<option value='"+a.states+"'>"+a.states+"</option>");
+              }
+            }
+          }
+      })
+    })
+    /*$(".car_state_select").change(function(){
+       var car_brand_select_val = $(this).val();
+        var car_category_select_val = $(".car_category_select").val();
+        var car_state_select_val = $(".car_brand_select").val();
+        console.log(car_state_select_val);
+        if(car_state_select_val!=""){
+          return true;
+        }
+        var  thearray=false;
+        if(car_category_select_val=="accessories"){
+          thearray = car_accesor;
+        }else if(car_category_select_val=="used-cars"){
+          thearray = carcategory;
+        }
+       var dmodel = new Array();
+       $(".car_brand_select").html("<option value=''>All Brands</option>");
+       $.each(thearray,function(i,a){
+          var dsstate = true;
+           if(car_brand_select_val!=""){dsstate = a.states == car_brand_select_val;}
+          if(dsstate){
+            if($.inArray(a.brand, dmodel) < 0 ){
+              dmodel.push(a.brand)
+              if(params.car_state_select==a.states){
+                $(".car_brand_select").append("<option selected value='"+a.brand+"'>"+a.brand+"</option>");
+                params.car_state_select="";
+              }else{
+                $(".car_brand_select").append("<option value='"+a.brand+"'>"+a.brand+"</option>");
+              }
+            }
+          }
+      })
+    })*/
+    if(params){
+      if(params.car_category_select){
+        $(".car_category_select").val(params.car_category_select);
+      }
+    }
+    $(".car_category_select").select2();
+     $(".car_category_select").trigger("change");
+     console.log(params);
+     if(params){
+      if(params.car_brand_select){
+        $(".car_brand_select").trigger("change");
+        params.car_brand_select="";
+        params.car_state_select="";
+      }
+    }
+  })
+</script>";s:4:"code";N;}}

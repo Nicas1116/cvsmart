@@ -102,4 +102,8 @@
   'nicas\\carsforsell\\models\\HomeRotateBanner' => 'plugins/nicas/carsforsell/models/HomeRotateBanner.php',
   'nicas\\carsforsell\\Controllers\\carcategory' => 'plugins\\nicas\\carsforsell\\controllers\\carcategory.php',
   'Nicas\\Carsforsell\\Models\\CarCategory' => 'plugins\\nicas\\carsforsell\\models\\CarCategory.php',
+  'nicas\\carsforsell\\Controllers\\caraccessories' => 'plugins\\nicas\\carsforsell\\controllers\\caraccessories.php',
+  'Nicas\\Carsforsell\\Models\\CarAccessories' => 'plugins\\nicas\\carsforsell\\models\\CarAccessories.php',
+  'nicas\\carsforsell\\models\\CarAccessories' => 'plugins\\nicas\\carsforsell\\models\\CarAccessories.php',
+  'Nicas\\Carsforsell\\Components\\Carsaccessoriesdetail' => 'plugins\\nicas\\carsforsell\\components\\Carsaccessoriesdetail.php',
 );

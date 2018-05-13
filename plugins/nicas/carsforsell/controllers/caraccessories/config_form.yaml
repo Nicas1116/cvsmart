@@ -1,0 +1,10 @@
+name: CarAccessories
+form: $/nicas/carsforsell/models/caraccessories/fields.yaml
+modelClass: Nicas\Carsforsell\Models\CarAccessories
+defaultRedirect: nicas/carsforsell/caraccessories
+create:
+    redirect: 'nicas/carsforsell/caraccessories/update/:id'
+    redirectClose: nicas/carsforsell/caraccessories
+update:
+    redirect: nicas/carsforsell/caraccessories
+    redirectClose: nicas/carsforsell/caraccessories

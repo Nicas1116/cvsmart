@@ -45,68 +45,7 @@ is_hidden = 0
 
     <div class="row">
       <div class="col-md-8 col-sm-12">
-       	<div class="search_container">
-       		<script type="text/javascript">
-       		</script>
-       		<form action="/cvsmart/car-list" method="POST">
-       			<h2>Find used car for sale</h2>
-       			<div class="row">
-		            <div class="col-md-6 col-sm-12">
-		                <select name="car_brand_select" class="form-control custom-select car_brand_select">
-		                  <option  value="">All Brands</option>
-		                </select>
-		            </div>
-		            <div class="col-md-6 col-sm-12">
-		              <select name="car_models_select" class="form-control custom-select car_model_select">
-		                  <option value="">All Models</option>
-		                </select>
-		            </div>
-		            <div class="col-md-6 col-sm-12">
-		              <select name="car_state_select" class="form-control custom-select">
-		                  <option  value="">All state</option>
-		                  {% if car_statelist %}
-			                {% for slider in car_statelist %}
-			                <option value="{{slider }}">{{ slider }}</option>
-			                {% endfor %}
-			              {% endif %}
-		                </select>
-		            </div>
-		            <div class="col-md-6 col-sm-12">
-		              <select name="car_prices_select" class="form-control custom-select">
-		                  <option  value="">All Prices</option>
-		                  {% if car_pricelist %}
-			                {% for slider in car_pricelist %}
-			                <option value="{{slider }}">{{ slider }}</option>
-			                {% endfor %}
-			              {% endif %}
-		                </select>
-		            </div>
-		            <div class="col-md-12 col-sm-12">
-		            	<input type="hidden" name="isfromhome" value="1">
-		            	<button class="btn-search">SEARCH</button>
-		            </div>
-		        </div>
-       		</form>
-       		<form action="/cvsmart/car-list" method="POST">
-       			<h2>Find modify car accessories</h2>
-       			<div class="row">
-		            <div class="col-md-6 col-sm-12">
-		                <select name="car_accessories_brand" class="form-control custom-select car_accessories_brand">
-		                  <option  value="">All Brand</option>
-		                </select>
-		            </div>
-		            <div class="col-md-6 col-sm-12">
-		              <select name="car_accessories_category" class="form-control custom-select car_accessories_category">
-		                  <option value="">All Categories</option>
-		                </select>
-		            </div>
-		            <div class="col-md-12 col-sm-12">
-		            	<input type="hidden" name="isfromhome" value="1">
-		            	<button class="btn-search">SEARCH</button>
-		            </div>
-		        </div>
-       		</form>
-       	</div>
+       	{% partial 'HomeForm' %}
       </div>
       <div class="col-md-1 col-sm-12 "></div>
       <div class="col-md-3 col-sm-12 ">
@@ -201,29 +140,5 @@ is_hidden = 0
 			}
 		})
 		$(".car_accessories_brand").select2();
-		$(".car_accessories_brand").change(function(){
-			var car_brand_select_val = $(this).val();
-			if(car_brand_select_val!=""){
-				var dmodel = new Array();
-				$(".car_accessories_category").html("<option value=''>All Categories</option>")
-				$.each(car_accesor,function(i,a){
-					console.log(a.brand,car_brand_select_val);
-					if(a.brand == car_brand_select_val){
-						if($.inArray(a.model, dmodel) < 0 ){
-							dmodel.push(a.category)
-							$(".car_accessories_category").append("<option value='"+a.category+"'>"+a.category+"</option>");
-						}
-					}
-				})
-				$(".car_accessories_category").removeAttr("disabled");
-				$(".car_accessories_category").select2();
-			}else{
-				$(".car_accessories_category").html("<option value=''>All Categories</option>")
-				$(".car_accessories_category").attr("disabled","");
-				$(".car_accessories_category").select2();
-			}
-			
-		});
-		$(".car_accessories_brand").trigger("change")
 	})
 </script>
