@@ -19,7 +19,9 @@ is_hidden = 0
       	<div class="row carlist_all">
   			{% for car in carslist %}
   			<?php $m++; ?>
-				<div class="col-md-4 col-sm-12 carlist_one"><div class="carlist_content" ><img src="{{ car.carlist_image|media }}"/><h2>{{ car.title }}</h2><p class="shortdesc">{{ car.shortdesc }}</p><a href="/cvsmart/car/{{ car.slug }}">More Info</a></div></div>
+				<div class="col-md-4 col-sm-12 carlist_one"><div class="carlist_content" >
+          <div class="carlist_img"><img src="{{ car.carlist_image|media }}"/></div>
+        <h2>{{ car.title }}</h2><p class="shortdesc">{{ car.shortdesc }}</p><a href="/cvsmart/car/{{ car.slug }}">More Info</a></div></div>
 			 {% endfor %}
       	</div>
       	<ul id="pagination" class="pagination-sm"></ul>

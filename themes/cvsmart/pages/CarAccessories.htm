@@ -1,0 +1,58 @@
+title = "Car Accessories"
+url = "/caraccessories/:slug"
+layout = "Default"
+is_hidden = 0
+
+[Carsdetail]
+==
+{% partial 'CarSelectPage' %}
+<div class="container carlistpage">
+	<div class="row">
+      <div class="col-md-12 col-sm-12">
+      	<h1>{{ carsdetail.title }}</h1>
+      </div>
+  </div>
+    <div class="row">
+      <div class="col-md-10 col-sm-12">
+      <div id="slider" class="flexslider">
+  		<ul class="slides">
+      	{% if carsdetail.carimages %}
+	        {% for carimage in carsdetail.carimages %}
+	        <li>
+	   			{% if carimage.isvideo %}
+	   			<iframe style="width:100%;display: block;height:550px;border:none;" src="https://www.youtube.com/embed/{{ carimage.carvideo }}"></iframe>
+	   			{% else %}
+	          <a href="{{ carimage.carimages|media }}" style="background-image: url({{ carimage.carimages|media }});" data-lity class="slider-content">
+	          	{% endif %}
+	          </a>
+	    </li>
+	        {% endfor %}
+	      {% endif %}
+	     </ul>
+      </div>
+      </div>
+      <div class="col-md-2 col-sm-12">
+      	<div id="carousel">
+  		{% if carsdetail.carimages %}
+	        {% for key,carimage in carsdetail.carimages %}
+	   		<a style="background-image: url({{ carimage.carimages|media }});" class="slider-content con-{{ key }}" slideno="{{ key }}">
+	   			{% if carimage.isvideo %}
+	   			<span class="videobg"></span>
+	   			{% endif %}
+	          </a>
+	        {% endfor %}
+	      {% endif %}
+      </div>
+      </div>
+  </div>
+  <div class="row">
+      <div class="col-md-4 col-sm-12">
+      	<h2>SPECIFICATION</h2>
+      	<p>{{ carsdetail.specification|raw }}</p>
+      </div>
+      <div class="col-md-4 col-sm-12">
+      	<h2>price</h2>
+        <p>{{ carsdetail.price }}</p>
+      </div>
+  </div>
+</div>

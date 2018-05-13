@@ -6,17 +6,19 @@
           <div class="row">
             <div class="col-md-4 col-sm-12">
                 <select name="car_category_select" class="form-control custom-select car_category_select">
-                  <option value="">All Categories</option>
+                  <option value="">All</option>
+                  <option value="used-cars">Used Cars</option>
+                  <option value="used-cars">Accecercious</option>
                 </select>
             </div>
             <div class="col-md-4 col-sm-12">
               <select name="car_brand_select" class="form-control custom-select car_brand_select" disabled>
-                  <option value="">All Brand</option>
+                  <option value="">All Brands</option>
                 </select>
             </div>
             <div class="col-md-4 col-sm-12">
-              <select name="car_state_select" class="form-control custom-select">
-                  <option value="">All state</option>
+              <select name="car_state_select" class="form-control custom-select" disabled>
+                  <option value="">All states</option>
                   {% if car_statelist %}
                       {% for slider in car_statelist %}
                       <option value="{{slider }}">{{ slider }}</option>

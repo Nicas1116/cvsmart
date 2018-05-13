@@ -1,3 +1,16 @@
+/*@font-face{font-family:DaimlerCAC-Regular;
+  src:url(https://assets.oneweb.mercedes-benz.com/global/1.13.0/fonts/EOT/DaimlerCAC-Regular.eot);
+  src:url(https://assets.oneweb.mercedes-benz.com/global/1.13.0/fonts/EOT/DaimlerCAC-Regular.eot#iefix) format("embedded-opentype"),
+  url(https://assets.oneweb.mercedes-benz.com/global/1.13.0/fonts/WOFF2/DaimlerCAC-Regular.woff2) format("woff2"),
+  url(https://assets.oneweb.mercedes-benz.com/global/1.13.0/fonts/WOFF/DaimlerCAC-Regular.woff) format("woff"),
+  url(https://assets.oneweb.mercedes-benz.com/global/1.13.0/fonts/TTF/DaimlerCAC-Regular.ttf) format("truetype"),
+  url(https://assets.oneweb.mercedes-benz.com/global/1.13.0/fonts/SVG/DaimlerCAC-Regular.svg#DaimlerCAC-Regular) format("svg")}
+
+@font-face{font-family:DaimlerCS-Light;src:url(https://assets.oneweb.mercedes-benz.com/global/1.13.0/fonts/EOT/DaimlerCS-Light.eot);src:url(https://assets.oneweb.mercedes-benz.com/global/1.13.0/fonts/EOT/DaimlerCS-Light.eot#iefix) format("embedded-opentype"),url(https://assets.oneweb.mercedes-benz.com/global/1.13.0/fonts/WOFF2/DaimlerCS-Light.woff2) format("woff2"),url(https://assets.oneweb.mercedes-benz.com/global/1.13.0/fonts/WOFF/DaimlerCS-Light.woff) format("woff"),url(https://assets.oneweb.mercedes-benz.com/global/1.13.0/fonts/TTF/DaimlerCS-Light.ttf) format("truetype"),url(https://assets.oneweb.mercedes-benz.com/global/1.13.0/fonts/SVG/DaimlerCS-Light.svg#DaimlerCS-Light) format("svg")}
+@font-face{font-family:DaimlerCS-Regular;src:url(https://assets.oneweb.mercedes-benz.com/global/1.13.0/fonts/EOT/DaimlerCS-Regular.eot);src:url(https://assets.oneweb.mercedes-benz.com/global/1.13.0/fonts/EOT/DaimlerCS-Regular.eot#iefix) format("embedded-opentype"),url(https://assets.oneweb.mercedes-benz.com/global/1.13.0/fonts/WOFF2/DaimlerCS-Regular.woff2) format("woff2"),url(https://assets.oneweb.mercedes-benz.com/global/1.13.0/fonts/WOFF/DaimlerCS-Regular.woff) format("woff"),url(https://assets.oneweb.mercedes-benz.com/global/1.13.0/fonts/TTF/DaimlerCS-Regular.ttf) format("truetype"),url(https://assets.oneweb.mercedes-benz.com/global/1.13.0/fonts/SVG/DaimlerCS-Regular.svg#DaimlerCS-Regular) format("svg")}
+@font-face{font-family:DaimlerCS-Demi;src:url(https://assets.oneweb.mercedes-benz.com/global/1.13.0/fonts/EOT/DaimlerCS-Demi.eot);src:url(https://assets.oneweb.mercedes-benz.com/global/1.13.0/fonts/EOT/DaimlerCS-Demi.eot#iefix) format("embedded-opentype"),url(https://assets.oneweb.mercedes-benz.com/global/1.13.0/fonts/WOFF2/DaimlerCS-Demi.woff2) format("woff2"),url(https://assets.oneweb.mercedes-benz.com/global/1.13.0/fonts/WOFF/DaimlerCS-Demi.woff) format("woff"),url(https://assets.oneweb.mercedes-benz.com/global/1.13.0/fonts/TTF/DaimlerCS-Demi.ttf) format("truetype"),url(https://assets.oneweb.mercedes-benz.com/global/1.13.0/fonts/SVG/DaimlerCS-Demi.svg#DaimlerCS-Demi) format("svg")}
+*/
+
 @font-face {
     font-family: 'AileronSemiBold';
     src: url('../fonts/AileronSemiBold.eot');
@@ -344,29 +357,29 @@ html[xmlns] .flexslider .slides {
 }
 
 
-.contact-us-info p{font-family: 'AileronHeavyItalic';font-size: 16px;line-height: 26px;}
-.contact-us-info p b{font-size: 18px;line-height: 24px;}
+.contact-us-info p{font-family: 'AileronHeavyItalic';font-size: 14px;line-height: 20px;letter-spacing: 0.5px;}
+.contact-us-info p b{font-size: 16px;line-height: 24px;}
 .contact-us-info p span{font-size: 10px;line-height: 12px;}
-.contact-us-info h3,.contact-us-info h2{font-size: 22px;line-height: 1;color:#fff;font-family: 'FuturaCondMedium';text-transform: uppercase;margin-bottom: 10px;margin-top: 25px;}
+.contact-us-info h3,.contact-us-info h2{font-size: 22px;line-height: 1;color:#fff;font-family: 'FuturaCondMedium';text-transform: uppercase;margin-bottom: 10px;margin-top: 30px;letter-spacing:  1.5px;}
 .contact-us-info h3{font-size:16px;line-height: 1;}
 #navbar{border-bottom: solid 1px #404040;}
 
 #layout-header .navbar-brand.home{position: absolute;top: 15px;}
-#layout-header .navbar-brand.home img{height: 101px;}
+#layout-header .navbar-brand.home img{height: 90px;}
 #navigation{padding-top: 30px;}
 .navbar ul.nav > li > a.mbutton{margin-right: 50px;}
 .navbar ul.nav > li > a.socialbutton{position: relative;top:0px;padding: 5px 10px;background:  transparent;border-top-color:  transparent;}
 .navbar ul.nav > li.open > a.normalbutton,
-.navbar ul.nav > li > a.normalbutton{border-top: none!important;text-decoration: none;font-size: 20px;line-height: 30px;color:#888a90;letter-spacing: 0.75px;border-bottom: solid 4px transparent;padding-top: 15px;padding-bottom: 10px;margin:  0 10px;background-color: transparent;outline: none;}
+.navbar ul.nav > li > a.normalbutton{border-top: none!important;text-decoration: none;font-size: 16px;line-height: 20px;color:#888a90;letter-spacing: 0px;border-bottom: solid 4px transparent;padding-top: 15px;padding-bottom: 10px;margin:  0 10px;background-color: transparent;outline: none;letter-spacing: 1px;}
 .navbar ul.nav > li > a.normalbutton.active,
 .navbar ul.nav > li > a.normalbutton:hover{border-top: none!important;border-bottom: solid 3px #fff;background-color: transparent;color: #fff;}
 #footer{background-image: url(../img/footer_bg.jpg);padding: 30px 0;background-size: cover;}
-#footer p{font-family: 'AileronRegular';font-size: 15px;line-height: 22px;color:#9f9f9f;text-transform: uppercase;margin-bottom:  0px;}
+#footer p{font-family: 'AileronRegular';font-size: 14px;line-height: 18px;color:#9f9f9f;text-transform: uppercase;margin-bottom:  0px;}
 #footer p a{color:#9f9f9f;display: inline-block;}
-#footer p a img{margin: 25px 0;}
-.carlist_content{margin: 0 0 30px;position:  relative;}
+#footer p a img{margin: 15px 0;}
+.carlist_content{margin: 0 0 50px;position:  relative;}
 .carlist_content img{display:block;max-width:100%;}
-.carlist_content a{display: block;font-size: 13px;text-decoration: underline;;line-height: 15px;font-family: 'AileronHeavyItalic';margin:0 10px;color:#fff;}
+.carlist_content a{display: block;font-size: 10px;text-decoration: underline;line-height: 15px;font-family: 'AileronHeavyItalic';margin:0 10px;color:#fff;}
 .carlist_content h2,.carlist_content p{margin:0;}
 .carlist_content h2{
     margin: 20px 10px 10px;
@@ -375,9 +388,9 @@ html[xmlns] .flexslider .slides {
     color: #a0a0a0;
 }
 .carlist_content p.shortdesc{
-    margin:0 10px 12px;
+    margin: 0 10px 10px;
     color:#747474;
-    font-size: 13px;
+    font-size: 12px;
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
@@ -390,21 +403,21 @@ section, div.section{margin-bottom: 0px;}
 #layout-header{position: relative;z-index: 999;}
 .contact-us-page{padding: 70px 0 60px;}
 #homesearch,.carlistpage{padding: 50px 0;}
-.carselectpage{background:#252525;padding: 60px 0 60px;}
+.carselectpage{background:#252525;padding: 50px 0 50px;}
 .search_container button,.submitbutton{background:transparent;border-color: transparent;display:  block;height:  auto;padding:  0px;}
-.submitbutton i.fa{font-size: 30px;line-height: 1;color:#a0a0a0;height:  auto;line-height: 65px;}
-.search_container select{font-family: 'AileronBold';width: 100%;display: block;background-color: rgba(0,0,0,0.7);background-image:  url(../img/form_select_bg.png);background-repeat:  no-repeat;background-position: center right 20px;padding: 23px 20px;height: auto;font-size: 16px;line-height: 1;color:#fff;box-shadow: none!important;border-color: rgba(128, 128, 128, 0.7)!important;text-transform: uppercase;-webkit-appearance:  none;-moz-apperance: none;}
+.submitbutton i.fa{font-size: 15px;line-height: 1;color:#a0a0a0;height:  auto;line-height: 45px;}
+.search_container select{font-family: 'AileronBold';width: 100%;display: block;background-color: rgba(0,0,0,0.7);background-image:  url(../img/form_select_bg.png);background-repeat:  no-repeat;background-position: center right 20px;padding: 13px 20px;height: auto;font-size: 16px;line-height: 1;color:#fff;box-shadow: none!important;border-color: rgba(128, 128, 128, 0.7)!important;text-transform: uppercase;-webkit-appearance:  none;-moz-apperance: none;}
 
-.select2-container--default .select2-selection,.carselectpage select{font-family: 'AileronBold';width: 100%;display: block;background-color: #252525;/* background-image:  url(../img/form_select_bg.png); */background-repeat:  no-repeat;background-position: center right 20px;padding: 23px 20px;height: auto;font-size: 16px;line-height: 1;color:#fff;box-shadow: none!important;border-color: rgba(128, 128, 128, 0.7)!important;text-transform: uppercase;-webkit-appearance:  none;-moz-apperance: none;}
+.select2-container--default .select2-selection,.carselectpage select{font-family: 'AileronBold';width: 100%;display: block;background-color: #252525;/* background-image:  url(../img/form_select_bg.png); */background-repeat:  no-repeat;background-position: center right 20px;padding: 13px 20px;height: auto;font-size: 14px;line-height: 1;color:#fff;box-shadow: none!important;border-color: rgba(128, 128, 128, 1)!important;text-transform: uppercase;-webkit-appearance:  none;-moz-apperance: none;}
 .search_container .select2-container--default .select2-selection{background:#000}
 .search_container .select2-container--default{margin-bottom:20px;}
-.carlistpage h1{font-family: 'FuturaCondMedium';text-transform: uppercase;font-size: 28px;line-height: 1;margin-bottom: 30px;color:#fff;margin-top:  0px;}
+.carlistpage h1{font-family: 'FuturaCondMedium';text-transform: uppercase;font-size: 22px;line-height: 1;margin-bottom: 30px;color:#fff;margin-top:  0px;letter-spacing:  1.5px;}
 #pagination .page-item.first .page-link,
 #pagination .page-item.prev .page-link,
 #pagination .page-item.last .page-link,
 #pagination .page-item.next .page-link{padding: 5px 15px;border:none;background:#505050;margin:0px 10px;}
 #pagination .page-item.active .page-link {color: #777777;}
-#pagination .page-item a{border-color: #555555;background-color: transparent;border-top: none;border-bottom: none;color:#fff;font-family: 'AileronHeavy';text-transform: uppercase;font-size: 14px;line-height:  1;padding: 7px 12px;}
+#pagination .page-item a{border-color: #555555;background-color: transparent;border-top: none;border-bottom: none;color:#fff;font-family: 'AileronHeavy';text-transform: uppercase;font-size: 12px;line-height:  1;padding: 7px 12px;}
 .pagination {
     margin: 40px 0 0;
     font-family: "Roboto", Helvetica, Arial, sans-serif;
@@ -425,7 +438,6 @@ section, div.section{margin-bottom: 0px;}
 .swiper-slide .slider-content{height: auto;background-size: cover;background-position: center center;background-repeat: no-repeat;}
 .swiper-pagination-bullet{background-color: #11193a}
 .swiper-pagination-bullet-active{background-color: #fff}
-
 .s-button-next,
 .s-button-prev {
   position: absolute;
@@ -444,6 +456,8 @@ section, div.section{margin-bottom: 0px;}
   font-size: 48px;
   opacity:  0.4;
   display:  block;
+  -webkit-transition: * 1s; /* Safari */
+  transition: * 1s;
 }
 .s-button-next:hover,
 .s-button-prev:hover {
@@ -458,7 +472,7 @@ section, div.section{margin-bottom: 0px;}
   }
 }
 .s-button-prev {
-  left: 20px;
+  left: -40px;
 }
 @media (max-width: 768px) {
   .s-button-prev {
@@ -466,13 +480,17 @@ section, div.section{margin-bottom: 0px;}
   }
 }
 .s-button-next {
-  right: 20px;
+  right: -40px;
 }
 @media (max-width: 768px) {
   .s-button-next {
     right: 5px;
   }
 }
+#home .swiper-container:hover .s-button-prev{left: 20px;}
+#home .swiper-container:hover .s-button-next{right: 20px;}
+
+
 .static_sidebanner{margin-top: 80px;}
 .static_sidebanner img{width: 100%;}
 .home_sidebanner{height: 230px;}
@@ -489,8 +507,8 @@ section, div.section{margin-bottom: 0px;}
 .home_sidebanner .swiper-pagination-bullet{background-color: #fff;}
 .home_sidebanner .swiper-pagination-bullet-active{background-color: #b9b9b9;}
 .search_container{border: solid 1px rgba(128, 128, 128, 0.7)!important;background: rgba(0,0,0,0.7);background-size:  100% 100%;}
-.search_container{padding: 30px 30px 0;}
-.search_container h2{margin: 0px;font-size: 26px;line-height: 1;margin-bottom: 25px;color:#fff;font-family: 'FuturaCondMedium';letter-spacing: -0.5px;}
+.search_container{padding: 50px 50px 0;}
+.search_container h2{margin: 0px;font-size: 20px;line-height: 1;margin-bottom: 25px;color:#fff;font-family: 'FuturaCondMedium';letter-spacing: 1.5px;text-transform:  uppercase;}
 .search_container select.form-control{
     color:#b7b7b7;
     -webkit-appearance: none;
@@ -500,7 +518,7 @@ section, div.section{margin-bottom: 0px;}
 .search_container select.form-control option{padding: 10px;-webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;}
-.search_container button{background:#11193a;color:#fff;font-size: 16px;line-height: 1;padding: 13px 20px;text-align: center;display: block;width: 100%;margin-bottom: 40px;font-family: 'AileronBold';outline:  none;}
+.search_container button{background:#11193a;color:#fff;font-size: 14px;line-height: 1;padding: 12px 20px;text-align: center;display: block;width: 100%;margin-bottom: 40px;font-family: 'AileronBold';outline:  none;}
 .search_container .form-control{margin-bottom: 20px;}
 .lity-close, .lity-close:active, .lity-close:focus, .lity-close:hover, .lity-close:visited{position: absolute;top: -25px;right: -25px;background-color:#000;width: 50px;height: 50px;font-size: 40px;}
 .slider-content{display: block;}
@@ -512,23 +530,26 @@ section, div.section{margin-bottom: 0px;}
 #carousel .slider-content{display: block;opacity: 0.5}
 #carousel .slider-content.active{display: block;opacity: 1}
 #homeaboutus{margin-bottom: 60px;}
-#homeaboutus .container{border-top:solid 1px #b7b7b7;border-bottom:solid 1px #b7b7b7;padding: 35px 0;}
-#homeaboutus .container h2{margin: 0px;font-size: 26px;line-height: 1;margin-bottom: 20px;color:#fff;font-family: 'FuturaCondMedium';letter-spacing: -0.5px;text-transform: uppercase;}
-#homeaboutus .container p{font-size: 14px;line-height: 20px;color:#747474;}
+#homeaboutus .container{border-top:solid 1px #b7b7b7;border-bottom:solid 1px #b7b7b7;padding: 25px 0;}
+#homeaboutus .container h2{margin: 0px;font-size: 20px;line-height: 1;margin-bottom: 20px;color:#fff;font-family: 'FuturaCondMedium';letter-spacing: -0.5px;text-transform: uppercase;}
+#homeaboutus .container p{font-size: 12px;line-height: 16px;color:#747474;}
 .form-control:focus {
   border-color: transparent;
   outline: 0;
   -webkit-box-shadow: none;
   box-shadow: none;
 }
+.socialbutton img{height: 30px;}
 #home .containerd{max-width: 1400px;margin: 0 auto;}
 .slider-content img{visibility: hidden;}
 #homeaboutus .container p a,#homeaboutus .container p span{color:#fff;}
 #homeaboutus .container p a{text-decoration:underline;}
 .swiper-pagination:after{content: " ";display: block;position: absolute;top: 0px;left: -26px;}
-.carlistpage h2{font-size: 24px;line-height: 1;margin-bottom: 15px;text-transform: uppercase;color:#fff;font-family: 'AileronHeavy';}
-.carlistpage p{font-size: 18px;line-height: 25px;color:#a0a0a0;font-family: 'AileronSemiBold';margin-bottom:  0px;}
+.carlistpage h2{font-size: 18px;line-height: 24px;margin-bottom: 10px;text-transform: uppercase;color:#fff;font-family: 'AileronHeavy';margin-top: 20px;}
+.carlistpage p{font-size: 16px;line-height: 22px;color:#a0a0a0;/* font-family: 'AileronSemiBold'; */margin-bottom:  0px;}
 .videobg{background: rgba(0,0,0,0.5) url(/cvsmart/themes/cvsmart/assets/img/youtubeplay.png) center center;position:  absolute;top: 0px;left:  0px;width:  100%;height: 100%;background-repeat: no-repeat;}
+.carlist_img{overflow: hidden;height: 200px;}
+.carlist_img img{margin-top: -20px;}
 @media (max-width: 999px) {
   .navbar-header{position: relative;z-index: 9999}
   #footer p{text-align: left;}
