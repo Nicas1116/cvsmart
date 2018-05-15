@@ -65,7 +65,7 @@ class __TwigTemplate_cc40b168bd0785c5d79ae97b3a6b3507d5fe57de03ea751595d2774ade2
           </div>
       </div>
       <div class=\"col-md-1 col-sm-12\">
-          <button class=\"submitbutton form-control\"><i class=\"fa fa-search\"></i></button>
+          <button class=\"submitbutton form-control\"><i class=\"fa fa-search\"></i><span>Search</span></button>
       </div>
     </div>
   </form>
@@ -262,7 +262,7 @@ class __TwigTemplate_cc40b168bd0785c5d79ae97b3a6b3507d5fe57de03ea751595d2774ade2
           </div>
       </div>
       <div class=\"col-md-1 col-sm-12\">
-          <button class=\"submitbutton form-control\"><i class=\"fa fa-search\"></i></button>
+          <button class=\"submitbutton form-control\"><i class=\"fa fa-search\"></i><span>Search</span></button>
       </div>
     </div>
   </form>

@@ -1,4 +1,4 @@
-1526217256a:1:{s:15:"site/header.htm";a:5:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:4263:"<header>
+1526403743a:1:{s:15:"site/header.htm";a:5:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:4254:"<header>
 
 
     <!-- *** TOP END *** -->
@@ -25,7 +25,7 @@ _________________________________________________________ -->
                     <div class="navbar-buttons">
                         <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
                             <span class="sr-only">Toggle navigation</span>
-                            <i class="fa fa-align-justify"></i>
+                            <i class="fa fa-bars"></i>
                         </button>
                     </div>
                 </div>
@@ -107,7 +107,7 @@ _________________________________________________________ -->
     <!-- *** NAVBAR END *** -->
 
 </header>
-";s:5:"mtime";i:1526045521;s:6:"markup";s:4261:"<header>
+";s:5:"mtime";i:1526398417;s:6:"markup";s:4252:"<header>
 
 
     <!-- *** TOP END *** -->
@@ -134,7 +134,7 @@ _________________________________________________________ -->
                     <div class="navbar-buttons">
                         <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
                             <span class="sr-only">Toggle navigation</span>
-                            <i class="fa fa-align-justify"></i>
+                            <i class="fa fa-bars"></i>
                         </button>
                     </div>
                 </div>

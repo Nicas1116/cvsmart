@@ -194,12 +194,13 @@ html[xmlns] .flexslider .slides {
   text-decoration: none;
   display: block;
   width: 40px;
-  height: 44px;
-  margin: -22px 0 0;
+  height: 110px;
+  margin: -55px 0 0;
   position: absolute;
   top: 50%;
   z-index: 10;
   overflow: hidden;
+  font-size:  100px;
   border:  none;
   opacity: 0;
   cursor: pointer;
@@ -213,15 +214,16 @@ html[xmlns] .flexslider .slides {
   border:  none;
 }
 .flex-direction-nav a:before {
-  font-family: "flexslider-icon";
-  font-size: 40px;
+  font-family: FontAwesome;
+  font-size: 100px;
+  line-height: 1;
   display: inline-block;
-  content: '\f001';
+  content:"\f104";
   color: #fff;
   text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
 }
 .flex-direction-nav a.flex-next:before {
-  content: '\f002';
+  content: "\f105";
 }
 .flex-direction-nav .flex-prev {
   left: -50px;
@@ -376,7 +378,7 @@ html[xmlns] .flexslider .slides {
 #footer{background-image: url(../img/footer_bg.jpg);padding: 30px 0;background-size: cover;}
 #footer p{font-family: 'AileronRegular';font-size: 14px;line-height: 18px;color:#9f9f9f;text-transform: uppercase;margin-bottom:  0px;}
 #footer p a{color:#9f9f9f;display: inline-block;}
-#footer p a img{margin: 15px 0;}
+#footer p a img{margin: 15px 0;height:  30px;}
 .carlist_content{margin: 0 0 50px;position:  relative;}
 .carlist_content img{display:block;max-width:100%;}
 .carlist_content a{display: block;font-size: 10px;text-decoration: underline;line-height: 15px;font-family: 'AileronHeavyItalic';margin:0 10px;color:#fff;}
@@ -466,10 +468,7 @@ section, div.section{margin-bottom: 0px;}
 .s-button-next span,
 .s-button-prev span{font-size: 100px;}
 @media (max-width: 768px) {
-  .s-button-next,
-  .s-button-prev {
-    font-size: 20px;
-  }
+
 }
 .s-button-prev {
   left: -40px;
@@ -482,11 +481,32 @@ section, div.section{margin-bottom: 0px;}
 .s-button-next {
   right: -40px;
 }
+  .submitbutton span{display: none;}
 @media (max-width: 768px) {
   .s-button-next {
     right: 5px;
   }
+  .s-button-next span, .s-button-prev span{
+    font-size: 50px;
+  }
+  .s-button-next,
+  .s-button-prev {
+    font-size: 50px;
+    margin-top: -40px
+  }
+  
 }
+@media (max-width: 999px) {
+  .home_sidebanner {margin-top: 30px;}
+  #footer p a img{
+    height: 30px;
+  }
+  .navbar ul.nav > li > a.socialbutton{display: none;}
+  .carselectpage .select2-container--default{margin: 10px 0;}
+  .submitbutton .fa-search{display: none;}
+  .submitbutton span{display: inline-block;padding: 10px;color: #fff;}
+  .submitbutton{border: solid 1px rgba(128, 128, 128, 1)!important;display:  inline-block;}
+  }
 #home .swiper-container:hover .s-button-prev{left: 20px;}
 #home .swiper-container:hover .s-button-next{right: 20px;}
 
@@ -557,8 +577,13 @@ section, div.section{margin-bottom: 0px;}
   #slider .slider-content{height: 250px;}
    #slider iframe{height: 250px!important;}
   #carousel{display: none}
-  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{background: transparent;color:#fff;margin-right: 10px;}
-  .navbar-default .navbar-toggle, .navbar-default .navbar-toggle{background: transparent;color:#fff;}
+  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{background: transparent;color:#fff;margin-right: 10px;border-color:  transparent;}
+  .navbar-default .navbar-toggle, .navbar-default .navbar-toggle{background: transparent;color:#fff;border-color:  transparent;}
 #layout-header .navbar-brand.home{top:0px;}
 .navbar ul.nav > li > a.normalbutton.active, .navbar ul.nav > li > a.normalbutton:hover{border-bottom: none;}
+.navbar-toggle i{font-size: 20px;}
+.flex-direction-nav a{height: 50px;margin-top: -25px;font-size: 40px;}
+.flex-direction-nav a:before{font-size: 40px;}
+#layout-header .navbar-brand.home img{height: 75px;}
+.contact-us-page,.carselectpage{padding: 30px 0;}
 } 
