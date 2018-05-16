@@ -1,4 +1,4 @@
-1526403743a:1:{s:15:"site/header.htm";a:5:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:4254:"<header>
+1526484344a:1:{s:15:"site/header.htm";a:5:{s:8:"fileName";s:15:"site/header.htm";s:7:"content";s:4324:"<header>
 
 
     <!-- *** TOP END *** -->
@@ -20,7 +20,7 @@ _________________________________________________________ -->
 
                     <a class="navbar-brand home" href="/cvsmart/">
                         <img src="/cvsmart/themes/cvsmart/assets/img/sp_logo.png">
-                       
+                        <span><img src="/cvsmart/themes/cvsmart/assets/img/title.png"></span>
                     </a>
                     <div class="navbar-buttons">
                         <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">
@@ -107,7 +107,7 @@ _________________________________________________________ -->
     <!-- *** NAVBAR END *** -->
 
 </header>
-";s:5:"mtime";i:1526398417;s:6:"markup";s:4252:"<header>
+";s:5:"mtime";i:1526483711;s:6:"markup";s:4322:"<header>
 
 
     <!-- *** TOP END *** -->
@@ -129,7 +129,7 @@ _________________________________________________________ -->
 
                     <a class="navbar-brand home" href="/cvsmart/">
                         <img src="/cvsmart/themes/cvsmart/assets/img/sp_logo.png">
-                       
+                        <span><img src="/cvsmart/themes/cvsmart/assets/img/title.png"></span>
                     </a>
                     <div class="navbar-buttons">
                         <button type="button" class="navbar-toggle btn-template-main" data-toggle="collapse" data-target="#navigation">

@@ -366,7 +366,7 @@ html[xmlns] .flexslider .slides {
 .contact-us-info h3{font-size:16px;line-height: 1;}
 #navbar{border-bottom: solid 1px #404040;}
 
-#layout-header .navbar-brand.home{position: absolute;top: 15px;}
+#layout-header .navbar-brand.home{position: absolute;top: 0px;height:  auto;}
 #layout-header .navbar-brand.home img{height: 90px;}
 #navigation{padding-top: 30px;}
 .navbar ul.nav > li > a.mbutton{margin-right: 50px;}
@@ -467,6 +467,8 @@ section, div.section{margin-bottom: 0px;}
 }
 .s-button-next span,
 .s-button-prev span{font-size: 100px;}
+.navbar-brand.home {position: relative;}
+#layout-header .navbar-brand.home span img{position: absolute;width: auto;height: auto;height: 9.5px;top: 43%;left: 100%;}
 @media (max-width: 768px) {
 
 }
@@ -579,7 +581,7 @@ section, div.section{margin-bottom: 0px;}
   #carousel{display: none}
   .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus{background: transparent;color:#fff;margin-right: 10px;border-color:  transparent;}
   .navbar-default .navbar-toggle, .navbar-default .navbar-toggle{background: transparent;color:#fff;border-color:  transparent;}
-#layout-header .navbar-brand.home{top:0px;}
+#layout-header .navbar-brand.home{top: 0px;}
 .navbar ul.nav > li > a.normalbutton.active, .navbar ul.nav > li > a.normalbutton:hover{border-bottom: none;}
 .navbar-toggle i{font-size: 20px;}
 .flex-direction-nav a{height: 50px;margin-top: -25px;font-size: 40px;}
